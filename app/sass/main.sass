@@ -1,0 +1,5836 @@
+@import config
+
+.smart-captcha-block
+	max-width: 427px
+	margin-bottom: 12px
+
+.noscroll
+	overflow: hidden
+
+.response
+	position: relative
+	z-index: 2
+
+.success
+	margin-top: 30px
+	background-color: #3fb53f
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+	p
+		margin: 0
+
+.errors-list
+	list-style-type: none
+	padding: 0
+	margin-top: 30px
+	background-color: #da4c4c
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+
+img
+	max-width: 100%
+	height: auto
+	user-select: none
+
+.video
+	position: relative
+	text-decoration: none
+	border-radius: 6px
+	padding-bottom: 56.25%
+	height: 0
+	overflow: hidden
+	margin-bottom: 30px
+	iframe, video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-width: 0
+		outline-width: 0
+
+.table-adaptive
+	overflow-x: auto
+
+.lg-backdrop.in
+	opacity: 0.55
+
+.lg-outer .lg-thumb-outer, .lg-outer .lg-toggle-thumb
+	background-color: rgba(0,0,0, .45)
+
+.breadcrumb-block
+	padding: 20px 0
+	+media-breakpoint-up(sm)
+		padding: 40px 0
+
+.breadcrumb
+	margin: 0
+	list-style-type: none
+	display: flex
+	font-size: 12px
+	line-height: 19px
+	position: relative
+	z-index: 1
+	padding: 0
+	overflow-x: auto
+	padding-bottom: 10px
+	position: relative
+	+media-breakpoint-up(sm)
+		overflow: hidden
+		flex-wrap: wrap
+		padding-bottom: 0
+	&__item
+		flex: 0 0 auto
+		+media-breakpoint-up(sm)
+			flex: initial
+	&__link
+		color: rgba(255, 255, 255, 0.44)
+		transition: color .35s ease-out
+		&:after
+			content: '-'
+			margin: 0 5px
+		&:hover
+			text-decoration: none
+			color: #fff
+			&:after
+				color: #fff
+	&__item_active
+		color: #fff
+
+.pagination
+	list-style-type: none
+	padding: 0
+	display: flex
+	margin: 0
+	margin-top: 30px
+	&__item
+		margin-right: 8px
+		flex: 0 0 33px
+		width: 33px
+		height: 33px
+		+media-breakpoint-up(sm)
+			flex: 0 0 40px
+			width: 40px
+			height: 40px
+	&__item_active .pagination__link
+		border-color: $accent
+		background-color: $accent
+		color: #fff
+	&__link
+		background-color: transparent
+		font-size: 16px
+		line-height: 25px
+		height: 100%
+		width: 100%
+		color: #000
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		border-radius: 50%
+		transition: border-color .25s ease, color .25s ease, background-color .25s ease
+		border-color: #000
+		border: 1px solid $accent
+		color: #000
+		&:hover
+			text-decoration: none
+			border-color: $accent
+			color: #fff
+			background-color: $accent
+
+.text-truncate
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+.content
+	margin-bottom: 30px
+	&_m0
+		margin: 0
+	iframe
+		width: 100%
+		margin: 0 auto !important
+	p
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		color: $text
+		margin: 0
+		&:not(:last-child)
+			margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			&:not(:last-child)
+				margin-bottom: 24px
+	b, strong
+		font-weight: 700
+		font-size: 17px
+		line-height: 24px
+		margin-bottom: 15px
+	a
+		color: $accent
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	img
+		margin-bottom: 30px
+		border-radius: 15px
+	h2
+		font-size: 20px
+		line-height: 26px
+		color: $text
+		font-weight: 600
+		margin-bottom: 20px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			line-height: 30px
+	h3
+		font-size: 19px
+		line-height: 25px
+		color: $text
+		font-weight: 600
+		margin-top: 40px
+		margin-bottom: 20px
+	ol
+		padding: 0
+		padding-left: 17px
+		margin-left: 10px
+		li
+			margin-bottom: 10px
+			padding-left: 8px
+		li::marker
+			color: $accent
+			font-weight: 700
+	ul
+		list-style-type: none
+		margin-left: 10px
+		padding: 0
+		margin-bottom: 15px
+		+media-breakpoint-up(sm)
+			margin-bottom: 25px
+		li
+			font-size: 16px
+			line-height: 24px
+			font-weight: 300
+			margin-bottom: 10px
+			// display: flex
+			position: relative
+			padding-left: 25px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				height: 8px
+				width: 8px
+				flex: 0 0 8px
+				border-radius: 50%
+				background-color: $accent
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25)
+				display: inline-block
+				margin-right: 15px
+				margin-top: 7px
+	table
+		width: 100%
+		margin-bottom: 20px
+		border: 1px solid $text
+		border-collapse: collapse
+		th
+			font-weight: bold
+			padding: 5px
+			background: $text
+			border: 1px solid $text
+		td
+			border: 1px solid $text
+			padding: 5px
+			font-size: 16px
+			line-height: 150%
+
+.section
+	padding: 50px 0
+	+media-breakpoint-up(sm)
+		padding: 70px 0
+	+media-breakpoint-up(xl)
+		padding: 100px 0
+	&_pt0
+		padding-top: 0
+	&_gray
+		background-color: #fafafa
+
+.container
+	padding: 0 8px
+	margin: 0 auto
+	width: 100%
+	+media-breakpoint-up(sm)
+		padding: 0 16px
+	+media-breakpoint-up(xl)
+		max-width: 1312px
+	&_text
+		+media-breakpoint-up(xl)
+			max-width: 847px
+
+.row
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+
+.menu-scrolled
+	// max-height: 310px
+	padding: 30px 0
+	box-shadow: 0 10px 8px 0 rgba(169, 182, 197, 0.28)
+	background: #fff
+	border-radius: 0 0 16px 16px
+	position: absolute
+	z-index: 10
+	width: 100%
+	display: none
+	position: absolute
+	top: 85px
+	/* .menu-scrolled__row */
+	&__row
+		display: flex
+		gap: 30px
+
+	/* .menu-scrolled__left */
+	&__left
+		flex: 0 0 20%
+		border-right: 2px solid #f2f5f9
+
+	/* .menu-scrolled__list */
+	&__list
+		padding: 0
+		list-style-type: none
+		display: flex
+		gap: 19px
+		flex-direction: column
+		max-height: 345px
+		flex-wrap: wrap
+		margin: 0
+		column-gap: 10px
+		height: 100%
+		+media-breakpoint-up(xl)
+			column-gap: 60px
+		+media-breakpoint-up(wxp)
+			column-gap: 100px
+
+	/* .menu-scrolled__item */
+	&__item
+
+	/* .menu-scrolled__link */
+	&__link
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+
+	/* .menu-scrolled__right */
+	&__right
+
+.menu-service
+	max-height: 310px
+	box-shadow: 0 10px 8px 0 rgba(169, 182, 197, 0.28)
+	background: #fff
+	border-radius: 0 0 16px 16px
+	position: absolute
+	z-index: 10
+	width: 100%
+	display: none
+	position: absolute
+	/* .menu-service__list */
+	&__list
+		padding: 0
+		list-style-type: none
+		display: flex
+		gap: 19px
+		flex-direction: column
+		max-height: 310px
+		flex-wrap: wrap
+		margin: 0
+		padding: 30px 0
+
+	/* .menu-service__item */
+	&__item
+
+	/* .menu-service__link */
+	&__link
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+
+.main
+	padding-top: 144px
+
+.header
+	width: 100%
+	z-index: 6
+	position: absolute
+	background-color: #fff
+	&.scrolled
+		position: fixed!important
+		transform: translateY(-100%)
+		z-index: 7
+		top: 0
+		// padding: 10px 0
+		.header__bottom
+			+media-breakpoint-up(lg)
+				display: none
+		.header__city
+			display: none
+		.search_scrolled
+			+media-breakpoint-up(lg)
+				display: flex
+		.header__scrolled-menu
+			+media-breakpoint-up(lg)
+				display: flex
+	&.on
+		transform: translateY(0)
+		transition: transform .35s ease-in-out
+		.search-block
+			top: 55px
+	/* .header__result-tests */
+	&__result-tests
+		display: none
+		+media-breakpoint-up(xl)
+			display: block
+	/* .header__call-home */
+	&__call-home
+		display: none
+		+media-breakpoint-up(xl)
+			display: block
+	/* .header__city */
+	&__city
+		display: none
+		+media-breakpoint-up(xl)
+			display: block
+	/* .header__phone */
+	&__phone
+	/* .header__btn */
+	&__btn
+		display: none
+		+media-breakpoint-up(xl)
+			display: block
+	/* .header__top */
+	&__top
+		padding: 12px 0
+		border-bottom: 2px solid #f2f5f9
+		+media-breakpoint-up(sm)
+			padding: 20px 0
+
+	/* .header__row */
+	&__row
+		display: flex
+		gap: 60px
+
+	/* .header__left */
+	&__left
+
+	/* .header__lk */
+	&__lk
+	/* .header__right-addreses */
+	&__right-addreses
+		display: flex
+		align-items: center
+		gap: 16px
+		+media-breakpoint-up(lg)
+			gap: 28px
+	/* .header__right */
+	&__right
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		gap: 16px
+		flex: 1
+		position: relative
+		+media-breakpoint-up(xl)
+			justify-content: space-between
+
+	/* .header__bottom */
+	&__bottom
+		padding: 12px 0
+		+media-breakpoint-up(sm)
+			padding: 16px 0
+		+media-breakpoint-up(lg)
+			padding: 0
+
+	/* .header__bottom-row */
+	&__bottom-row
+		display: flex
+		justify-content: space-between
+		position: relative
+
+	/* .header__bottom-left */
+	&__bottom-left
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+
+	/* .header__bottom-right */
+	&__bottom-right
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex: 1
+		gap: 24px
+		+media-breakpoint-up(lg)
+			flex: none
+
+	&__toggle-menu
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		position: relative
+		z-index: 1
+		color: #A9B6C5
+		height: 30px
+		cursor: pointer
+		font-weight: 600
+		font-size: 14px
+		line-height: 13px
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+			color: #A9B6C5
+		+media-breakpoint-up(lg)
+			display: none
+		&.on .header__toggle-line
+			background-color: transparent
+		&.on .header__toggle-line::before
+			// transform: rotate(45deg) translate(2px, 5px)
+			background-color: #A9B6C5
+			// left: 3px
+		&.on .header__toggle-line::after
+			// transform: rotate(-45deg) translate(2px, -5px)
+			background-color: #A9B6C5
+			// left: 3px
+
+	&__toggle-line
+		margin-right: 8px
+		width: 12px
+		height: 1px
+		background-color: #A9B6C5
+		display: block
+		position: relative
+		transition: all 0.3s
+		&:after, &:before
+			content: ''
+			width: 18px
+			height: 1px
+			background-color: #A9B6C5
+			position: absolute
+			transition: all 0.3s
+			right: 0
+		&:after
+			top: 5px
+		&:before
+			bottom: 5px
+	&__scrolled-menu
+
+		display: none
+		align-items: center
+		justify-content: flex-end
+		position: relative
+		z-index: 1
+		color: #A9B6C5
+		height: 30px
+		cursor: pointer
+		font-weight: 600
+		font-size: 14px
+		line-height: 13px
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+			color: #A9B6C5
+		// +media-breakpoint-up(lg)
+		// 	display: none
+		&.active .header__scrolled-menu-line
+			background-color: transparent
+		&.active .header__scrolled-menu-line::before
+			transform: rotate(45deg) translate(2px, 5px)
+			background-color: #A9B6C5
+			// left: 3px
+		&.active .header__scrolled-menu-line::after
+			transform: rotate(-45deg) translate(2px, -5px)
+			background-color: #A9B6C5
+			// left: 3px
+
+	&__scrolled-menu-line
+		margin-right: 8px
+		width: 18px
+		height: 1px
+		background-color: #A9B6C5
+		display: block
+		position: relative
+		transition: all 0.3s
+		&:after, &:before
+			content: ''
+			width: 18px
+			height: 1px
+			background-color: #A9B6C5
+			position: absolute
+			transition: all 0.3s
+			right: 0
+		&:after
+			top: 5px
+		&:before
+			bottom: 5px
+
+.logo
+	/* .logo__img */
+	&__img
+	&__img_menu
+		max-width: 196px
+
+.balloon
+	display: flex
+	align-items: center
+	gap: 10px
+	cursor: pointer
+	&:hover
+		text-decoration: none
+	&_doc
+		+media-breakpoint-up(lg)
+			flex-direction: row-reverse
+	&_phone
+		.balloon__block
+			display: none
+		+media-breakpoint-up(lg)
+			.balloon__block
+				display: block
+	&_lk
+		.balloon__block
+			display: none
+		+media-breakpoint-up(lg)
+			.balloon__block
+				display: block
+	&_orange
+		.balloon__label
+			color: $text
+		.balloon__icon-block
+			background-color: $accent
+		.balloon__title
+			color: $accent
+	&_white
+		.balloon__label
+			color: #fff
+		.balloon__title
+			color: #fff
+	/* .balloon__block */
+	&__block
+		&:hover
+			text-decoration: none
+	/* .balloon__icon-block */
+	&__icon-block
+		height: 32px
+		width: 32px
+		flex: 0 0 32px
+		background-color: $blue
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+	&__icon-block_big
+		height: 42px
+		width: 42px
+		flex: 0 0 42px
+	/* .balloon__icon */
+	&__icon
+		fill: #fff
+		height: 16px
+		width: 16px
+
+	/* .balloon__label */
+	&__label
+		font-weight: 600
+		font-size: 12px
+		line-height: 12px
+		color: $blue2
+		margin-bottom: 1px
+
+	/* .balloon__title */
+	&__title
+		font-weight: 600
+		font-size: 14px
+		color: $text
+	&__title_blue
+		color: $blue
+
+.btn-center
+	text-align: center
+	margin-top: 32px
+
+.btn
+	font-weight: 700
+	font-size: 14px
+	text-align: center
+	color: #ff7009
+	border-radius: 41px
+	background-color: $light_accent
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 42px
+	padding: 0 40px
+	border: none
+	transition: color .35s ease-out
+	cursor: pointer
+	&:hover
+		text-decoration: none
+	&:focus
+		outline: 0
+
+	&_back
+		background-color: rgba(255,255,255,.16 )
+		color: #fff
+	&_orange
+		background-color: $accent
+		color: #fff
+	&_blue
+		background-color: $blue
+		color: #fff
+		transition: all .35s ease-out
+		&:hover
+			background-color: $light_blue
+			color: $blue
+	&_blue2
+		background-color: $blue2
+		color: #fff
+		transition: all .35s ease-out
+		&:hover
+			background-color: $accent
+			color: #fff
+	&_text-blue
+		color: $blue
+	&_bg-white
+		background-color: #fff
+		border: 1px solid $light_accent
+	&_white
+		background-color: #fff
+		color: $blue
+		border: 1px solid #f2f5f9
+	&_upper
+		text-transform: uppercase
+	&_w100
+		width: 100%
+	&_w203
+		width: 203px
+	&_w216
+		width: 216px
+	&_first
+		width: 100%
+		// max-width: 305px
+		+media-breakpoint-up(sm)
+			width: 216px
+	&_gradient
+		background: linear-gradient(90deg, #ffab6e 0%, #ff7009 100%)
+		color: #fff
+		transition: color .35s ease-out
+		&:hover
+			// background: #ffab6e
+			color: $blue
+	&_gradient-blue
+		background: linear-gradient(90deg, #5c9fde 0%, #8cc1f2 100%)
+		color: #fff
+		transition: color .35s ease-out
+		&:hover
+			// background: #8cc1f2
+			color: $accent
+	&_callback
+		background-color: #fff
+		transition: all .35s ease-out
+		width: 100%
+		&:hover
+			background-color: $light_accent
+		+media-breakpoint-up(sm)
+			width: 203px
+	&_p16
+		padding: 0 16px
+	&_qa
+		display: none
+		+media-breakpoint-up(sm)
+			display: inline-flex
+	&_qa-mobile
+		width: 100%
+		margin-top: 32px
+		+media-breakpoint-up(sm)
+			display: none
+	&_more
+		width: 256px
+		height: 42px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border: 1px solid #fddfcb
+		border-radius: 41px
+		font-weight: 600
+		font-size: 14px
+		color: #ff7009
+		background-color: #fff
+		&:hover
+			background-color: #fddfcb
+
+.menu-modal-overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	backdrop-filter: blur(15px)
+	background: rgba(255, 255, 255, 0.4)
+	z-index: 5
+	display: none
+	animation: fade .35s ease
+	+media-breakpoint-up(lg)
+		z-index: 4
+	&.active
+		display: block
+
+.menu-modal
+	display: block
+	width: 100%
+	max-width: 400px
+	padding: 0
+	position: fixed
+	overflow-y: auto
+	height: 100%
+	right: 0
+	top: 0
+	bottom: 0
+	z-index: 23
+	// padding: 10px 15px 30px 15px
+	transform: translateX(100%)
+	transition: transform .35s ease
+	background-color: #fff
+	border-left: 1px solid #dfdfdf
+	+media-breakpoint-up(sm)
+
+		// width: 498px
+		// padding: 30px
+
+	&.on
+		transform: translateX(0%)
+		.menu-modal__overlay
+			display: block
+	/* .menu-modal__overlay */
+	&__overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		backdrop-filter: blur(15px)
+		background: rgba(28, 21, 31, 0.4)
+		z-index: 4
+		display: none
+		animation: fade .35s ease
+		&.active
+			display: block
+
+	/* .menu-modal__block */
+	&__block
+		background-color: #fff
+		width: 330px
+		padding: 58px 30px 16px 30px
+		margin-left: auto
+		overflow-y: auto
+		height: 100%
+		position: relative
+		z-index: 5
+		transform: translateX(100%)
+		transition: transform .35s ease
+		+media-breakpoint-up(sm)
+			width: 420px
+	/* .menu-modal__top */
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 14px 16px
+		border-bottom: 2px solid #f2f5f9
+	/* .menu-modal__bottom */
+	&__bottom
+		margin-top: 32px
+		padding: 0 16px
+		padding-bottom: 32px
+		border-bottom: 2px solid #f2f5f9
+	/* .menu-modal__ballons */
+	&__ballons
+		margin-top: 26px
+		display: flex
+		flex-wrap: wrap
+		gap: 18px
+	/* .menu-modal__results */
+	&__results
+		padding: 26px 16px
+
+.menu
+	/* .menu__list */
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		gap: 28px
+
+	/* .menu__item */
+	&__item
+		// padding: 12px 0
+		+media-breakpoint-up(lg)
+			padding: 16px 0
+		// &:not(:last-child)
+		// 	margin-bottom: 35px
+		&.open
+			.menu__item-svg
+				transform: rotate(180deg)
+			.menu__link
+				color: $accent
+		+media-breakpoint-up(lg)
+			// padding: 20px 0
+			&:not(:last-child)
+				margin-bottom: 0
+		+media-breakpoint-up(md)
+			&:hover
+				.menu__item-svg
+					fill: $accent
+					transform: rotate(180deg)
+				.menu__sub
+					display: block
+				.menu__link
+					color: $accent
+					text-decoration: none
+	&__item_sub
+		position: relative
+		z-index: 2
+
+	/* .menu__link */
+	&__link
+		font-weight: 700
+		font-size: 14px
+		text-transform: uppercase
+		color: $text
+		transition: color .35s ease-out
+		&:hover
+			text-decoration: none
+			color: $blue
+	&__link_more
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		color: #a9b6c5
+	/* .menu__sub-item */
+	&__sub-item
+	/* .menu__sub-link */
+	&__sub-link
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+		&:hover
+			text-decoration: none
+	/* .menu__sub */
+	&__sub
+		list-style-type: none
+		padding: 0
+		padding-left: 10px
+		margin: 0
+		z-index: 3
+		background-color: #fff
+		left: -30px
+		top: 58px
+		// white-space: nowrap
+		animation: fade .35s ease-out
+		max-height: 0
+		overflow: hidden
+		transition: max-height .35s ease-out, padding .35s ease-out
+		padding-top: 10px
+		+media-breakpoint-up(lg)
+			padding: 30px
+			max-height: initial
+			overflow: initial
+			display: none
+			position: absolute
+			border-radius: 0 0 16px 16px
+			// border: 1px solid #d9d9d9
+			box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1)
+			min-width: 348px
+		+media-breakpoint-up(xl)
+			top: 58px
+	&__sub_modal
+		list-style-type: none
+		padding: 0
+		padding-left: 10px
+		margin: 0
+		z-index: 3
+		background-color: #fff
+		// white-space: nowrap
+		animation: fade .35s ease-out
+		max-height: 0
+		overflow: hidden
+		transition: max-height .35s ease-out, padding .35s ease-out
+		padding-top: 10px
+		position: relative
+		left: 0
+		top: 0
+		box-shadow: none
+		min-width: auto
+		display: block
+		padding: 0
+	&_modal
+		.menu__list
+			display: block
+		.menu__item
+			border-bottom: 2px solid #f2f5f9
+		.menu__link
+			display: block
+			padding: 14px 16px
+
+		.menu__sub-item
+			// height: 44px
+			&:hover
+				background-color: transparent
+				.menu__sub-link
+					color: $accent
+					text-decoration: none
+		.menu__sub-link
+			padding: 4px 16px
+			display: block
+			color: $text
+		.menu__item-svg-block
+			display: inline-block
+			margin-left: 8px
+			position: absolute
+			top: 10px
+			right: 16px
+			z-index: 2
+		.menu__item
+			&:hover
+				.menu__item-svg
+					transform: rotate(0deg)
+			.menu__sub
+				&:hover
+					// display: none
+		.menu__item_sub
+			display: block
+			&.open
+				.menu__item-svg
+					transform: rotate(180deg)
+
+.search
+	display: flex
+	align-items: center
+	gap: 6px
+	cursor: pointer
+	&_scrolled
+		display: none
+	/* .search__svg */
+	&__svg
+		fill: $blue2
+		height: 18px
+		width: 18px
+
+	/* .search__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		color: $blue2
+
+.search-results
+
+.search-group
+	margin-bottom: 24px
+	/* .search-group__title */
+	&__title
+		font-size: 1.25rem
+		border-bottom: 2px solid #eee
+		padding-bottom: 8px
+		margin-bottom: 12px
+
+	/* .search-group__count */
+	&__count
+		color: #888
+		font-weight: normal
+		font-size: 0.9em
+
+	/* .search-group__list */
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 12px
+
+.search-item
+	color: $text
+	margin-bottom: 30px
+	display: block
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		p
+			color: $text
+	&__title
+		color: $text
+		font-size: 24px
+		line-height: 36px
+		margin-bottom: 10px
+	&__text
+		font-size: 16px
+		color: $text
+		margin-bottom: 10px
+	&__link
+		color: $accent
+
+.form-header
+	position: absolute
+	left: 0
+	z-index: 4
+	display: none
+	width: 100%
+	top: -6px
+	+media-breakpoint-up(lg)
+		width: calc(100% + 4px)
+		top: 8px
+		left: -2px
+	&_scrolled
+		top: 0
+		.form-header__block
+			max-width: 1000px
+		.form-header__input, .search-suggest
+			max-width: 1000px
+	&__block
+		max-width: 900px
+		position: relative
+	&__block_w100
+		max-width: initial
+	&__close
+		position: absolute
+		right: 22px
+		top: 10px
+		cursor: pointer
+	/* .form-header__input */
+	&__input
+		background: #f2f5f9
+		border-radius: 41px
+		padding: 6px 24px
+		font-weight: 600
+		font-size: 14px
+		border: none
+		width: 100%
+		max-width: 900px
+		outline: none
+		font-weight: 600
+		font-size: 14px
+		height: 43px
+		&::placeholder
+			color: #a9b6c5
+	&__input_w100
+		max-width: initial
+	&__btn
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		background-color: #f2f5f9
+		position: absolute
+		right: 62px
+		top: 10px
+		border: none
+		color: #5C9FDE
+		display: flex
+		padding: 0
+		align-items: center
+		gap: 5px
+	&__btn_r24
+		right: 24px
+	&__btn-svg
+		fill: #5C9FDE
+		height: 18px
+		width: 18px
+
+.search-suggest
+	background: #f2f5f9
+	border-radius: 41px
+	padding: 6px 24px
+	font-weight: 600
+	font-size: 14px
+	border: none
+	width: 100%
+	max-width: 900px
+	outline: none
+	font-weight: 600
+	font-size: 14px
+	height: 43px
+	&::placeholder
+		color: #a9b6c5
+
+.call-home
+	display: flex
+	align-items: center
+	gap: 6px
+	/* .call-home__svg */
+	&__svg
+		fill: $accent
+		height: 18px
+		width: 18px
+
+	/* .call-home__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		color: $accent
+
+.result-tests
+	display: flex
+	align-items: center
+	gap: 6px
+	&_menu
+		margin-bottom: 8px
+	/* .result-tests__svg */
+	&__svg
+		fill: $blue
+		height: 18px
+		width: 18px
+
+	/* .result-tests__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		color: $blue
+
+.fisrt-pagination
+	text-align: center
+	margin-bottom: 24px
+
+.first
+	/* .first__block-bottom */
+	&__block-bottom
+	/* .first__block-top */
+	&__block-top
+		margin-bottom: 60px
+	/* .first__block */
+	&__block
+		// background-image: url('../images/dest/first_mob.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		padding: 30px 20px
+		border-radius: 16px
+		border-top-left-radius: 0
+		margin-bottom: 16px
+		background-position: bottom
+		position: relative
+		z-index: 1
+		overflow: hidden
+		min-height: 650px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&:after
+			content: ''
+			background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)
+			height: 183px
+			bottom: 0
+			left: 0
+			display: block
+			position: absolute
+			z-index: 1
+			width: 100%
+		+media-breakpoint-up(sm)
+			// background-image: url('../images/dest/first.jpg')
+			border-radius: 32px
+			padding: 60px 40px
+			min-height: 588px
+			&:after
+				display: none
+		+media-breakpoint-up(lg)
+			padding: 100px 90px
+	&__block-img
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 0
+		display: none
+		object-fit: cover
+		height: 100%
+		width: 100%
+		+media-breakpoint-up(sm)
+			display: block
+	&__block-img_mob
+		display: block
+		+media-breakpoint-up(sm)
+			display: none
+
+	/* .first__title */
+	&__title
+		font-weight: 600
+		font-size: 36px
+		line-height: 120%
+		color: #fff
+		margin-bottom: 23px
+		max-width: 460px
+		+media-breakpoint-up(sm)
+			font-size: 42px
+			line-height: 97%
+		+media-breakpoint-up(lg)
+			font-size: 64px
+
+	/* .first__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		color: #fff
+		margin-bottom: 44px
+		max-width: 593px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+	/* .first__date */
+	&__date
+		font-weight: 700
+		font-size: 16px
+		color: #fff
+		// margin-bottom: 236px
+		+media-breakpoint-up(sm)
+			// margin-bottom: 49px
+
+	/* .first__row */
+	&__row
+		display: flex
+		position: relative
+		z-index: 2
+		gap: 12px
+		flex-direction: column
+		+media-breakpoint-up(sm)
+			align-items: center
+			flex-direction: row
+
+.advantages
+	/* .advantages__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			flex-direction: row
+	/* .advantages__col */
+	&__col
+		flex: 0 0 calc(33.3333% - 11px)
+
+	/* .advantages__item */
+	&__item
+		display: flex
+		// align-items: center
+		height: 100%
+		gap: 16px
+		border-radius: 16px
+		background-color: $light_accent
+		padding: 16px
+		transition: background-color .35s ease-out
+		&:hover
+			background-color: $light_blue
+			.advantages__icon
+				fill: $blue
+		+media-breakpoint-up(xl)
+			gap: 30px
+			padding: 30px
+	&__item_border
+		border-top-left-radius: 0
+	/* .advantages__icon-block */
+	&__icon-block
+
+	/* .advantages__icon */
+	&__icon
+		height: 39px
+		width: 39px
+		flex: 0 0 39px
+		fill: $accent
+		transition: fill .35s ease-out
+
+	/* .advantages__text-block */
+	&__text-block
+
+	/* .advantages__title */
+	&__title
+		font-weight: 600
+		font-size: 16px
+		color: $text
+		margin-bottom: 7px
+
+	/* .advantages__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: $text
+
+.title
+	font-weight: 600
+	font-size: 24px
+	color: $text
+	line-height: 130%
+	+media-breakpoint-up(sm)
+		font-size: 32px
+	+media-breakpoint-up(md)
+		font-size: 40px
+	+media-breakpoint-up(lg)
+		font-size: 48px
+	&_mb
+		margin-bottom: 16px
+	&_white
+		color: #fff
+	&_mb0
+		margin-bottom: 0
+	&_small
+		font-size: 24px
+		+media-breakpoint-up(sm)
+			font-size: 28px
+
+.subtitle
+	font-weight: 600
+	font-size: 11px
+	color: $accent
+	+media-breakpoint-up(sm)
+		font-size: 13px
+
+.title-arrow
+	display: flex
+	align-items: center
+	gap: 18px
+	margin-bottom: 18px
+	+media-breakpoint-up(sm)
+		gap: 36px
+		margin-bottom: 30px
+	/* .title-arrow__icon */
+	&__icon
+		width: 20px
+		height: 21px
+		flex: 0 0 20px
+		fill: $text
+
+.title-row
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 16px
+	flex-wrap: wrap
+	margin-bottom: 18px
+	+media-breakpoint-up(sm)
+		margin-bottom: 30px
+	+media-breakpoint-up(lg)
+		gap: 36px
+
+.service-main
+	// padding-bottom: 50px
+	// +media-breakpoint-up(sm)
+	// 	padding-bottom: 70px
+	// +media-breakpoint-up(xl)
+	// 	padding-bottom: 100px
+	/* .service-main__block */
+	&__block
+		display: grid
+		gap: 16px
+		grid-template-columns: repeat(1, 1fr)
+		// grid-template-rows: repeat(2, 1fr)
+		grid-auto-rows: max-content
+		+media-breakpoint-up(md)
+			// grid-template-rows: repeat(2, 1fr)
+			grid-template-columns: repeat(2, 1fr)
+		+media-breakpoint-up(lg)
+			grid-template-columns: repeat(3, 1fr)
+			// grid-template-rows: repeat(3, 1fr)
+
+	/* .service-main__item */
+	&__item
+		&:hover
+			text-decoration: none
+
+	&__item_1
+		+media-breakpoint-up(lg)
+			grid-column: 1 / 2
+			grid-row: 1 / 4
+	&__item_2
+		+media-breakpoint-up(lg)
+			grid-column: 2 / 3
+			grid-row: 1 / 2
+	&__item_3
+		+media-breakpoint-up(lg)
+			grid-column: 3 / 4
+			grid-row: 1 / 2
+	&__item_4
+		+media-breakpoint-up(lg)
+			grid-column: 2 / 3
+			grid-row: 2 / 3
+	&__item_5
+		+media-breakpoint-up(lg)
+			grid-column: 3 / 4
+			grid-row: 2 / 3
+	&__item_6
+		+media-breakpoint-up(lg)
+			grid-column: 2 / 4
+			grid-row: 3 / 4
+
+.checkup
+	background: url('../images/checkup.png'), linear-gradient(180deg, #ffab6e 0%, #ff7009 100%)
+	background-position: center bottom
+	background-repeat: no-repeat
+	padding: 30px 20px
+	height: 100%
+	height: 570px
+	+media-breakpoint-up(sm)
+		padding: 30px
+	+media-breakpoint-up(md)
+		background-position: center top
+		height: 100%
+	+media-breakpoint-up(lg)
+		background-position: center bottom
+	// background-image: url('../images/dest/checkup.png')
+	/* .checkup__title */
+	&__title
+		font-weight: 600
+		color: #fff
+		font-size: 24px
+		+media-breakpoint-up(sm)
+			font-size: 32px
+		+media-breakpoint-up(md)
+			font-size: 40px
+
+	/* .checkup__text */
+	&__text
+		font-weight: 600
+		font-size: 16px
+		line-height: 120%
+		color: #fff
+		max-width: 197px
+		margin-bottom: 16px
+
+	/* .checkup__row */
+	&__row
+		display: flex
+		gap: 8px
+		flex: wrap
+
+.service-item-main
+	border-radius: 16px
+	height: 100%
+	background-color: $light_blue
+	padding: 30px 20px
+	&:hover
+		text-decoration: none
+	+media-breakpoint-up(sm)
+		padding: 30px
+	&_page
+		height: auto
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+	&_page-mobile
+		display: block
+		margin-bottom: 30px
+		+media-breakpoint-up(lg)
+			display: none
+	&_plastic
+		background-image: url('../images/plastic.svg')
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: bottom
+	&_pediatr
+		background-image: url('../images/pediatr.svg')
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: bottom
+	/* .service-item-main__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		line-height: 70%
+		color: #3c5673
+		margin-bottom: 12px
+		+media-breakpoint-up(lg)
+			font-size: 32px
+
+	/* .service-item-main__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+
+	/* .service-item-main__list */
+	&__list
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+		margin-top: 18px
+
+	/* .service-item-main__list-item */
+	&__list-item
+		border-radius: 37px
+		background-color: #fff
+		font-weight: 600
+		font-size: 14px
+		color: $blue
+		padding: 5px 16px
+		&:hover
+			text-decoration: none
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+.help-house
+	background: url('../images/car.svg'), linear-gradient(90deg, #5c9fde 0%, #8cc1f2 100%)
+	background-repeat: no-repeat
+	background-position: 95% center
+	padding: 30px 20px
+	border-radius: 16px
+	position: relative
+	z-index: 1
+	+media-breakpoint-up(sm)
+		padding: 30px
+	.btn
+		+media-breakpoint-up(lg)
+			position: absolute
+			top: 55%
+			left: 33%
+		+media-breakpoint-up(xl)
+			left: 25%
+	/* .help-house__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		line-height: 110%
+		color: #fff
+		max-width: 424px
+		margin-bottom: 8px
+		u
+			display: block
+			text-decoration-style: dotted
+		+media-breakpoint-up(sm)
+			font-size: 32px
+			u
+				display: inline-block
+		+media-breakpoint-up(md)
+			font-size: 40px
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+
+.about
+	background-color: $light_accent
+	padding: 30px 20px
+	border-radius: 0 16px 16px 16px
+	background-image: url('../images/dest/about_mob.png')
+	background-repeat: no-repeat
+	height: 600px
+	background-position: bottom
+	background-size: contain
+	+media-breakpoint-up(sm)
+		background-size: cover
+		height: auto
+		background-position: 0 0
+		background-image: url('../images/dest/about.png')
+		border-radius: 0 32px 32px 32px
+		padding: 30px
+	+media-breakpoint-up(lg)
+		padding: 70px
+	/* .about__content */
+	&__content
+		max-width: 521px
+	/* .about__text */
+	&__text
+		max-width: 521px
+		font-size: 12px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+	/* .about__row */
+	&__row
+		display: flex
+		gap: 12px
+		flex-direction: column
+		+media-breakpoint-up(sm)
+			flex-direction: row
+			align-items: center
+
+.tab-content
+	display: none
+	&.active
+		display: block
+
+.tab-block
+.tab-block_orange
+	.tab-btn
+		background-color: $light_accent
+		color: $accent
+		&:hover
+			background-color: $accent
+			color: #fff
+	.tab-btn.active
+		background-color: $accent
+	.map-block__list
+		background-color: $light_accent
+	.address-item__title
+		color: $accent
+	.map-block__toggle-btn.active
+		background-color: $accent
+
+.tab-btn-block
+	display: flex
+	gap: 8px
+	// flex-wrap: wrap
+	overflow: auto
+	margin-bottom: 16px
+	padding-bottom: 16px
+
+.tab-btn
+	font-weight: 600
+	font-size: 16px
+	color: $blue
+	border-radius: 37px
+	background-color: #f2f5f9
+	padding: 5px 16px
+	transition: all .35s ease-out
+	cursor: pointer
+
+	&:hover
+		background-color: $blue
+		color: #fff
+	&.active
+		background-color: $blue
+		color: #fff
+
+.map-block
+	+media-breakpoint-up(md)
+		display: flex
+		overflow: hidden
+
+	/* .map-block__toggle-btn */
+	&__toggle-btn
+		border: 1px solid #f2f5f9
+		background-color: #fff
+		flex: 0 0 50%
+		text-align: center
+		padding: 8px 0
+		&:first-child
+			border-radius: 16px 0 0 16px
+		&:last-child
+			border-radius: 0 16px 16px 0
+		&.active
+			background-color: $blue
+			color: #fff
+	/* .map-block__toggle */
+	&__toggle
+		display: flex
+		margin-bottom: -10px
+		position: relative
+		z-index: 1
+		+media-breakpoint-up(md)
+			display: none
+	/* .map-block__toggle-item */
+	&__toggle-item
+		display: none
+		&.active
+			display: block
+		&[data-toggle-item="map"]
+			// display: none
+		+media-breakpoint-up(md)
+			display: block!important
+
+	/* .map-block__map */
+	&__map
+		height: 450px
+		+media-breakpoint-up(md)
+			height: auto
+			flex: 1
+	/* .map-block__list */
+	&__list
+		padding: 30px 20px
+		background-color: $light_blue
+		max-height: 450px
+		overflow-y: auto
+		+media-breakpoint-up(sm)
+			padding: 30px
+		+media-breakpoint-up(md)
+			max-height: 517px
+			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			flex: 0 0 416px
+
+.address-item
+	margin-bottom: 28px
+	/* .address-item__address */
+	&__address
+		font-weight: 700
+		font-size: 24px
+		color: #3c5673
+
+	/* .address-item__title */
+	&__title
+		font-weight: 600
+		font-size: 14px
+		color: $blue
+		margin-bottom: 13px
+
+	/* .address-item__time */
+	&__time
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+		margin-bottom: 7px
+
+	/* .address-item__phone */
+	&__phone
+		display: flex
+		gap: 4px
+		align-items: center
+		font-weight: 700
+		font-size: 14px
+		color: #3c5673
+		transition: color .35s ease-out
+		&:hover
+			text-decoration: none
+			color: $blue
+
+	/* .address-item__phone-svg */
+	&__phone-svg
+		height: 15px
+		width: 15px
+		flex: 0 0 15px
+
+.qa-block
+	/* .qa-block__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+		+media-breakpoint-up(sm)
+			gap: 24px
+
+	/* .qa-block__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 calc( 50% - 12px )
+
+.qa-item
+	margin-left: auto
+	margin-right: auto
+	position: sticky
+	border-radius: 16px
+	overflow: hidden
+	background-color: #f2f5f9
+	&.open
+		.qa-item__btn
+			transform: rotate(180deg)
+	&_mb
+		margin-bottom: 16px
+	/* .qa-item__title-block */
+	&__title-block
+		background-color: #f2f5f9
+		transition: background-color .35s ease-out
+		display: flex
+		cursor: pointer
+		justify-content: space-between
+		align-items: center
+		padding: 15px
+		gap: 6px
+		border-top-left-radius: 12px
+		border-top-right-radius: 12px
+		+media-breakpoint-up(sm)
+			padding: 18px 22px
+		+media-breakpoint-up(lg)
+			padding: 22px 30px
+
+	/* .qa-item__title */
+	&__title
+		display: flex
+		align-items: center
+		font-weight: 600
+		font-size: 16px
+		color: #3c5673
+	&__title_24
+		font-size: 20px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .qa-item__btn */
+	&__btn
+		flex: 0 0 23px
+
+	/* .qa-item__text-block */
+	&__text-block
+		max-height: 0
+		overflow: hidden
+		transition: max-height .5s ease
+		a
+			color: $accent
+		p
+			margin-bottom: 5px
+	/* .qa-item__text */
+	&__text
+		padding: 20px 24px
+		padding-left: 15px
+		padding-top: 0
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+		+media-breakpoint-up(md)
+			padding-left: 30px
+
+.trust-us
+	/* .trust-us__row */
+	&__row
+		display: flex
+		margin: 0 -8px
+		overflow: auto
+	/* .trust-us__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 25%
+
+	/* .trust-us__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_accent
+		text-align: center
+		padding: 24px
+		height: 148px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		min-width: 254px
+		transition: background-color .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: #ffe6d5
+	/* .trust-us__item-img */
+	&__item-img
+		margin-bottom: 8px
+
+	/* .trust-us__item-rating */
+	&__item-rating
+		display: flex
+		align-items: center
+		gap: 12px
+		justify-content: center
+
+	/* .trust-us__item-rating-count */
+	&__item-rating-count
+		font-weight: 800
+		font-size: 20px
+		color: $text
+
+	/* .trust-us__item-rating-stars */
+	&__item-rating-stars
+
+	/* .trust-us__item-rating-star */
+	&__item-rating-star
+
+.footer
+	padding-bottom: 16px
+	/* .footer__block */
+	&__block
+		background-color: $light_blue
+		background-image: url('../images/footer.svg')
+		background-repeat: no-repeat
+		background-position: right bottom
+		background-size: 200px
+		margin-bottom: 8px
+		padding: 30px 20px
+		border-radius: 0 16px 16px 16px
+		+media-breakpoint-up(sm)
+			border-radius: 0 32px 32px 32px
+			background-size: auto
+			padding: 36px 32px
+
+	/* .footer__top */
+	&__top
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		justify-content: space-between
+		align-items: flex-end
+		+media-breakpoint-up(sm)
+			padding-bottom: 32px
+			border-bottom: 2px solid rgba(169, 182, 197, 0.18)
+
+	/* .footer__top-left */
+	&__top-left
+		display: flex
+		flex-wrap: wrap
+		gap: 12px
+		+media-breakpoint-up(sm)
+			gap: 20px
+		+media-breakpoint-up(xl)
+			gap: 60px
+
+	/* .footer__top-item */
+	&__top-item
+		&:hover
+			text-decoration: none
+
+	/* .footer__top-item-key */
+	&__top-item-key
+		font-weight: 400
+		font-size: 14px
+		color: $blue
+
+	/* .footer__top-item-value */
+	&__top-item-value
+		font-weight: 700
+		font-size: 20px
+		color: $blue
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .footer__top-right */
+	&__top-right
+
+	/* .footer__bottom */
+	&__bottom
+		display: none
+		+media-breakpoint-up(sm)
+			padding-top: 30px
+			gap: 36px
+			display: flex
+			flex-wrap: wrap
+		+media-breakpoint-up(xl)
+			gap: 100px
+
+	/* .footer__left */
+	&__left
+		+media-breakpoint-up(md)
+			flex: 0 0 610px
+
+	/* .footer__title */
+	&__title
+		font-weight: 600
+		font-size: 16px
+		color: $blue
+		margin-bottom: 12px
+
+	/* .footer__service */
+	&__service
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		+media-breakpoint-up(md)
+			max-height: 190px
+
+	/* .footer__link */
+	&__link
+		font-weight: 400
+		font-size: 14px
+		line-height: 193%
+		color: #3c5673
+
+	/* .footer__center */
+	&__center
+
+	/* .footer__item */
+	&__item
+		font-weight: 600
+		font-size: 16px
+		color: $text
+	&__item_blue
+		color: $blue
+
+	/* .footer__right */
+	&__right
+	/* .footer__btn */
+	&__btn
+		margin-top: 15px
+	&__btn_mob
+		+media-breakpoint-up(sm)
+			display: none
+	/* .footer__copy */
+	&__copy
+		font-weight: 400
+		font-size: 12px
+		color: #fff
+	&__copy-block
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+	&__copy-block_mob
+		display: block
+		margin-top: 26px
+		+media-breakpoint-up(lg)
+			display: none
+	/* .footer__policy */
+	&__policy
+		font-weight: 400
+		font-size: 12px
+		color: #fff
+		&:hover
+			color: #fff
+
+.social
+	display: flex
+	gap: 16px
+	&_header
+		&.dnmob
+			display: none
+			+media-breakpoint-up(sm)
+				display: flex
+		.social__item
+			height: 32px
+			width: 32px
+		.social__item-svg
+			width: 18px
+			flex: 0 0 18px
+			height: 14px
+
+	/* .social__item */
+	&__item
+		height: 39px
+		width: 39px
+		background-color: $blue
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+	/* .social__item-svg */
+	&__item-svg
+		width: 22px
+		flex: 0 0 22px
+		height: 18px
+		fill: #fff
+
+.callback
+	background: linear-gradient(90deg, #ff7009 0%, #ffab6e 100%)
+	padding: 30px 20px
+	border-radius: 16px
+	+media-breakpoint-up(sm)
+		border-radius: 32px
+		padding: 46px 42px
+	/* .callback__row */
+	&__row
+		display: flex
+		gap: 18px
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			gap: 64px
+			flex-direction: row
+
+	/* .callback__left */
+	&__left
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	/* .callback__right */
+	&__right
+		flex: 1
+
+	/* .callback__title */
+	&__title
+		font-weight: 700
+		font-size: 16px
+		color: #fff
+		margin-bottom: 6px
+
+	/* .callback__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: #fff
+		// max-width: 440px
+		margin-bottom: 18px
+
+.callback-form
+	&__row
+		display: flex
+		row-gap: 16px
+		flex-direction: column
+		margin: 0 -8px
+		flex-wrap: wrap
+		+media-breakpoint-up(sm)
+			align-items: center
+			flex-direction: row
+	/* .callback-form__input-block */
+	&__input-block
+
+		padding: 0 8px
+		+media-breakpoint-up(sm)
+			flex: 0 1 50%
+
+	/* .callback-form__input */
+	&__input
+		width: 100%
+		padding: 8px 24px
+		background: #fff
+		border-radius: 46px
+		border: none
+		border: 1px solid transparent
+		&:focus
+			outline: 0
+		&.error
+			background-color: #ffe1e1
+
+.inner
+	border-radius: 0 32px 32px 32px
+
+	// background: radial-gradient(296.71% 65.2% at 65.2% 30.75%, #ffb681 0%, #ff7009 100%)
+	// background: radial-gradient(29.71% 205.2% at 52.2% 40.75%,#ffb681 0,#ff7009 100%)
+	background: radial-gradient(circle, #ffb681, #ffa666, #ff954b, #ff8330, #ff7009)
+	padding: 30px 20px
+	margin-bottom: 32px
+	+media-breakpoint-up(sm)
+		padding: 36px
+	&_doc
+		background: url('../images/doc-single.svg'), radial-gradient(296.71% 65.2% at 65.2% 30.75%, #ffb681 0%, #ff7009 100%)
+		background-repeat: no-repeat
+		background-position: center right
+	/* .inner__service-row */
+	&__service-row
+		display: flex
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			align-items: center
+			flex-direction: row
+	/* .inner__service-left */
+	&__service-left
+		+media-breakpoint-up(md)
+			flex: 0 0 300px
+		+media-breakpoint-up(lg)
+			flex: 0 0 358px
+
+	/* .inner__text */
+	&__text
+		font-weight: 600
+		font-size: 16px
+		color: #fff
+
+	/* .inner__service-right */
+	&__service-right
+		flex: 1
+
+	/* .inner__find-text */
+	&__find-text
+		font-weight: 700
+		font-size: 14px
+		color: #fff
+		margin-bottom: 12px
+	&__find-text_mb0
+		margin-bottom: 0
+	/* .inner__row */
+	&__row
+		display: flex
+		align-items: center
+		gap: 24px
+		flex-wrap: wrap
+		margin-bottom: 12px
+		+media-breakpoint-up(md)
+			gap: 48px
+	&__row_jcsb
+		justify-content: space-between
+
+	/* .inner__col */
+	&__col
+
+	/* .inner__back-block */
+	&__back-block
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		gap: 16px
+		+media-breakpoint-up(md)
+			gap: 32px
+
+	/* .inner-form */
+.inner-form
+	position: relative
+	z-index: 1
+	/* .inner-form__input */
+	&__input
+		background-color: #fff
+		border: none
+		border-radius: 41px
+		padding: 8px 24px
+		height: 42px
+		width: 100%
+		font-size: 12px
+		+media-breakpoint-up(sm)
+			font-size: 14px
+	&__input_border
+		border: 1px solid rgba(169, 182, 197, 0.45)
+	/* .inner-form__btn */
+	&__btn
+		font-weight: 700
+		font-size: 14px
+		color: #fff
+		padding: 8px 24px
+		height: 42px
+		background-color: $blue
+		border: none
+		position: absolute
+		z-index: 2
+		right: 0
+		bottom: 0
+		border-radius: 41px
+
+.consult
+	margin-bottom: 48px
+	/* .consult__row */
+	&__row
+		display: flex
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			flex-direction: row
+
+	/* .consult__col */
+	&__col
+		+media-breakpoint-up(md)
+			flex: 0 0 calc( 50% - 8px )
+
+	/* .consult__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_accent
+		padding: 30px 20px
+		+media-breakpoint-up(sm)
+			padding: 36px
+
+	/* .consult__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 20px
+		color: $text
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .consult__item-text */
+	&__item-text
+		margin-bottom: 24px
+		min-height: 80px
+
+	/* .consult__item-row */
+	&__item-row
+		display: flex
+		gap: 8px
+		flex-direction: column
+		+media-breakpoint-up(xl)
+			flex-direction: row
+	/* .consult__item-btn	 */
+	&__item-btn
+		flex: 1
+
+.service
+	padding-bottom: 30px
+	+media-breakpoint-up(sm)
+		padding-bottom: 60px
+	/* .service__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+
+	/* .service__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(xl)
+			flex: 0 0 calc( 33.3333% - 11px )
+
+	/* .service__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_blue
+		padding: 30px 20px
+		display: block
+		height: 100%
+		&:hover
+			text-decoration: none
+		+media-breakpoint-up(sm)
+			padding: 36px
+	&__item_gradient
+		background: linear-gradient(136deg, #5da0df 0%, #8cc0f1 100%)
+		.service__item-title
+			color: #fff
+		.service__item-text
+			color: #fff
+	/* .service__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 22px
+		line-height: 146%
+		color: #3c5673
+
+	/* .service__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+		margin-bottom: 26px
+		margin-top: 8px
+
+	/* .service__item-list */
+	&__item-list
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+
+	/* .service__item-list-el */
+	&__item-list-el
+		color: $blue
+		background-color: #fff
+		border-radius: 37px
+		padding: 4px 16px
+		font-size: 14px
+		&:hover
+			color: $blue
+
+.inner-block
+	/* .inner-block__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			flex-direction: row
+	/* .inner-block__col */
+	&__col
+		flex: 0 0 calc(50% - 8px)
+
+	/* .inner-block__title */
+	&__title
+		font-weight: 700
+		font-size: 20px
+		color: $text
+		margin-bottom: 22px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .inner-block__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		color: $text
+		margin-bottom: 32px
+
+.advantages-inner
+	/* .advantages-inner__row */
+	&__row
+		display: flex
+		gap: 16px
+		flex-wrap: wrap
+
+	/* .advantages-inner__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+
+	/* .advantages-inner__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_blue
+		padding: 24px
+		height: 100%
+		transition: all .35s ease-out
+		&:hover
+			background-color: $light_accent
+			.advantages-inner__item-title-svg
+				fill: $accent
+
+	/* .advantages-inner__item-title-svg */
+	&__item-title-svg
+		height: 17px
+		width: 17px
+		flex: 0 0 17px
+		margin-right: 8px
+		fill: $blue
+		transition: all .35s ease-out
+
+	/* .advantages-inner__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 14px
+		color: $text
+		margin-bottom: 16px
+		display: flex
+		align-items: center
+
+	/* .advantages-inner__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: $text
+
+.inner-service
+	/* .inner-service__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+
+	/* .inner-service__col */
+	&__col
+		// flex: 0 0 100%
+		flex: 0 0 calc(50% - 8px )
+		max-width: calc(50% - 8px )
+		+media-breakpoint-up(sm)
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 33.333% - 11px )
+			max-width: calc( 33.333% - 11px )
+		+media-breakpoint-up(xl)
+			flex: 0 0 calc( 25% - 12px )
+			max-width: calc( 25% - 12px )
+
+	/* .inner-service__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_blue
+		padding: 16px
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+media-breakpoint-up(sm)
+			padding: 20px 18px
+	&__item_orange
+		background-color: $light_accent
+		.inner-service__item-btn
+			color: $accent
+			&:hover
+				background-color: $accent
+				color: #fff
+	/* .inner-service__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 16px
+		line-height: 120%
+		color: #3c5673
+		margin-bottom: 18px
+		min-height: 57px
+		overflow: hidden
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		display: -webkit-box
+		+media-breakpoint-up(sm)
+			-webkit-line-clamp: 3
+			min-height: 72px
+			max-height: 72px
+			font-size: 20px
+
+	/* .inner-service__item-btn */
+	&__item-btn
+		width: 100%
+		background-color: #fff
+		color: $blue
+		font-weight: 600
+		font-size: 14px
+		border-radius: 41px
+		display: inline-block
+		text-align: center
+		padding: 10px 0
+		transition: all .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: $blue
+			color: #fff
+
+.service-more
+	/* .service-more__row */
+	&__row
+		display: flex
+		gap: 16px
+		// overflow: auto
+		padding-bottom: 8px
+		flex-wrap: wrap
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			flex-direction: row
+	/* .service-more__col */
+	&__col
+		flex: 0 0 calc( 33.3333% - 11px )
+
+	/* .service-more__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_blue
+		padding: 24px
+		min-width: 314px
+		height: 100%
+		display: block
+		&:hover
+			text-decoration: none
+		h3
+			font-weight: 700
+			font-size: 20px
+			line-height: 146%
+			color: #3c5673
+			margin-bottom: 8px
+			+media-breakpoint-up(sm)
+				font-size: 24px
+		p
+			font-weight: 400
+			font-size: 14px
+			color: #3c5673
+
+	/* .service-more__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 20px
+		line-height: 146%
+		color: #3c5673
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .service-more__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+
+.checkup-page
+	margin-bottom: 24px
+	/* .checkup-page__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		overflow: auto
+
+	/* .checkup-page__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 33.333% - 11px )
+
+.checkup-item
+	padding: 18px
+	border-radius: 16px
+	background-color: $light_blue
+	display: block
+	height: 100%
+	&:hover
+		text-decoration: none
+	+media-breakpoint-up(sm)
+		padding: 24px
+	+media-breakpoint-up(xl)
+		padding: 32px
+	/* .checkup-item__img */
+	&__img
+		margin-bottom: 24px
+		width: 100%
+		aspect-ratio: 4/3
+		object-fit: cover
+
+	/* .checkup-item__name */
+	&__name
+		font-weight: 600
+		color: #3c5673
+		margin-bottom: 24px
+		display: block
+		line-height: 120%
+		font-size: 18px
+		&:hover
+			text-decoration: none
+			color: #3c5673
+		+media-breakpoint-up(sm)
+			font-size: 20px
+		+media-breakpoint-up(md)
+			font-size: 24px
+
+	/* .checkup-item__cat-item */
+	&__cat-item
+
+		font-weight: 700
+		font-size: 12px
+		color: #5baaff
+		border-radius: 24px
+		padding: 6px 16px
+		background: #eef5ff
+		align-self: start
+		cursor: pointer
+	/* .checkup-item__cat */
+	&__cat
+		font-weight: 500
+		font-size: 14px
+		color: $blue
+		margin-bottom: 12px
+		display: flex
+		flex-wrap: wrap
+
+	/* .checkup-item__row */
+	&__row
+		display: flex
+		gap: 8px
+		flex-wrap: wrap
+
+	/* .checkup-item__call */
+	&__call
+		font-weight: 400
+		font-size: 14px
+		line-height: 157%
+		color: $blue
+		border-radius: 38px
+		padding: 10px 23px
+		background-color: #fff
+		cursor: pointer
+		transition: all .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: $blue
+			color: #fff
+
+	/* .checkup-item__btn */
+	&__btn
+		border-radius: 38px
+		padding: 0px 23px
+		height: 40px
+		font-weight: 700
+		font-size: 14px
+		line-height: 157%
+		color: #fff
+		background-color: $blue
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border: 1px solid $blue
+		transition: all .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: transparent
+			color: $blue
+	/* .checkup-item__name-small */
+	&__name-small
+		font-weight: 700
+		font-size: 18px
+		color: #262626
+		margin-bottom: 16px
+
+	/* .checkup-item__text-small */
+	&__text-small
+		font-weight: 400
+		font-size: 16px
+		line-height: 150%
+		color: #3c5673
+
+.doctor-filter
+	display: flex
+	gap: 16px
+	flex-wrap: wrap
+	margin-bottom: 32px
+	align-items: center
+	.select
+		&:nth-child(1), &:nth-child(2)
+			width: calc(50% - 8px)
+		&:nth-child(3)
+			width: 100%
+		+media-breakpoint-up(sm)
+			&:nth-child(1), &:nth-child(2),&:nth-child(3)
+				width: auto
+	&_w100
+		.select
+			width: 100%
+			&:nth-child(1), &:nth-child(2)
+				width: 100%
+			+media-breakpoint-up(sm)
+				width: auto
+				&:nth-child(1), &:nth-child(2)
+					width: auto
+
+	.btn
+		height: 58px
+	/* .doctor-filter__item */
+	&__item
+		display: flex
+		gap: 8px
+		align-items: center
+		background-color: $light_blue
+		padding: 8px 22px
+		border-radius: 26px
+		font-weight: 600
+		font-size: 14px
+		color: $blue
+		cursor: pointer
+		transition: all .35s ease-out
+		&:hover
+			background-color: $blue
+			color: #fff
+			.doctor-filter__item-svg
+				fill: #fff
+		+media-breakpoint-up(sm)
+			font-size: 16px
+			padding: 16px 32px
+			border-radius: 37px
+
+	/* .doctor-filter__item-svg */
+	&__item-svg
+		height: 22px
+		fill: $blue
+		width: 22px
+		flex: 0 0 22px
+		transition: all .35s ease-out
+		transform: rotate(90deg)
+
+.doctor
+	/* .doctor__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		overflow: auto
+	&__row_scroll
+		flex-wrap: nowrap
+		padding-bottom: 8px
+		.doctor-item
+			min-width: 320px
+
+	/* .doctor__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 33.333% - 11px )
+
+.doc-slider-pagination
+	text-align: center
+	margin-top: 12px
+
+.doctor-item
+	padding: 18px
+	border-radius: 16px
+	background-color: $light_blue
+
+	+media-breakpoint-up(sm)
+		padding: 24px
+		height: 100%
+	+media-breakpoint-up(xl)
+		padding: 32px
+	/* .doctor-item__block */
+	&__block
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	/* .doctor-item__img */
+	&__img
+		margin-bottom: 24px
+		width: 100%
+
+	/* .doctor-item__name */
+	&__name
+		font-weight: 600
+		color: #3c5673
+		margin-bottom: 12px
+		line-height: 120%
+		font-size: 18px
+		display: block
+		&:hover
+			color: #3c5673
+			text-decoration: none
+		+media-breakpoint-up(sm)
+			font-size: 20px
+			min-height: 48px
+		+media-breakpoint-up(md)
+			font-size: 24px
+			min-height: 59px
+
+	/* .doctor-item__pos */
+	&__pos
+		font-weight: 500
+		font-size: 14px
+		color: #3c5673
+		margin-bottom: 14px
+
+	/* .doctor-item__row */
+	&__row
+		display: flex
+		gap: 8px
+		flex-wrap: wrap
+
+	/* .doctor-item__exp */
+	&__exp
+		font-weight: 400
+		font-size: 14px
+		line-height: 157%
+		color: #5c9fde
+		border-radius: 38px
+		padding: 10px 23px
+		background-color: #fff
+	/* .doctor-item__btn */
+	&__btn
+		border-radius: 38px
+		padding: 0px 23px
+		height: 40px
+		font-weight: 700
+		font-size: 14px
+		line-height: 157%
+		color: #fff
+		background-color: $blue
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border: 1px solid $blue
+		transition: all .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: transparent
+			color: $blue
+			.doctor-item__btn-svg
+				fill: $blue
+	&__btn_w100
+		width: 100%
+	&__btn-svg
+		fill: #fff
+		margin-left: 8px
+		transition: all .35s ease-out
+	/* .doctor-item__labels */
+	&__labels
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+		margin-bottom: 18px
+	/* .doctor-item__label */
+	&__label
+		font-weight: 600
+		font-size: 12px
+		color: #5c9fde
+		background: rgba(92, 159, 222, 0.11)
+		border-radius: 37px
+		padding: 4px 16px
+	&__label_orange
+		color: $accent
+		background-color: $light_accent
+
+.duration-inner
+	border-radius: 0 16px 16px 16px
+	background-color: #f2f5f9
+	padding: 18px
+	+media-breakpoint-up(sm)
+		padding: 24px
+	/* .duration-inner__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+
+	/* .duration-inner__item */
+	&__item
+		// flex: 0 0 100%
+		// +media-breakpoint-up(sm)
+		flex: 0 0 calc(50% - 8px)
+
+	/* .duration-inner__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 14px
+		color: #3c5673
+		margin-bottom: 8px
+
+	/* .duration-inner__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+
+	/* .duration-inner__item-svg */
+	&__item-svg
+		height: 16px
+		width: 16px
+		fill: $blue
+		margin-right: 6px
+
+.service-price
+	border-radius: 16px
+	background-color: $light_accent
+	padding: 16px
+	display: flex
+	// flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	gap: 16px
+	&:hover
+		text-decoration: none
+	+media-breakpoint-up(sm)
+		padding: 24px
+	/* .service-price__text-block */
+	&__text-block
+
+	/* .service-price__title */
+	&__title
+		font-weight: 700
+		font-size: 14px
+		color: $text
+
+	/* .service-price__text */
+	&__text
+		margin-top: 8px
+		font-weight: 400
+		font-size: 14px
+		color: $text
+		display: none
+
+	/* .service-price__price-block */
+	&__price-block
+		display: flex
+		align-items: center
+		// flex-wrap: wrap
+		gap: 8px
+	/* .service-price__price-all */
+	&__price-all
+		font-weight: 700
+		font-size: 12px
+		color: #ff7009
+		background-color: #fff
+		border-radius: 37px
+		padding: 9px 16px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	/* .service-price__price */
+	&__price
+		font-weight: 700
+		font-size: 16px
+		color: $accent
+		flex: 0 0 80px
+		text-align: right
+		+media-breakpoint-up(sm)
+			font-size: 20px
+			flex: 0 0 110px
+		+media-breakpoint-up(md)
+			flex: 0 0 120px
+			font-size: 24px
+
+.main
+	/* .main__row */
+	&__row
+		flex-direction: column
+		display: flex
+		margin-bottom: 16px
+		+media-breakpoint-up(lg)
+			display: flex
+			flex-direction: row
+			margin: 0 -8px
+			margin-bottom: 16px
+
+	/* .main__left */
+	&__left
+		margin-bottom: 24px
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+			flex: 0 0 416px
+			padding: 0 8px
+
+	/* .main__right */
+	&__right
+		padding: 0 8px
+		flex: 0 1 100%
+		min-width: 1px
+
+.sidebar
+	border-radius: 0 32px 32px 32px
+	background-color: $light_accent
+	padding: 20px
+	margin-bottom: 16px
+	.sidebar__block
+		background-color: $light_accent
+	+media-breakpoint-up(md)
+		padding: 24px
+	&_blue
+		background-color: $light_blue
+		.sidebar__btn
+			background-color: $blue
+		.sidebar__block
+			background-color: $light_blue
+		.sidebar__item
+			&.active
+				color: #fff
+				background-color: $blue
+				.sidebar__item-svg
+					opacity: 1
+			&:hover
+				background-color: $blue
+	/* .sidebar__title */
+	&__title
+		font-weight: 600
+		font-size: 20px
+		color: $text
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .sidebar__item-text */
+	&__item-text
+	/* .sidebar__btn-svg */
+	&__btn-svg
+		height: 24px
+		width: 24px
+		fill: #fff
+		opacity: 1
+		transition: all .35s ease-out
+	/* .sidebar__item-svg */
+	&__item-svg
+		height: 24px
+		width: 24px
+		fill: #fff
+		opacity: 0
+		transition: all .35s ease-out
+	/* .sidebar__btn */
+	&__btn
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 4px
+		flex-wrap: wrap
+		font-weight: 600
+		font-size: 16px
+		color: $text
+		padding: 8px 12px
+		border-radius: 46px
+		transition: all .35s ease-out
+		color: #fff
+		background-color: $accent
+		+media-breakpoint-up(lg)
+			display: none
+	/* .sidebar__block */
+	&__block
+		position: fixed
+		top: 0
+		left: 0
+		background: #fff
+		width: 100%
+		height: 100%
+		z-index: 20
+		overflow: auto
+		display: none
+		padding: 8px
+		&.active
+			display: block
+		+media-breakpoint-up(sm)
+
+			padding: 16px
+		+media-breakpoint-up(lg)
+			z-index: 4
+			padding: 0
+			display: block
+			position: relative
+			background-color: transparent
+	/* .sidebar__item */
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 4px
+		flex-wrap: wrap
+		font-weight: 600
+		font-size: 16px
+		color: $text
+		padding: 8px 12px
+		border-radius: 46px
+		transition: all .35s ease-out
+		background-color: transparent
+		&.active
+			color: #fff
+			background-color: $accent
+			.sidebar__item-svg
+				opacity: 1
+
+		&:hover
+			text-decoration: none
+			color: #fff
+			background-color: $accent
+			.sidebar__item-svg
+				opacity: 1
+
+.price-block
+	margin-bottom: 24px
+	.service-price
+		margin-bottom: 12px
+	/* .price-block__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		color: #262626
+		margin-bottom: 12px
+
+.analys
+	/* .analys__search-block */
+	&__search-block
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		margin-bottom: 8px
+		.inner-form
+			flex: 1
+			min-width: 300px
+
+	/* .analys__reset */
+	&__reset
+
+.search-item-js
+	&.is-hidden
+		display: none
+
+.analys-item
+	padding: 8px
+	background-color: $light_blue
+	border-radius: 16px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 16px
+	padding-right: 16px
+	cursor: pointer
+	margin-bottom: 8px
+	transition: background-color .35s ease-out
+	flex-wrap: wrap
+	+media-breakpoint-up(sm)
+		flex-wrap: nowrap
+
+	&.selected
+		.analys-item__check-svg
+			opacity: 1
+	&:hover
+		background-color: #e4ebf3
+	+media-breakpoint-up(sm)
+		gap: 24px
+		padding-right: 24px
+	/* .analys-item__check-svg */
+	&__check-svg
+		height: 24px
+		width: 24px
+		fill: $blue
+		opacity: 0
+		transition: all .35s ease-out
+	/* .analys-item__check-block */
+	&__check-block
+		height: 30px
+		width: 30px
+		flex: 0 0 30px
+		background-color: #fff
+		border-radius: 8px
+		display: flex
+		align-items: center
+		justify-content: center
+		order: 0
+		+media-breakpoint-up(sm)
+			height: 40px
+			width: 40px
+			flex: 0 0 40px
+
+	/* .analys-item__text */
+	&__text
+		font-weight: 400
+		font-size: 12px
+		color: #3c5673
+		display: none
+		// word-break: break-all
+	/* .analys-item__title-block */
+	&__title-block
+		flex: 1 1 100%
+		order: 2
+		+media-breakpoint-up(sm)
+			flex: 1
+			order: 0
+	/* .analys-item__title */
+	&__title
+		font-weight: 700
+		font-size: 14px
+		color: #3c5673
+		flex: 1
+		// word-break: break-all
+
+	/* .analys-item__price */
+	&__price
+		font-weight: 700
+		font-size: 14px
+		color: $blue
+		flex: 0 0 70px
+		text-align: right
+		order: 1
+		+media-breakpoint-up(sm)
+			order: 2
+
+.sidebar-calc
+	background-color: $light_accent
+	border-radius: 16px
+	padding: 16px
+	+media-breakpoint-up(sm)
+		border-radius: 32px
+		padding: 24px
+	/* .sidebar-calc__title */
+	&__title
+		font-weight: 600
+		font-size: 20px
+		color: $text
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .sidebar-calc__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+		margin-bottom: 24px
+
+	/* .sidebar-calc__price */
+	&__price
+		font-weight: 700
+		font-size: 28px
+		color: $accent
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 40px
+
+	/* .sidebar-calc__see */
+	&__see
+		color: $accent
+
+.programm
+	/* .programm__item */
+	&__item
+		display: flex
+		align-items: flex-start
+		margin-bottom: 16px
+		gap: 8px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			gap: 30px
+			flex-direction: row
+		+media-breakpoint-up(xl)
+			gap: 120px
+
+	/* .programm__item-title-block */
+	&__item-title-block
+		border-radius: 16px
+		background-color: $light_accent
+		display: flex
+		align-items: center
+		gap: 16px
+		padding: 16px
+		width: 100%
+		+media-breakpoint-up(md)
+			padding: 24px
+			flex: 0 0 308px
+		svg
+			width: 34px
+			height: 34px
+			flex: 0 0 34px
+
+	/* .programm__item-title-svg */
+	&__item-title-svg
+		width: 34px
+		height: 34px
+		flex: 0 0 34px
+
+	/* .programm__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 18px
+		line-height: 130%
+		color: $text
+		+media-breakpoint-up(sm)
+			font-size: 20px
+
+	/* .programm__item-text */
+	&__item-text
+
+.checkup-how
+	margin-bottom: 24px
+	/* .checkup-how__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		overflow: auto
+
+	/* .checkup-how__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 33.333% - 11px )
+
+	/* .checkup-how__item */
+	&__item
+		border-radius: 16px
+		background-color: $light_blue
+		padding: 24px
+		min-width: 314px
+		height: 100%
+
+	/* .checkup-how__item-number */
+	&__item-number
+		font-weight: 900
+		font-size: 64px
+		line-height: 100%
+		margin-bottom: 12px
+		color: rgba(60, 86, 115, 0.17)
+		font-family: 'Quartal', sans-serif
+
+	/* .checkup-how__item-title */
+	&__item-title
+		font-weight: 700
+		color: #3c5673
+		margin-bottom: 8px
+		font-size: 20px
+		line-height: 110%
+
+	/* .checkup-how__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: #3c5673
+
+.checkup-block
+	/* .checkup-block__bg-img */
+	&__bg-img
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+			position: absolute
+			bottom: 0
+			right: 0
+			max-width: 500px
+		+media-breakpoint-up(xl)
+			max-width: initial
+
+	/* .checkup-block__block */
+	&__block
+		position: relative
+		// background: radial-gradient(29.71% 205.2% at 52.2% 40.75%,#ffb681 0,#ff7009 100%)
+		background: radial-gradient(circle, #ffb681, #ffa666, #ff954b, #ff8330, #ff7009)
+
+		border-radius: 0 32px 32px 32px
+		padding: 30px 20px
+		background-size: contain
+		padding: 20px
+		+media-breakpoint-up(sm)
+			padding: 50px
+		+media-breakpoint-up(lg)
+			padding: 90px
+
+	/* .checkup-block__title */
+	&__title
+		font-weight: 600
+		font-size: 28px
+		line-height: 120%
+		color: #fff
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			font-size: 38px
+		+media-breakpoint-up(md)
+			font-size: 48px
+			margin-bottom: 70px
+
+	/* .checkup-block__subtitle */
+	&__subtitle
+		font-weight: 700
+		font-size: 20px
+		line-height: 104%
+		color: #fff
+		margin-bottom: 32px
+		max-width: 568px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .checkup-block__text */
+	&__text
+		font-weight: 600
+		font-size: 16px
+		color: #fff
+		max-width: 642px
+		margin-bottom: 32px
+
+.inner-doc
+	margin-top: 16px
+	/* .inner-doc__row */
+	&__row
+		+media-breakpoint-up(lg)
+			display: flex
+			justify-content: space-between
+
+	/* .inner-doc__left */
+	&__left
+		display: flex
+		gap: 12px
+		margin-bottom: 24px
+		flex-direction: column
+		+media-breakpoint-up(sm)
+			gap: 30px
+			flex-direction: row
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+		+media-breakpoint-up(xl)
+			gap: 60px
+
+	/* .inner-doc__img-block */
+	&__img-block
+
+	/* .inner-doc__img */
+	&__img
+		border-radius: 16px
+		+media-breakpoint-up(sm)
+			max-width: 310px
+
+	/* .inner-doc__name-block */
+	&__name-block
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	/* .inner-doc__pos */
+	&__pos
+		margin-top: 20px
+		font-weight: 500
+		font-size: 16px
+		color: #fff
+
+	/* .inner-doc__items */
+	&__items
+		display: flex
+		gap: 8px
+		flex-wrap: wrap
+	&__items_mb
+		margin-bottom: 8px
+
+	/* .inner-doc__items-el */
+	&__items-el
+		font-weight: 600
+		font-size: 12px
+		color: $blue
+		border-radius: 37px
+		padding: 6px 16px 4px 16px
+		background-color: #fff
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	&__items-el_orange
+		color: $accent
+	&__items-el_opacity
+		background-color: rgba(255, 255, 255, 0.2)
+		color: #fff
+
+	/* .inner-doc__right */
+	&__right
+		+media-breakpoint-up(lg)
+			flex: 0 0 270px
+
+	/* .inner-doc__callback-text */
+	&__callback-text
+		font-weight: 700
+		font-size: 14px
+		color: #fff
+		margin-bottom: 8px
+		text-align: right
+		+media-breakpoint-up(lg)
+
+.appointment
+	/* .appointment__row */
+	&__row
+		display: flex
+		justify-content: space-between
+		gap: 30px
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			flex-direction: row
+		+media-breakpoint-up(xl)
+			gap: 72px
+
+	/* .appointment__left */
+	&__left
+		flex: 1
+
+	/* .appointment__block */
+	&__block
+		border-radius: 16px 16px 0 0
+		background-color: $light_accent
+		padding: 30px 20px
+		+media-breakpoint-up(sm)
+			padding: 36px
+
+	/* .appointment__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		line-height: 204%
+		color: $text
+		margin-bottom: 16px
+
+	/* .appointment__scroll */
+	&__scroll
+		max-height: 260px
+		overflow: auto
+
+	/* .appointment__right */
+	&__right
+		+media-breakpoint-up(lg)
+			flex: 0 0 360px
+			text-align: right
+
+	/* .appointment__img */
+	&__img
+
+	/* .appointment__q-title */
+	&__q-title
+		font-weight: 700
+		font-size: 24px
+		line-height: 129%
+		color: #3c5673
+		margin-bottom: 12px
+		max-width: 300px
+		+media-breakpoint-up(lg)
+			text-align: right
+			margin-left: auto
+
+	/* .appointment__q-text */
+	&__q-text
+		font-weight: 400
+		font-size: 16px
+		color: #3c5673
+		max-width: 360px
+		margin-bottom: 8px
+		+media-breakpoint-up(lg)
+			text-align: right
+
+	/* .appointment__q-text-blue */
+	&__q-text-blue
+		font-weight: 400
+		font-size: 16px
+		color: $blue
+		max-width: 360px
+		margin-bottom: 12px
+		+media-breakpoint-up(lg)
+			text-align: right
+	/* .appointment__bottom */
+	&__bottom
+		background: linear-gradient(90deg, #ff7009 0%, #ff9f59 69.83%, #ff7009 100%)
+		border-radius: 0 0 16px 16px
+		padding: 30px 20px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+media-breakpoint-up(sm)
+			padding: 36px
+
+	/* .appointment__btn */
+	&__btn
+		font-weight: 700
+		font-size: 14px
+		color: #ff7009
+		background-color: #fff
+		border-radius: 41px
+		padding: 12px 50px
+		&:hover
+			text-decoration: none
+	/* .appointment__bottom-text */
+	&__bottom-text
+		font-weight: 600
+		font-size: 16px
+		color: #fff
+
+.appointment-item
+	padding: 8px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 16px
+	cursor: pointer
+	transition: background-color .35s ease-out
+	border-bottom: 1px solid #ead4c6
+	+media-breakpoint-up(sm)
+		gap: 24px
+	/* .appointment-item__check-block */
+	&__check-block
+		height: 30px
+		width: 30px
+		flex: 0 0 30px
+		background-color: #fff
+		border-radius: 8px
+		display: flex
+		align-items: center
+		justify-content: center
+		+media-breakpoint-up(sm)
+			height: 40px
+			width: 40px
+			flex: 0 0 40px
+
+	/* .appointment-item__title */
+	&__title
+		font-weight: 600
+		font-size: 16px
+		color: $text
+	/* .appointment-item__title-block */
+	&__title-block
+		flex: 1
+
+	/* .appointment-item__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		color: #c4aa98
+
+	/* .appointment-item__price */
+	&__price
+		font-weight: 700
+		font-size: 14px
+		color: $accent
+		flex: 0 0 65px
+	/* .appointment-item__svg */
+	&__svg
+		height: 24px
+		width: 24px
+		fill: $accent
+		opacity: 0
+
+.about-first
+	margin-bottom: 16px
+	/* .about-first__row */
+	&__row
+		display: flex
+		flex-direction: column
+		gap: 16px
+		+media-breakpoint-up(lg)
+			flex-direction: row
+	/* .about-first__col */
+	&__col
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc(50% - 8px)
+	&__col_nalog
+		text-align: center
+		.about-first__img
+			max-width: 470px
+
+	/* .about-first__img */
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: 0 16px 16px 16px
+
+	/* .about-first__text */
+	&__text
+
+.about-numbers
+	/* .about-numbers__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+	/* .about-numbers__col */
+	&__col
+		flex: 0 0 calc(50% - 8px)
+		max-width: calc(50% - 8px)
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc(25% - 12px)
+	&__col_f100
+		flex: 0 0 100%
+		max-width: 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc(50% - 8px)
+			max-width: calc(50% - 8px)
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc(25% - 12px)
+
+	/* .about-numbers__item */
+	&__item
+		background-color: #f2f5f9
+		padding: 24px
+		border-radius: 0 16px 16px 16px
+
+	/* .about-numbers__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 24px
+		line-height: 125%
+		color: #3c5673
+		+media-breakpoint-up(sm)
+			font-size: 53px
+
+	/* .about-numbers__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 12px
+		color: #3c5673
+		min-height: 47px
+		+media-breakpoint-up(sm)
+			font-size: 14px
+	/* .about-numbers__text */
+	&__text
+		font-size: 14px
+		color: $blue2
+		margin-top: 16px
+
+.about-info
+	/* .about-info__row */
+	&__row
+		display: flex
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			flex-direction: row
+
+	/* .about-info__col */
+	&__col
+		flex: 0 0 calc(33.333% - 12px)
+
+	/* .about-info__item */
+	&__item
+		display: flex
+		align-items: center
+		gap: 8px
+		background-color: $light_accent
+		border-radius: 16px
+		padding: 28px 32px
+		transition: background-color .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: $light_blue
+
+	/* .about-info__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		color: #262626
+		+media-breakpoint-up(sm)
+			font-size: 32px
+
+.license-block
+	border-radius: 0 16px 16px 16px
+	background-color: $light_blue
+	padding: 16px
+	margin-bottom: 18px
+	+media-breakpoint-up(sm)
+		padding: 32px
+	/* .license-block__row */
+	&__row
+		display: flex
+		flex-direction: column
+		gap: 16px
+		+media-breakpoint-up(md)
+			gap: 0
+			flex-direction: row
+			margin: 0 -8px
+	/* .license-block__col */
+	&__col
+		+media-breakpoint-up(md)
+			flex: 0 0 50%
+			padding: 0 8px
+	/* .license-block__item */
+	&__item
+		// display: flex
+		margin-bottom: 16px
+		// gap: 16px
+
+	/* .license-block__title */
+	&__title
+		font-weight: 700
+		font-size: 12px
+		color: #3c5673
+		flex: 0 0 50%
+		+media-breakpoint-up(sm)
+			font-size: 16px
+		+media-breakpoint-up(md)
+			flex: 0 0 350px
+
+	/* .license-block__text */
+	&__text
+		font-weight: 400
+		font-size: 12px
+		color: #3c5673
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+.about-documents
+	padding-bottom: 46px
+	margin-bottom: 46px
+	border-bottom: 1px solid rgba(169, 182, 197, 0.38)
+	/* .about-documents__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			flex-direction: row
+
+	/* .about-documents__col */
+	&__col
+		flex: 0 0 calc( 50% - 8px )
+
+	/* .about-documents__item */
+	&__item
+		display: inline-flex
+		gap: 8px
+		align-items: center
+		border-radius: 41px
+		padding: 12px 36px
+		background: $light_accent
+		&:hover
+			text-decoration: none
+	/* .about-documents__item-svg */
+	&__item-svg
+		flex: 0 0 24px
+	/* .about-documents__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 14px
+		color: #262626
+
+.about-license
+	/* .about-license__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		flex-direction: column
+		+media-breakpoint-up(md)
+			flex-direction: row
+
+	/* .about-license__col */
+	&__col
+
+	/* .about-license__item */
+	&__item
+		display: inline-flex
+		gap: 8px
+		align-items: center
+		border-radius: 41px
+		padding: 12px 36px
+		background: $light_blue
+		&:hover
+			text-decoration: none
+
+	/* .about-license__item-svg */
+	&__item-svg
+		flex: 0 0 24px
+
+	/* .about-license__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 14px
+		color: #262626
+
+.news
+	/* .news__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -4px
+		+media-breakpoint-up(sm)
+			margin: 0 -8px
+
+	/* .news__col */
+	&__col
+		flex: 0 0 50%
+		padding: 0 4px
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			padding: 0 8px
+		+media-breakpoint-up(lg)
+			flex: 0 0 25%
+	&__col_50
+		flex: 0 0 100%
+		+media-breakpoint-up(lg)
+			flex: 0 0 50%
+
+.news-item
+	position: relative
+	z-index: 1
+	display: block
+	&:hover
+		text-decoration: none
+	/* .news-item__cat */
+	&__cat
+		position: absolute
+		z-index: 2
+		top: 20px
+		right: 20px
+		background: $light_accent
+		border-radius: 37px
+		padding: 4px 16px
+		font-weight: 600
+		font-size: 8px
+		color: $accent
+		+media-breakpoint-up(sm)
+			font-size: 12px
+
+	/* .news-item__img */
+	&__img
+		width: 100%
+		object-fit: cover
+		height: 190px
+		margin-bottom: 16px
+		border-radius: 16px
+		+media-breakpoint-up(sm)
+			height: 350px
+
+	/* .news-item__text */
+	&__text
+		font-weight: 400
+		font-size: 12px
+		line-height: 137%
+		color: #3c5673
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	/* .news-item__title */
+	&__title
+		font-weight: 600
+		color: #3c5673
+		margin-bottom: 8px
+
+	/* .news-item__date */
+	&__date
+		font-weight: 600
+		font-size: 10px
+		color: #5c9fde
+		border-radius: 37px
+		padding: 4px 16px
+		background: rgba(92, 159, 222, 0.11)
+		display: inline-block
+		+media-breakpoint-up(sm)
+			font-size: 12px
+
+.contacts-map
+	position: relative
+	z-index: 1
+	iframe
+		height: 360px
+	+media-breakpoint-up(sm)
+	+media-breakpoint-up(md)
+		height: 500px
+		iframe
+			height: 100%
+	/* .contacts-map__block */
+	&__block
+		background-color: #fff
+		box-shadow: 0 0 18px 0 rgba(60, 86, 115, 0.24)
+		border-radius: 16px
+		padding: 16px
+		margin-bottom: 32px
+		+media-breakpoint-up(md)
+			padding: 32px
+			margin-bottom: 0
+			position: absolute
+			top: 30px
+			left: 30px
+			z-index: 2
+
+	/* .contacts-map__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		line-height: 258%
+		color: #3c5673
+
+	/* .contacts-map__item */
+	&__item
+		display: flex
+		gap: 30px
+		&:not(:last-child)
+			margin-bottom: 30px
+
+	/* .contacts-map__item-title */
+	&__item-title
+		font-weight: 400
+		font-size: 14px
+		color: #a9b6c5
+
+	/* .contacts-map__item-value */
+	&__item-value
+		font-weight: 600
+		font-size: 16px
+		color: #3c5673
+		a
+			color: #3c5673
+			&:hover
+				color: #3c5673
+
+.clinic
+	/* .clinic__row */
+	&__row
+		display: flex
+		margin: 0 -8px
+		flex-wrap: wrap
+
+	/* .clinic__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+
+	/* .clinic__item-top */
+	&__item-top
+		padding: 30px
+		padding-bottom: 0
+	/* .clinic__item */
+	&__item
+		background: $light_blue
+		border-radius: 16px
+		overflow: hidden
+		transition: background-color .35s ease-out
+		&:hover
+			background-color: $light_accent
+
+	/* .clinic__img */
+	&__img
+		width: 100%
+		object-fit: cover
+		max-height: 250px
+
+.anketa
+	border-radius: 32px
+	background-color: $light_accent
+	padding: 30px
+	margin-bottom: 16px
+	/* .anketa__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		color: #262626
+		margin-bottom: 8px
+
+	/* .anketa__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		justify-content: space-between
+
+	/* .anketa__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+		max-width: 336px
+
+	/* .anketa__btn */
+	&__btn
+		font-weight: 600
+		font-size: 14px
+		color: #ff7009
+		border-radius: 41px
+		background-color: #fff
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 12px 30px
+		width: 230px
+		transition: all .35s ease-out
+		&:hover
+			color: #fff
+			background-color: $accent
+			text-decoration: none
+
+.vakansia
+	border-radius: 16px
+	background-color: $light_blue
+	padding: 20px 25px
+	margin-bottom: 8px
+	/* .vakansia__row */
+	&__row
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 16px
+
+	/* .vakansia__left */
+	&__left
+
+	/* .vakansia__title */
+	&__title
+		font-weight: 700
+		font-size: 14px
+		color: #3c5673
+		margin-bottom: 10px
+
+	/* .vakansia__labels */
+	&__labels
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+	/* .vakansia__label */
+	&__label
+		font-weight: 600
+		font-size: 12px
+		color: #5c9fde
+		background: rgba(92, 159, 222, 0.11)
+		border-radius: 37px
+		padding: 4px 16px
+	&__label_orange
+		color: $accent
+		background-color: $light_accent
+
+	/* .vakansia__right */
+	&__right
+
+	/* .vakansia__btn */
+	&__btn
+		font-weight: 700
+		font-size: 14px
+		line-height: 157%
+		color: #fff
+		background: $blue
+		border-radius: 38px
+		padding: 0px 23px
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 212px
+		transition: all .35s ease-out
+		&:hover
+			text-decoration: none
+			background-color: #fff
+			color: $blue
+
+.review-btn
+	font-weight: 700
+	font-size: 14px
+	color: #ff7009
+	border-radius: 41px
+	width: 234px
+	height: 42px
+	background-color: #fff
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	transition: all .35s ease-out
+	&:hover
+		text-decoration: none
+		color: $blue
+
+.review
+	/* .review__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
+		overflow: auto
+
+	/* .review__col */
+	&__col
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 33.333% - 11px )
+
+.review-item
+	border-radius: 0 16px 16px 16px
+	background-color: #f2f5f9
+	padding: 30px
+	/* .review-item__stars */
+	&__stars
+		display: flex
+		gap: 4px
+		margin-bottom: 12px
+
+	/* .review-item__svg */
+	&__svg
+		height: 20px
+		width: 20px
+		fill: #FFAE00
+
+	/* .review-item__text */
+	&__text
+		font-weight: 600
+		font-size: 14px
+		color: #3c5673
+
+	/* .review-item__bottom */
+	&__bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	/* .review-item__name */
+	&__name
+		font-weight: 800
+		font-size: 14px
+		color: #3c5673
+
+	/* .review-item__date */
+	&__date
+		font-weight: 600
+		font-size: 14px
+		text-align: right
+		color: #5c9fde
+
+.akcii
+	/* .akcii__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -4px
+		+media-breakpoint-up(sm)
+			margin: 0 -8px
+	/* .akcii__col */
+	&__col
+		padding: 0 4px
+		margin-bottom: 16px
+		flex: 0 0 100%
+		+media-breakpoint-up(lg)
+			flex: 0 0 50%
+
+.cooperation
+	/* .cooperation__row */
+	&__row
+		display: flex
+		margin: 0 -8px
+		flex-wrap: wrap
+	/* .cooperation__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+
+.cooperation-item
+	padding: 30px
+	background-color: $light_blue
+	border-radius: 0 16px 16px 16px
+	transition: all .35s ease-out
+	&:hover
+		background-color: $light_accent
+		.cooperation-item__svg path
+			fill: $accent
+	/* .cooperation-item__svg */
+	&__svg
+		margin-bottom: 30px
+		path
+			transition: all .35s ease-out
+			fill: $blue
+
+	/* .cooperation-item__title */
+	&__title
+		font-weight: 700
+		font-size: 20px
+		line-height: 110%
+		color: #3c5673
+		margin-bottom: 24px
+
+	/* .cooperation-item__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		line-height: 137%
+		color: #3c5673
+		margin-bottom: 60px
+		ul
+			padding-left: 17px
+
+.nalog-how
+	&_blue
+		.nalog-how__item
+			background-color: $light_blue
+		.nalog-how__title
+			span
+				color: $blue
+		.nalog-how__item-svg
+			fill: $blue
+		.nalog-how__col
+			flex: 0 0 100%
+			+media-breakpoint-up(md)
+				flex: 0 0 33.333%
+		.nalog-how__col_large
+			+media-breakpoint-up(md)
+				flex: 0 0 66.667%
+
+	/* .nalog-how__title */
+	&__title
+		font-weight: 600
+		font-size: 20px
+		line-height: 122%
+		color: #262626
+		margin-bottom: 28px
+		span
+			color: $accent
+		+media-breakpoint-up(sm)
+			font-size: 32px
+
+	/* .nalog-how__row */
+	&__row
+		display: flex
+
+		display: flex
+		margin: 0 -8px
+		flex-wrap: wrap
+	/* .nalog-how__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		margin-bottom: 16px
+		+media-breakpoint-up(md)
+			flex: 0 0 25%
+
+	&__col_small
+
+	&__col_large
+		+media-breakpoint-up(md)
+			flex: 0 0 75%
+
+	/* .nalog-how__item */
+	&__item
+		border-radius: 0 16px 16px 16px
+		background-color: $light_accent
+		padding: 24px
+
+	/* .nalog-how__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 14px
+		color: #262626
+		margin-bottom: 20px
+
+	/* .nalog-how__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 14px
+		color: #262626
+
+	/* .nalog-how__item-text-row */
+	&__item-text-row
+		display: flex
+		flex-direction: column
+		gap: 30px
+		+media-breakpoint-up(sm)
+			flex-direction: row
+			gap: 60px
+		.nalog-how__item-text
+			flex: 1
+	&__item-svg
+		height: 17px
+		width: 17px
+		flex: 0 0 17px
+		margin-right: 8px
+		fill: $accent
+		transition: all .35s ease-out
+
+.nalog-title
+	font-weight: 600
+	font-size: 16px
+	line-height: 120%
+	color: #262626
+	margin-bottom: 24px
+	+media-breakpoint-up(sm)
+		font-size: 24px
+
+.form-message-response
+	position: fixed
+	right: 0
+	bottom: 0
+	font-weight: 600
+	color: #fff
+	z-index: 123
+	display: block
+	padding: 20px 30px
+	border-top-left-radius: 5px
+	margin: 0
+	transform: translateX(100%)
+	transition: transform .35s ease-out
+
+.form-message-response__success
+	background-color: rgb(76, 218, 100)
+
+.form-message-response__error
+	background-color: #CE2C2C
+
+.form-message-response.active
+	transform: translateX(0%)
+
+.drop-zone
+	max-width: 416px
+	height: 134px
+	padding: 8px
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	font-weight: 500
+	font-size: 16px
+	cursor: pointer
+	color: #cccccc
+	background-color: #f2f5f9
+	border-radius: 16px
+
+	&--over
+		border-style: solid
+	&__prompt
+		display: block
+		width: 100%
+	&__input
+		display: none
+
+	&__thumb
+		width: 118px
+		height: 100%
+		border-radius: 10px
+		overflow: hidden
+		background-color: #cccccc
+		background-size: cover
+		position: relative
+
+	&__thumb::after
+		content: attr(data-label)
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 5px 0
+		color: #ffffff
+		background: rgba(0, 0, 0, 0.75)
+		font-size: 14px
+		text-align: center
+
+.form
+	/* .form__input */
+	&__input
+		border-radius: 16px
+		background: $light_blue
+		width: 100%
+		border: none
+		padding: 18px 26px
+		font-size: 14px
+		border: 1px solid transparent
+		&:focus
+			outline: 0
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	&__input_white
+		background-color: #fff
+	&__input_h
+		height: 132px
+	/* .form__btn-block */
+	&__btn-block
+		display: flex
+		justify-content: flex-end
+		gap: 28px
+		margin-top: 50px
+		flex-direction: column-reverse
+		+media-breakpoint-up(sm)
+			align-items: center
+			flex-direction: row
+
+	/* .form__policy */
+	&__policy
+		font-weight: 400
+		flex: 1
+		font-size: 12px
+		color: #a9b6c5
+		+media-breakpoint-up(sm)
+			max-width: 379px
+	&__policy_white
+		color: #fff
+	/* .form__checkbox */
+	&__checkbox
+		display: inline-flex
+		align-items: center
+		gap: 10px
+		position: relative
+		cursor: pointer
+		margin-bottom: 16px
+
+	/* .form__checkbox-input */
+	&__checkbox-input
+		position: absolute
+		z-index: -1
+		opacity: 0
+
+		&:checked+.form__checkbox-box::before
+			// border-color: #454852
+			background-color: $light_blue
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235C9FDE' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+		&.error+.form__checkbox-box:before
+			border-color: rgb(218, 76, 76)
+
+	/* .form__checkbox-box */
+	&__checkbox-box
+		// height: 38px
+		// width: 38px
+		// background-color: $light_blue
+
+		display: inline-flex
+		align-items: center
+		user-select: none
+		margin: 0
+		&:before
+			content: ''
+			display: inline-block
+			width: 38px
+			height: 38px
+			flex-shrink: 0
+			border-radius: 8px
+			flex-grow: 0
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 50% 50%
+			background-color: $light_blue
+			border: 1px solid transparent
+
+	/* .form__checkbox-label */
+	&__checkbox-label
+		font-size: 14px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	/* .form__chechbox-row */
+	&__chechbox-row
+		display: flex
+		column-gap: 30px
+		row-gap: 10px
+		flex-wrap: wrap
+		margin-bottom: 10px
+
+.nalog-form
+	/* .nalog-form__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -8px
+		row-gap: 16px
+
+	/* .nalog-form__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 33.3333%
+	&__col_large
+		flex: 0 0 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 66.6667%
+
+.vakansia-form
+	/* .vakansia-form__row */
+	&__row
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		gap: 16px
+		+media-breakpoint-up(md)
+			max-height: 380px
+	/* .vakansia-form__col */
+	&__col
+	&__col_large
+		height: 140px
+
+.vakansia-dop
+	padding-top: 60px
+	/* .vakansia-dop__row */
+	&__row
+		// display: flex
+		// flex-direction: column
+		// flex-wrap: wrap
+		margin-bottom: 36px
+		+media-breakpoint-up(xl)
+			// max-height: 185px
+
+	/* .vakansia-dop__col */
+	&__col
+
+	/* .vakansia-dop__label */
+	&__label
+		font-size: 14px
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+.vakansia-family
+	padding-top: 60px
+
+.vakansia-family-item
+	border-radius: 16px
+	background-color: $light_blue
+	padding: 20px
+	margin-bottom: 12px
+	/* .vakansia-family-item__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -8px
+		row-gap: 16px
+	/* .vakansia-family-item__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 25%
+	&__col_large
+		+media-breakpoint-up(md)
+			flex: 0 0 50%
+	&__col_full
+		flex: 0 0 100%
+
+.vakansia-family-item-add
+	display: inline-flex
+	gap: 8px
+	font-weight: 700
+	font-size: 14px
+	line-height: 157%
+	color: #5c9fde
+	border: 1px solid rgba(169, 182, 197, 0.33)
+	border-radius: 38px
+	padding: 7px 23px
+	cursor: pointer
+	&_accent
+		color: $accent
+
+.vakansia-education
+	padding-top: 60px
+	/* .vakansia-education__row */
+	&__row
+		margin: 0 -8px
+		display: flex
+		flex-wrap: wrap
+
+	/* .vakansia-education__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		&:first-child
+			margin-bottom: 30px
+		+media-breakpoint-up(md)
+			flex: 0 0 50%
+			&:first-child
+				margin-bottom: 0
+
+.vakansia-education-item
+	border-radius: 16px
+	background-color: $light_accent
+	padding: 20px
+	margin-bottom: 12px
+	/* .vakansia-education-item__row */
+	&__row
+		margin: 0 -8px
+		display: flex
+		flex-wrap: wrap
+		row-gap: 16px
+
+	/* .vakansia-education-item__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+	&__col_half
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+
+.akcii-item
+	position: relative
+	z-index: 5
+	cursor: pointer
+	/* .akcii-item__modal */
+	&__modal
+		display: none
+		position: fixed
+		// background-color: rgba(19,19,19,.9)
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 5
+		overflow-y: scroll
+		padding: 80px 0px
+
+		background: #fff
+
+	/* .akcii-item__modal-block */
+	&__modal-block
+		margin-left: auto
+		margin-right: auto
+		background: #fff
+		max-width: 760px
+		// padding: 40px 30px
+		border-radius: 16px
+		// overflow: hidden
+		height: auto
+		position: relative
+		box-shadow: 0 4px 23px 0 rgba(169, 182, 197, 0.31)
+
+	/* .akcii-item__modal-img */
+	&__modal-img
+		width: 100%
+		max-height: 395px
+		object-fit: cover
+		border-top-left-radius: 16px
+		border-top-right-radius: 16px
+
+	/* .akcii-item__modal-close */
+	&__modal-close
+		position: absolute
+		right: -40px
+		top: -20px
+	/* .akcii-item__modal-text-block */
+	&__modal-text-block
+		padding: 40px
+
+.modal
+	position: fixed
+	z-index: 24
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	backdrop-filter: blur(15px)
+	background: rgba(28, 21, 31, 0.4)
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	overflow-y: scroll
+	display: none
+	+media-breakpoint-up(lg)
+		@media screen and ( min-height: 600px )
+			align-items: center
+	&.open
+		opacity: 1
+		display: flex
+		transition: opacity 300ms
+	&_center
+		align-items: center
+	/* .modal__block */
+	&__block
+		background-color: #fff
+		padding: 20px
+		max-width: 959px
+		width: 100%
+		position: relative
+		z-index: 1
+		border-radius: 12px
+		+media-breakpoint-up(sm)
+	 /* .modal__block_w700 */
+	&__block_w368
+		width: 90%
+		+media-breakpoint-up(sm)
+			width: 100%
+			max-width: 368px
+	&__block_callback
+		padding: 40px 20px
+		+media-breakpoint-up(sm)
+			padding: 40px 60px
+	&__block_w540
+		width: 90%
+		+media-breakpoint-up(sm)
+			width: 100%
+			max-width: 540px
+
+	/* .modal__close */
+	&__close
+		height: 24px
+		width: 24px
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		z-index: 20
+		right: 20px
+		top: 20px
+		cursor: pointer
+
+	/* .modal__close-svg */
+	&__close-svg
+
+	/* .modal__title */
+	&__title
+		font-weight: 600
+		font-size: 36px
+		line-height: 136%
+		color: #262626
+
+	/* .modal__text */
+	&__text
+		font-weight: 400
+		font-size: 14px
+		line-height: 129%
+		color: #262626
+		margin-bottom: 30px
+
+	/* .modal__title-form */
+	&__title-form
+		font-weight: 600
+		font-size: 24px
+		line-height: 204%
+		color: #262626
+
+.radio label, .checkbox label
+	padding-left: 0
+	margin: 0
+
+.filter-item
+	display: flex
+	align-items: center
+	gap: 8px
+	cursor: pointer
+	/* .filter-item__input */
+	&__input
+		position: absolute
+		opacity: 0
+		&:checked+.filter-item__input-custom
+			border: 1px solid #f96a13
+			background-color: #f96a13
+			fill: #fff
+	/* .filter-item__input-custom */
+	&__input-custom
+		display: block
+		position: relative
+		background-color: #fff
+		border: 1px solid rgba(0, 0, 0, .5)
+		fill: transparent
+		width: 14px
+		height: 14px
+		flex: 0 0 14px
+		border-radius: 2px
+
+	/* .filter-item__input-custom-svg */
+	&__input-custom-svg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+		width: 10px
+		height: 10px
+		display: block
+
+	/* .filter-item__text */
+	&__text
+
+.select
+	position: relative
+	&_filter
+		label
+			// display: block
+		.select__list-item
+			padding: 13px 8px 0 8px
+		.select__button-text, .select__list-item-text
+			// display: none
+		.select__button
+			align-items: center
+			justify-content: space-between
+			display: flex
+			gap: 8px
+			border-radius: 37px
+			padding: 18px 18px
+			background-color: #f2f5f9
+			cursor: pointer
+			transition: all .35s ease-out
+			&:hover
+				background-color: $blue
+				.select__button-address
+					color: #fff
+				.select__button-svg
+					fill: #fff
+			+media-breakpoint-up(sm)
+				min-width: 224px
+		.select__button-svg
+			position: initial
+			fill: #5c9fde
+		.select__button-address
+			color: #5c9fde
+			font-weight: 600
+
+	&--active .select__button
+		// box-shadow: 0px 0px 0px 4px rgba(171, 191, 125, 0.26)
+	&__button-address
+		font-weight: 600
+		font-size: 16px
+		color: #262626
+	&__button-text
+		font-weight: 500
+		font-size: 14px
+		color: #c4aa98
+		min-height: 20px
+	&__button-svg
+		position: absolute
+		top: 21px
+		right: 10px
+
+	&__button
+		position: relative
+		display: block
+		// width: 200px
+		text-align: left
+		background: #fff5ee
+		border-radius: 6px
+		padding-top: 13px
+		padding-bottom: 13px
+		padding-left: 20px
+		padding-right: 35px
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		cursor: pointer
+
+		&:focus,
+		&--active
+			outline: none
+			box-shadow: 0px 0px 0px 4px rgba(171, 191, 125, 0.26)
+
+	&__list
+		display: none
+		position: absolute
+		left: 0
+		top: 72px
+		margin: 0
+		padding: 0
+		list-style-type: none
+		background: #FFFFFF
+		box-shadow: 0px 4px 8px rgba(171, 191, 125, 0.26)
+		overflow: hidden
+		border-radius: 6px
+		width: 100%
+		z-index: 1
+		height: 230px
+		overflow: auto
+
+		&--visible
+			display: block
+
+	&__list-item-address
+		font-weight: 600
+		font-size: 16px
+		color: #262626
+
+	&__list-item-text
+		font-weight: 500
+		font-size: 14px
+		color: #c4aa98
+	&__list-item
+		display: block
+		width: 100%
+		margin: 0
+		padding: 0
+		border-bottom: 0px
+		padding: 13px 20px
+		background-color: #fff
+		text-align: left
+		font-size: 14px
+		cursor: pointer
+
+		&:first-child
+			border-radius: 6px 6px 0 0
+
+		&:last-child
+			border-radius: 0 0 6px 6px
+			// 
+
+		&:hover,
+		&:focus
+			color: $accent
+			outline: 0
+			.select__list-item-text
+				color: $accent
+			.select__list-item-address
+				color: $accent
+
+	&__input-hidden
+		display: none
+
+.lightpick
+	padding: 20px
+
+.lightpick__select.lightpick__select-years
+	display: none
+
+.lightpick__day.is-end-date, .lightpick__day.is-end-date:hover, .lightpick__day.is-start-date, .lightpick__day.is-start-date:hover
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23ff7009' cx='16' cy='16' r='16'/%3E%3C/svg%3E")
+
+.lightpick__month
+	width: 240px
+	+media-breakpoint-up(sm)
+		width: 360px
+
+.btn-modal
+	cursor: pointer
+
+.modal-form
+	/* .modal-form__input-block */
+	&__input-block
+		margin-bottom: 8px
+
+	/* .modal-form__input */
+	&__input
+		border-radius: 16px
+		background: $light_blue
+		width: 100%
+		border: none
+		padding: 18px 26px
+		font-size: 14px
+		border: 1px solid transparent
+		&.error
+			background-color: #ffe1e1
+		&:focus
+			outline: 0
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+	/* .modal-form__btn-row */
+	&__btn-row
+
+	/* .modal-form__btn */
+	&__btn
+
+	/* .modal-form__btn-text */
+	&__btn-text
+
+.select-address
+	/* .select-address__title */
+	&__title
+		font-weight: 700
+		font-size: 18px
+		line-height: 129%
+		color: #262626
+		margin-bottom: 12px
+
+	/* .select-address__item */
+	&__item
+		display: flex
+		gap: 8px
+		align-items: flex-start
+		cursor: pointer
+		&:not(:last-child)
+			margin-bottom: 8px
+		&.active
+			.select-address__item-address
+				color: $accent
+
+	/* .select-address__item-svg */
+	&__item-svg
+		flex: 0 0 16px
+		margin-top: 2px
+
+	/* .select-address__item-address */
+	&__item-address
+		font-weight: 600
+		font-size: 14px
+		color: #262626
+	/* .select-address__btn-block */
+	&__btn-block
+		display: flex
+		justify-content: flex-end
+		margin-top: 16px
+
+	/* .select-address__btn */
+	&__btn
+
+.online-modal
+	/* .online-modal__step */
+	&__step
+
+	/* .online-modal__block */
+	&__block
+
+	/* .online-modal__nav */
+	&__nav
+		margin-top: 24px
+		display: flex
+		gap: 12px
+		justify-content: flex-end
+
+	/* .online-modal__btn-next */
+	&__btn-next
+
+	/* .online-modal__btn-prev */
+	&__btn-prev
+		background: #f0f0f0
+		color: #333
+
+.checkup-single-hero
+	position: relative
+	overflow: hidden
+	+media-breakpoint-up(sm)
+		padding-top: 50px
+	+media-breakpoint-up(lg)
+		padding-top: 100px
+	&__img
+		position: absolute
+		// z-index: -1
+		top: calc(50% - 130px)
+		right: -73px
+		display: none
+		object-fit: cover
+		// height: 100%
+		// width: 100%
+		max-width: 360px
+		+media-breakpoint-up(sm)
+			display: block
+		+media-breakpoint-up(lg)
+			top: 64px
+			max-width: initial
+	&__block-img_mob
+		display: block
+		+media-breakpoint-up(sm)
+			display: none
+	/* .checkup-single-hero__wrap */
+	&__wrap
+		position: relative
+		z-index: 1
+	/* .checkup-single-hero__title */
+	&__title
+		font-weight: 600
+		font-size: 36px
+		line-height: 120%
+		color: #fff
+		// margin-bottom: 23px
+		max-width: 635px
+		+media-breakpoint-up(sm)
+			font-size: 42px
+			line-height: 97%
+		+media-breakpoint-up(lg)
+			padding-left: 60px
+			font-size: 64px
+	/* .checkup-single-hero__btn-block */
+	&__btn-block
+		display: flex
+		position: relative
+		z-index: 2
+		gap: 12px
+		flex-direction: column
+		margin-top: 30px
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			margin-top: 50px
+			margin-bottom: 50px
+			align-items: center
+			flex-direction: row
+		+media-breakpoint-up(lg)
+			padding-left: 60px
+			margin-bottom: 100px
+			margin-top: 77px
+	/* .checkup-single-hero__menu */
+	&__menu
+		display: flex
+		gap: 30px
+		row-gap: 0px
+		flex-wrap: wrap
+		margin-bottom: 16px
+		+media-breakpoint-up(lg)
+			padding-left: 60px
+
+	/* .checkup-single-hero__menu-item */
+	&__menu-item
+		font-weight: 400
+		font-size: 16px
+		color: #fff
+		&:hover
+			color: #fff
+		+media-breakpoint-up(sm)
+			font-size: 18px
+
+	/* .checkup-single-hero__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -8px
+
+	/* .checkup-single-hero__col */
+	&__col
+		padding: 0 8px
+		flex: 0 0 100%
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			flex: 0 0 25%
+			margin-bottom: 0
+
+	/* .checkup-single-hero__item */
+	&__item
+		border-radius: 16px
+		padding: 24px
+		background-color: #fff
+		// min-height: 166px
+		height: 100%
+		+media-breakpoint-up(xl)
+			padding: 30px
+
+	/* .checkup-single-hero__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 18px
+		line-height: 120%
+		color: $text
+		margin-bottom: 16px
+
+	/* .checkup-single-hero__item-text */
+	&__item-text
+		font-weight: 500
+		font-size: 16px
+		line-height: 138%
+		color: #3c5673
+
+.checkup-single-sostav
+	background-color: #f2f5f9
+	padding: 32px 0
+	+media-breakpoint-up(sm)
+		padding: 64px 0
+	/* .checkup-single-sostav__sticky */
+	&__sticky
+		+media-breakpoint-up(md)
+			position: sticky
+			top: 160px
+		+media-breakpoint-up(lg)
+			top: 100px
+	/* .checkup-single-sostav__block */
+	&__block
+		margin-top: 30px
+		+media-breakpoint-up(md)
+			margin-top: 60px
+		+media-breakpoint-up(lg)
+			margin-top: 90px
+	&__block_mt0
+		margin-top: 0
+	/* .checkup-single-sostav__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		+media-breakpoint-up(md)
+			margin: 0 -8px
+			flex-direction: row
+
+	/* .checkup-single-sostav__left */
+	&__left
+		+media-breakpoint-up(md)
+			padding: 0 8px
+			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			flex: 0 0 66.6667%
+			margin-bottom: 0
+	/* .checkup-single-sostav__right */
+	&__right
+		+media-breakpoint-up(md)
+			margin-bottom: 16px
+			padding: 0 8px
+			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			flex: 0 0 33.3337%
+			margin-bottom: 0
+
+	/* .checkup-single-sostav__top */
+	&__top
+		display: flex
+		gap: 14px
+		margin-bottom: -3px
+		+media-breakpoint-up(lg)
+			margin-left: 70px
+	/* .checkup-single-sostav__btn */
+	&__btn
+		color: #3c5673
+		font-weight: 700
+		font-size: 20px
+		line-height: 24px
+		padding: 18px
+		border: 3px solid #fff
+		border-top-right-radius: 24px
+		border-top-left-radius: 24px
+		cursor: pointer
+		&.active
+			color: #5baaff
+			background-color: #fff
+		+media-breakpoint-up(sm)
+			font-size: 24px
+		+media-breakpoint-up(lg)
+			font-size: 32px
+			line-height: 32px
+			border-top-right-radius: 32px
+			border-top-left-radius: 32px
+			padding: 30px
+
+	/* .checkup-single-sostav__item */
+	&__item
+		border-radius: 0 16px 16px 16px
+		background-color: #fff
+		padding: 16px
+		&:not(:last-child)
+			margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			padding: 30px
+		+media-breakpoint-up(lg)
+			padding: 30px 30px 30px 70px
+	&__item_max
+		position: relative
+		&:not(.active)
+			.checkup-single-sostav__item-label
+				color: #b4b4b4
+				background-color: #f5f6f7
+			.checkup-single-sostav__item-title-icon
+				filter: grayscale(100%)
+			.checkup-single-sostav__item-title-title
+				color: #b4b4b4
+			.checkup-single-sostav__item-title-block
+				&:not(:last-child)
+					border-bottom: 1px solid #B4B4B4
+
+	/* .checkup-single-sostav__item-label */
+	&__item-label
+		font-weight: 400
+		font-size: 16px
+		line-height: 138%
+		color: #ff7008
+		background-color: #fff5ee
+		border-radius: 30px
+		padding: 3px 13px
+		display: inline-block
+		margin-bottom: 24px
+
+	/* .checkup-single-sostav__item-title-block */
+	&__item-title-block
+		display: flex
+		gap: 8px
+		align-items: flex-start
+		padding: 12px 0
+		&:not(:last-child)
+			border-bottom: 1px solid $accent
+
+	/* .checkup-single-sostav__item-title-icon */
+	&__item-title-icon
+
+	/* .checkup-single-sostav__item-title-title */
+	&__item-title-title
+		font-weight: 700
+		font-size: 16px
+		line-height: 120%
+		color: #262626
+		margin-top: 4px
+		+media-breakpoint-up(sm)
+			font-size: 18px
+
+	/* .checkup-single-sostav__item-label-max */
+	&__item-label-max
+		font-weight: 500
+		font-size: 16px
+		line-height: 138%
+		color: #5baaff
+		border-radius: 30px
+		padding: 3px 13px
+		background: #e6f0ff
+		margin-bottom: 8px
+		display: inline-block
+		+media-breakpoint-up(sm)
+			position: absolute
+			right: 30px
+
+	/* .checkup-single-sostav__if */
+	&__if
+		font-weight: 600
+		font-size: 24px
+		color: #5baaff
+		margin-bottom: 16px
+
+	/* .checkup-single-sostav__if-block */
+	&__if-block
+		border-radius: 16px
+		padding: 16px
+		background-color: #fff
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			padding: 30px
+
+	/* .checkup-single-sostav__if-item */
+	&__if-item
+		display: flex
+		align-items: flex-start
+		gap: 12px
+		&:not(:last-child)
+			margin-bottom: 16px
+	&__if-item_max
+		&:not(.active)
+			.checkup-single-sostav__if-item-img
+				filter: grayscale(100%)
+			.checkup-single-sostav__if-item-title
+				color: #b4b4b4
+
+	/* .checkup-single-sostav__if-item-img */
+	&__if-item-img
+
+	/* .checkup-single-sostav__if-item-title */
+	&__if-item-title
+		font-weight: 700
+		font-size: 16px
+		line-height: 150%
+		color: #262626
+	/* .checkup-single-sostav__price-block */
+	&__price-block
+		border-radius: 16px
+		padding: 16px
+		background-color: #5baaff
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			padding: 24px 30px
+
+	/* .checkup-single-sostav__price */
+	&__price
+		font-weight: 700
+		font-size: 38px
+		line-height: 130%
+		color: #fff
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 56px
+
+	/* .checkup-single-sostav__price-not */
+	&__price-not
+		font-weight: 700
+		font-size: 14px
+		color: #fff
+		opacity: .6
+		+media-breakpoint-up(sm)
+			font-size: 18px
+	/* .checkup-single-sostav__doctor-block */
+	&__doctor-block
+		border-radius: 16px
+		padding: 16px
+		background-color: #fff
+		+media-breakpoint-up(sm)
+			padding: 24px 30px
+
+	/* .checkup-single-sostav__checkbox */
+	&__checkbox
+		display: inline-flex
+		align-items: center
+		gap: 10px
+		position: relative
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			margin-bottom: 16px
+
+	/* .checkup-single-sostav__checkbox-input */
+	&__checkbox-input
+		position: absolute
+		z-index: -1
+		opacity: 0
+
+		&:checked+.checkup-single-sostav__checkbox-box::before
+			// border-color: #454852
+			background-color: #fff
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235C9FDE' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+
+	/* .checkup-single-sostav__checkbox-box */
+	&__checkbox-box
+		display: inline-flex
+		align-items: center
+		user-select: none
+		cursor: pointer
+		margin: 0
+		&:before
+			content: ''
+			display: inline-block
+			width: 38px
+			height: 38px
+			flex-shrink: 0
+			border-radius: 50%
+			flex-grow: 0
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 50% 50%
+			background-color: #fff
+			border: 1px solid $blue
+	/* .checkup-single-sostav__text */
+	&__text
+		font-weight: 300
+		font-size: 16px
+		color: #262626
+		span
+			color: $accent
+	/* .checkup-single-sostav__sum */
+	&__sum
+		font-weight: 700
+		font-size: 24px
+		color: #5baaff
+		margin-left: 48px
+
+.title-pdf
+	border-radius: 36px
+	padding: 8px 30px
+	background: #eef5ff
+	font-weight: 500
+	font-size: 16px
+	line-height: 125%
+	color: #5baaff
+	max-width: 315px
+	display: flex
+	align-items: center
+	gap: 8px
+	&:hover
+		text-decoration: none
+	svg
+		flex: 0 0 34px
+
+.how
+	/* .how__title */
+	&__title
+		font-weight: 600
+		font-size: 24px
+		line-height: 120%
+		color: #262626
+		margin-bottom: 16px
+		+media-breakpoint-up(sm)
+			margin-bottom: 36px
+			font-size: 32px
+		+media-breakpoint-up(md)
+			font-size: 40px
+	/* .how__row */
+	&__row
+		+media-breakpoint-up(md)
+			display: flex
+			margin: 0 -8px
+
+	/* .how__left */
+	&__left
+		margin-bottom: 12px
+		+media-breakpoint-up(sm)
+			margin-bottom: 30px
+		+media-breakpoint-up(md)
+			margin-bottom: 0
+			min-width: 1px
+			padding: 0 8px
+			flex: 0 0 324px
+
+	/* .how__right */
+	&__right
+		position: relative
+		+media-breakpoint-up(md)
+			padding: 0 8px
+			min-width: 1px
+			flex: 1
+
+.how-slider
+	/* .how-slider__slide */
+	&__slide
+
+	/* .how-slider__title */
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 120%
+		color: #000
+		margin-bottom: 12px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			max-width: 85%
+
+	/* .how-slider__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		line-height: 150%
+		color: #000
+
+	/* .how-slider__item-top */
+	&__item-top
+		padding: 16px
+		+media-breakpoint-up(sm)
+			padding: 40px
+	/* .how-slider__item */
+	&__item
+		border-radius: 16px
+		background-color: #f2f5f9
+		overflow: hidden
+		+media-breakpoint-up(sm)
+			border-radius: 32px
+
+	/* .how-slider__img */
+	&__img
+		width: 100%
+		object-fit: cover
+		object-position: center
+		+media-breakpoint-up(sm)
+			// max-height: 480px
+
+.how-btn
+	z-index: 2
+	display: flex
+	gap: 8px
+	margin-bottom: 16px
+	+media-breakpoint-up(sm)
+		gap: 16px
+		right: 40px
+		top: 40px
+		position: absolute
+
+	/* .how-btn__item */
+	&__item
+		height: 35px
+		width: 35px
+		flex: 0 0 35px
+		+media-breakpoint-up(sm)
+			flex: 0 0 45px
+			width: 45px
+			height: 45px
+	&__item_prev
+		transform: rotate(180deg)
+
+	&__item_next
+
+	/* .how-btn__svg */
+	&__svg
+		fill: $blue
+		height: 35px
+		width: 35px
+		flex: 0 0 35px
+		+media-breakpoint-up(sm)
+			height: 45px
+			width: 45px
+			flex: 0 0 45px
+
+.how
+	/* .how__labels */
+	&__labels
+		display: flex
+		flex-direction: column
+		gap: 6px
+		+media-breakpoint-up(sm)
+			gap: 12px
+
+	/* .how__labels-item */
+	&__labels-item
+		font-weight: 700
+		font-size: 14px
+		color: #5baaff
+		border-radius: 24px
+		padding: 4px 16px
+		background: #eef5ff
+		align-self: start
+		cursor: pointer
+		&.active
+			background-color: #5baaff
+			color: #eef5ff
+		+media-breakpoint-up(sm)
+			padding: 8px 16px
+			font-size: 16px
+
+.review-checkup
+	/* .review-checkup__row */
+	&__row
+		+media-breakpoint-up(lg)
+			display: flex
+			justify-content: space-between
+
+	/* .review-checkup__left */
+	&__left
+		+media-breakpoint-up(lg)
+			flex: 0 0 523px
+
+	/* .review-checkup__item */
+	&__item
+		border-radius: 16px
+		padding: 16px
+		background: #fff5ee
+		margin-bottom: 8px
+
+		+media-breakpoint-up(sm)
+			padding: 16px 30px
+
+	/* .review-checkup__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 32px
+		color: #262626
+		margin-bottom: 4px
+		+media-breakpoint-up(sm)
+			margin-bottom: 16px
+			font-size: 40px
+
+	/* .review-checkup__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 18px
+		line-height: 150%
+		color: #3c5673
+
+	/* .review-checkup__label */
+	&__label
+		font-weight: 400
+		font-size: 15px
+		color: #838383
+		margin-bottom: 16px
+
+	/* .review-checkup__right */
+	&__right
+
+.checkup-block
+	/* .checkup-block__block */
+	&__block
+
+	/* .checkup-block__form */
+	&__form
+		max-width: 585px
+		position: relative
+		z-index: 1
+
+	/* .checkup-block__title */
+	&__title
+
+	/* .checkup-block__form-row */
+	&__form-row
+		display: flex
+		row-gap: 16px
+		flex-direction: column
+		margin: 0 -8px
+		flex-wrap: wrap
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			align-items: center
+			flex-direction: row
+
+	/* .checkup-block__form-input-block */
+	&__form-input-block
+		padding: 0 8px
+		+media-breakpoint-up(sm)
+			flex: 0 1 50%
+
+	/* .checkup-block__form-input */
+	&__form-input
+		width: 100%
+		padding: 8px 24px
+		background: #fff
+		border-radius: 46px
+		border: none
+		border: 1px solid transparent
+		&:focus
+			outline: 0
+		&.error
+			background-color: #ffe1e1
+
+.filter-checked
+	display: none
+	flex-wrap: wrap
+	gap: 8px
+	margin: 10px 0
+	align-items: center
+	&__text
+		font-weight: 600
+		color: #333
+		margin-right: 8px
+	&__item
+		background: #f0f0f0
+		padding: 6px 12px
+		border-radius: 20px
+		font-size: 14px
+		display: flex
+		align-items: center
+		gap: 6px
+		cursor: pointer
+		transition: background 0.2s
+	&__item:hover
+		background: #e0e0e0
+	&__remove
+		font-weight: bold
+		color: #999
+		font-size: 18px
+		line-height: 1
+	&__remove:hover
+		color: #d00
+
+.border-radius
+	border-radius: 0 16px 16px 16px
+
+@keyframes "fade"
+	from
+		opacity: 0
+	to
+		opacity: 1

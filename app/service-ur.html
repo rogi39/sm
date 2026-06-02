@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__left">
+						<a href="#" class="logo">
+							<img src="images/logo.svg" alt="logo" class="logo__img">
+						</a>
+					</div>
+					<div class="header__right">
+						<div class="header__right-addreses">
+							<div class="header__city">
+								<a href="#" class="balloon">
+									<div class="balloon__icon-block">
+										<svg class="balloon__icon">
+											<use xlink:href="images/sprite.svg#location"></use>
+										</svg>
+									</div>
+									<div class="balloon__block">
+										<div class="balloon__label">Город</div>
+										<div class="balloon__title">Владикавказ</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="header__phone">
+								<a href="#" class="balloon balloon_phone">
+									<div class="balloon__icon-block">
+										<svg class="balloon__icon">
+											<use xlink:href="images/sprite.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="balloon__block">
+										<div class="balloon__label">Заказать звонок</div>
+										<div class="balloon__title">+7 (8672) 40-42-03</div>
+									</div>
+								</a>
+							</div>
+							<div class="header__btn">
+								<a href="#" class="btn btn_w203 btn_upper">онлайн запись</a>
+							</div>
+						</div>
+
+						<div class="header__lk">
+							<a href="#" class="balloon balloon_lk">
+								<div class="balloon__icon-block">
+									<svg class="balloon__icon">
+										<use xlink:href="images/sprite.svg#lk"></use>
+									</svg>
+								</div>
+								<div class="balloon__block">
+									<div class="balloon__label">Личный кабинет</div>
+									<div class="balloon__title">Войти/Зарегестрироваться</div>
+								</div>
+							</a>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="container">
+				<div class="header__bottom-row">
+					<div class="header__bottom-left">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Врачи</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">анализы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">хирургия</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">чекапы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+								<li class="menu__item"><a href="#" class="menu__link menu__link_more">еще</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__bottom-right">
+						<div class="search">
+							<svg class="search__svg">
+								<use xlink:href="images/sprite.svg#search"></use>
+							</svg>
+							<div class="search__text">поиск</div>
+						</div>
+						<div class="header__call-home">
+							<div class="call-home">
+								<svg class="call-home__svg">
+									<use xlink:href="images/sprite.svg#car"></use>
+								</svg>
+								<div class="call-home__text">вызов на дом</div>
+							</div>
+						</div>
+						<div class="header__result-tests">
+							<div class="result-tests">
+								<svg class="result-tests__svg">
+									<use xlink:href="images/sprite.svg#result"></use>
+								</svg>
+								<div class="result-tests__text">результаты анализов</div>
+							</div>
+						</div>
+						<span class="header__toggle-menu" id="toggle-menu">
+							<span class="header__toggle-line"></span>
+							меню
+						</span>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="menu-modal-overlay"></div>
+	<div class="menu-modal">
+		<nav class="menu menu_modal">
+			<div class="menu-modal__top">
+				<a href="#" class="logo">
+					<img src="images/logo.svg" alt="logo" class="logo__img logo__img_menu">
+				</a>
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-menu">
+					<path d="M9.17 14.8299L14.83 9.16992" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M14.83 14.8299L9.17 9.16992" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<ul class="menu__list">
+				<li class="menu__item menu__item_sub">
+					<a href="#" class="menu__link">Услуги</a>
+
+					<span class="menu__item-svg-block">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="menu__item-svg">
+							<path d="M15 2L9 2C4 2 2 4 2 9L2 15C2 20 4 22 9 22L15 22C20 22 22 20 22 15L22 9C22 4 20 2 15 2Z" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15.53 10.5401L12 14.0601L8.47 10.5401" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+					</span>
+					<ul class="menu__sub menu__sub_modal">
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Акушерство и гинекология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Аллергология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Выездная помощь</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дневной стационар </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дерматология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Детская неврология </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Кардиология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Маммология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Массаж</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Мануальная терапия</a></li>
+					</ul>
+
+				</li>
+				<li class="menu__item menu__item_sub">
+					<a href="#" class="menu__link">Врачи</a>
+					<span class="menu__item-svg-block">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="menu__item-svg">
+							<path d="M15 2L9 2C4 2 2 4 2 9L2 15C2 20 4 22 9 22L15 22C20 22 22 20 22 15L22 9C22 4 20 2 15 2Z" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15.53 10.5401L12 14.0601L8.47 10.5401" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+					</span>
+					<ul class="menu__sub menu__sub_modal">
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Акушерство и гинекология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Аллергология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Выездная помощь</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дневной стационар </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дерматология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Детская неврология </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Кардиология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Маммология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Массаж</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Мануальная терапия</a></li>
+					</ul>
+				</li>
+				<li class="menu__item"><a href="#" class="menu__link">анализы</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">хирургия</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">чекапы</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+				<li class="menu__item"><a href="#" class="menu__link menu__link_more">еще</a></li>
+			</ul>
+			<div class="menu-modal__bottom">
+				<a href="#" class="btn btn_w100 btn_upper">онлайн запись</a>
+				<div class="menu-modal__ballons">
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#lk"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Личный кабинет</div>
+							<div class="balloon__title">Войти/Зарегестрироваться</div>
+						</div>
+					</a>
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Город</div>
+							<div class="balloon__title">Владикавказ</div>
+						</div>
+					</a>
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#phone"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Заказать звонок</div>
+							<div class="balloon__title">+7 (8672) 40-42-03</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<div class="menu-modal__results">
+				<div class="result-tests result-tests_menu">
+					<svg class="result-tests__svg">
+						<use xlink:href="images/sprite.svg#result"></use>
+					</svg>
+					<div class="result-tests__text">результаты анализов</div>
+				</div>
+				<div class="call-home">
+					<svg class="call-home__svg">
+						<use xlink:href="images/sprite.svg#car"></use>
+					</svg>
+					<div class="call-home__text">вызов на дом</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<main class="main">
+		<div class="container">
+			<div class="inner">
+				<h1 class="title title_white title_mb0">Услуги для юридических лиц</h1>
+			</div>
+		</div>
+
+		</div>
+		<div class="section section_pt0">
+			<div class="container">
+
+				<div class="about-first">
+					<div class="about-first__row">
+						<div class="about-first__col">
+							<div class="subtitle">Семейная медицина</div>
+							<div class="title-row">
+								<div class="title">Основные направления обслуживания:</div>
+							</div>
+							<div class="about-first__text">
+								<p>Сотрудники вашей компании могут получить медицинские услуги по прямому договору с сетью клиник «Семейная медицина». Мы предлагаем широкий спектр амбулаторно-поликлинической, стационарной и выездной медицинской помощи.</p>
+							</div>
+						</div>
+						<div class="about-first__col">
+							<div class="about-first__text">
+								<ul>
+									<li>Консультации врачей для взрослых и детей, включая узкопрофильных специалистов</li>
+									<li>Лабораторные анализы</li>
+									<li>Комплексные программы диагностики (check-up)</li>
+									<li>Инструментальная диагностика: КТ, МРТ, УЗИ, рентген, денситометрия, цифровая маммография</li>
+									<li>Эндоскопические исследования</li>
+									<li>Хирургия и пластическая хирургия</li>
+									<li>Стационарное лечение (дневной и круглосуточный стационар)</li>
+									<li>Функциональная диагностика</li>
+									<li>Выездная служба по республике Северная Осетия-Алания</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-numbers">
+					<div class="about-numbers__row">
+						<div class="about-numbers__col about-numbers__col_f100">
+							<div class="advantages-inner__item">
+								<div class="advantages-inner__item-title">
+									<svg class="advantages-inner__item-title-svg">
+										<use xlink:href="images/sprite.svg#check"></use>
+									</svg>
+									Современное оборудование
+								</div>
+								<div class="advantages-inner__item-text">Собственная современная лаборатория и экспертное диагностическое оборудование</div>
+							</div>
+
+						</div>
+						<div class="about-numbers__col about-numbers__col_f100">
+							<div class="advantages-inner__item">
+								<div class="advantages-inner__item-title">
+									<svg class="advantages-inner__item-title-svg">
+										<use xlink:href="images/sprite.svg#check"></use>
+									</svg>
+									Комфортные условия
+								</div>
+								<div class="advantages-inner__item-text">Возможность проведения обследований с выездом к клиенту</div>
+							</div>
+						</div>
+						<div class="about-numbers__col about-numbers__col_f100">
+							<div class="advantages-inner__item">
+								<div class="advantages-inner__item-title">
+									<svg class="advantages-inner__item-title-svg">
+										<use xlink:href="images/sprite.svg#check"></use>
+									</svg>
+									Клиентоориентированность
+								</div>
+								<div class="advantages-inner__item-text">Специальные условия для клиентов (бонусы и скидки)</div>
+							</div>
+						</div>
+						<div class="about-numbers__col about-numbers__col_f100">
+							<div class="advantages-inner__item">
+								<div class="advantages-inner__item-title">
+									<svg class="advantages-inner__item-title-svg">
+										<use xlink:href="images/sprite.svg#check"></use>
+									</svg>
+									Удобство
+								</div>
+								<div class="advantages-inner__item-text">По результатам обследований оформляется «Паспорт здоровья»*</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-numbers__text">*документ с подробной информацией о состоянии здоровья, результатах анализов и рекомендациях врачей</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_pt0">
+			<div class="container">
+				<div class="title title_mb">Форматы сотрудничества</div>
+				<div class="cooperation">
+					<div class="cooperation__row">
+						<div class="cooperation__col">
+
+							<div class="cooperation-item">
+								<svg class="cooperation-item__svg" width="59" height="49" viewBox="0 0 59 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M51.4955 10.0565H51.3366V8.60457C51.3366 6.83885 49.6069 5.40225 47.4809 5.40225H43.7317V3.89033C43.7317 1.74515 41.6264 0 39.0386 0H19.9615C17.3737 0 15.2684 1.74524 15.2684 3.89033V5.40225H11.5192C9.39313 5.40225 7.66335 6.83885 7.66335 8.60457V10.0565H7.50455C4.51284 10.0565 2.07886 12.0779 2.07886 14.5626V44.4938C2.07886 46.9786 4.51284 49 7.50467 49H51.4955C54.4872 49 56.9212 46.9786 56.9212 44.4939V14.5627C56.9212 12.0779 54.4872 10.0565 51.4955 10.0565ZM47.4809 7.31631C48.3361 7.31631 49.0319 7.89426 49.0319 8.60457V10.0565H43.7317V7.31631H47.4809ZM17.573 3.89033C17.573 2.80056 18.6445 1.91406 19.9615 1.91406H39.0386C40.3556 1.91406 41.427 2.80066 41.427 3.89033V10.0565H38.3599V5.40723C38.3599 4.87866 37.8439 4.4502 37.2076 4.4502H21.7925C21.156 4.4502 20.6401 4.87866 20.6401 5.40723V10.0566H17.573V3.89033ZM22.9448 10.0565V6.36426H36.0551V10.0566L22.9448 10.0565ZM9.96803 8.60457C9.96803 7.89426 10.6639 7.31631 11.5192 7.31631H15.2684V10.0565H9.96803V8.60457ZM54.6165 44.4939C54.6165 45.9232 53.2165 47.0859 51.4955 47.0859H7.50467C5.78364 47.0859 4.38366 45.9231 4.38366 44.4939V30.9557C6.42872 33.1699 9.64618 34.6 13.2582 34.6C13.2965 34.6 13.3343 34.5984 13.3716 34.5954C13.4089 34.5985 13.4467 34.6 13.485 34.6H13.5534V39.9094C13.5534 40.4379 14.0693 40.8664 14.7058 40.8664H19.6203C20.2567 40.8664 20.7726 40.4379 20.7726 39.9094V34.6H20.8411C20.9383 34.6 21.0328 34.59 21.1232 34.5711H24.2907C24.9272 34.5711 25.4431 34.1427 25.4431 33.6141C25.4431 33.0855 24.9272 32.6571 24.2907 32.6571H21.9934V26.4944C21.9934 25.9658 21.4775 25.5373 20.8411 25.5373H13.4849C12.8484 25.5373 12.3325 25.9658 12.3325 26.4944V32.6462C7.87238 32.2606 4.38354 29.1201 4.38354 25.3156V14.5627C4.38354 13.1333 5.78364 11.9706 7.50455 11.9706H51.4954C53.2164 11.9706 54.6164 13.1334 54.6164 14.5627V25.3156C54.6164 29.1201 51.1276 32.2605 46.6675 32.6462V26.4944C46.6675 25.9658 46.1515 25.5373 45.5152 25.5373H38.1589C37.5225 25.5373 37.0065 25.9658 37.0065 26.4944V32.6571H34.7092C34.0729 32.6571 33.5569 33.0855 33.5569 33.6141C33.5569 34.1427 34.0729 34.5711 34.7092 34.5711H37.8768C37.967 34.59 38.0615 34.6 38.1589 34.6H38.2274V39.9094C38.2274 40.4379 38.7434 40.8664 39.3798 40.8664H44.2943C44.9306 40.8664 45.4466 40.4379 45.4466 39.9094V34.6H45.5152C45.5534 34.6 45.5912 34.5984 45.6285 34.5954C45.6657 34.5985 45.7036 34.6 45.7417 34.6C49.3538 34.6 52.5713 33.1699 54.6164 30.9557L54.6165 44.4939ZM15.858 34.6H18.4678V38.9523H15.858V34.6ZM19.6887 32.6571H19.5899C19.5023 32.6571 19.4171 32.6652 19.3352 32.6806H14.7058C14.6827 32.6806 14.6599 32.6813 14.6373 32.6823V27.4515H19.6889V32.6571H19.6887ZM44.3628 32.6823C44.3401 32.6812 44.3173 32.6806 44.2943 32.6806H39.6649C39.5829 32.6653 39.4976 32.6571 39.4102 32.6571H39.3113V27.4514H44.363V32.6823H44.3628ZM40.5321 34.6H43.1419V38.9523H40.5321V34.6Z" />
+									<path d="M29.4793 34.5714C29.0052 34.5714 28.5675 34.3206 28.4008 33.9516C28.2303 33.5743 28.3688 33.1358 28.7429 32.8784C29.1001 32.6328 29.6129 32.5909 30.0219 32.7711C30.4518 32.9606 30.6967 33.3718 30.6156 33.7708C30.5228 34.2269 30.0372 34.5714 29.4793 34.5714Z" />
+								</svg>
+								<div class="cooperation-item__title">Базовый</div>
+								<div class="cooperation-item__text">
+									<ul>
+										<li>Lorem ipsum dolor sit amet consectetur. Auctor sed proin est nam at. </li>
+										<li>Tellus lorem odio a facilisi platea est risus. Aliquam sollicitudin ornare porttitor orci. </li>
+										<li>Ut sit elementum natoque quis odio ut urna elementum. Facilisis nisi pellentesque neque convallis cursus.</li>
+									</ul>
+								</div>
+								<div class="btn btn_blue2">Узнать условия по телефону</div>
+
+							</div>
+
+
+						</div>
+						<div class="cooperation__col">
+							<div class="cooperation-item">
+								<svg class="cooperation-item__svg" width="59" height="49" viewBox="0 0 59 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M51.4955 10.0565H51.3366V8.60457C51.3366 6.83885 49.6069 5.40225 47.4809 5.40225H43.7317V3.89033C43.7317 1.74515 41.6264 0 39.0386 0H19.9615C17.3737 0 15.2684 1.74524 15.2684 3.89033V5.40225H11.5192C9.39313 5.40225 7.66335 6.83885 7.66335 8.60457V10.0565H7.50455C4.51284 10.0565 2.07886 12.0779 2.07886 14.5626V44.4938C2.07886 46.9786 4.51284 49 7.50467 49H51.4955C54.4872 49 56.9212 46.9786 56.9212 44.4939V14.5627C56.9212 12.0779 54.4872 10.0565 51.4955 10.0565ZM47.4809 7.31631C48.3361 7.31631 49.0319 7.89426 49.0319 8.60457V10.0565H43.7317V7.31631H47.4809ZM17.573 3.89033C17.573 2.80056 18.6445 1.91406 19.9615 1.91406H39.0386C40.3556 1.91406 41.427 2.80066 41.427 3.89033V10.0565H38.3599V5.40723C38.3599 4.87866 37.8439 4.4502 37.2076 4.4502H21.7925C21.156 4.4502 20.6401 4.87866 20.6401 5.40723V10.0566H17.573V3.89033ZM22.9448 10.0565V6.36426H36.0551V10.0566L22.9448 10.0565ZM9.96803 8.60457C9.96803 7.89426 10.6639 7.31631 11.5192 7.31631H15.2684V10.0565H9.96803V8.60457ZM54.6165 44.4939C54.6165 45.9232 53.2165 47.0859 51.4955 47.0859H7.50467C5.78364 47.0859 4.38366 45.9231 4.38366 44.4939V30.9557C6.42872 33.1699 9.64618 34.6 13.2582 34.6C13.2965 34.6 13.3343 34.5984 13.3716 34.5954C13.4089 34.5985 13.4467 34.6 13.485 34.6H13.5534V39.9094C13.5534 40.4379 14.0693 40.8664 14.7058 40.8664H19.6203C20.2567 40.8664 20.7726 40.4379 20.7726 39.9094V34.6H20.8411C20.9383 34.6 21.0328 34.59 21.1232 34.5711H24.2907C24.9272 34.5711 25.4431 34.1427 25.4431 33.6141C25.4431 33.0855 24.9272 32.6571 24.2907 32.6571H21.9934V26.4944C21.9934 25.9658 21.4775 25.5373 20.8411 25.5373H13.4849C12.8484 25.5373 12.3325 25.9658 12.3325 26.4944V32.6462C7.87238 32.2606 4.38354 29.1201 4.38354 25.3156V14.5627C4.38354 13.1333 5.78364 11.9706 7.50455 11.9706H51.4954C53.2164 11.9706 54.6164 13.1334 54.6164 14.5627V25.3156C54.6164 29.1201 51.1276 32.2605 46.6675 32.6462V26.4944C46.6675 25.9658 46.1515 25.5373 45.5152 25.5373H38.1589C37.5225 25.5373 37.0065 25.9658 37.0065 26.4944V32.6571H34.7092C34.0729 32.6571 33.5569 33.0855 33.5569 33.6141C33.5569 34.1427 34.0729 34.5711 34.7092 34.5711H37.8768C37.967 34.59 38.0615 34.6 38.1589 34.6H38.2274V39.9094C38.2274 40.4379 38.7434 40.8664 39.3798 40.8664H44.2943C44.9306 40.8664 45.4466 40.4379 45.4466 39.9094V34.6H45.5152C45.5534 34.6 45.5912 34.5984 45.6285 34.5954C45.6657 34.5985 45.7036 34.6 45.7417 34.6C49.3538 34.6 52.5713 33.1699 54.6164 30.9557L54.6165 44.4939ZM15.858 34.6H18.4678V38.9523H15.858V34.6ZM19.6887 32.6571H19.5899C19.5023 32.6571 19.4171 32.6652 19.3352 32.6806H14.7058C14.6827 32.6806 14.6599 32.6813 14.6373 32.6823V27.4515H19.6889V32.6571H19.6887ZM44.3628 32.6823C44.3401 32.6812 44.3173 32.6806 44.2943 32.6806H39.6649C39.5829 32.6653 39.4976 32.6571 39.4102 32.6571H39.3113V27.4514H44.363V32.6823H44.3628ZM40.5321 34.6H43.1419V38.9523H40.5321V34.6Z" />
+									<path d="M29.4793 34.5714C29.0052 34.5714 28.5675 34.3206 28.4008 33.9516C28.2303 33.5743 28.3688 33.1358 28.7429 32.8784C29.1001 32.6328 29.6129 32.5909 30.0219 32.7711C30.4518 32.9606 30.6967 33.3718 30.6156 33.7708C30.5228 34.2269 30.0372 34.5714 29.4793 34.5714Z" />
+								</svg>
+								<div class="cooperation-item__title">Стандартный</div>
+								<div class="cooperation-item__text">
+									<ul>
+										<li>Lorem ipsum dolor sit amet consectetur. Auctor sed proin est nam at. </li>
+										<li>Tellus lorem odio a facilisi platea est risus. Aliquam sollicitudin ornare porttitor orci. </li>
+										<li>Ut sit elementum natoque quis odio ut urna elementum. Facilisis nisi pellentesque neque convallis cursus.</li>
+									</ul>
+								</div>
+								<div class="btn btn_blue2">Узнать условия по телефону</div>
+							</div>
+						</div>
+						<div class="cooperation__col">
+							<div class="cooperation-item">
+								<svg class="cooperation-item__svg" width="64" height="49" viewBox="0 0 64 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M28.9428 8.38784C28.4653 8.23494 27.916 8.40728 27.7158 8.7729L25.3632 13.0751L23.0107 8.7729C22.811 8.40691 22.2617 8.23494 21.7841 8.38784C21.3066 8.54112 21.0815 8.96131 21.2812 9.3273L24.4985 15.2108C24.6445 15.4777 24.9858 15.6516 25.3632 15.6516C25.7412 15.6516 26.082 15.4777 26.228 15.2108L29.4458 9.3273C29.6455 8.96131 29.4204 8.54112 28.9428 8.38784Z" />
+									<path d="M36.1763 15.6515C36.6943 15.6515 37.1138 15.3299 37.1138 14.9337V12.7097H39.9023C41.4785 12.7097 42.7612 11.7276 42.7612 10.5209C42.7612 9.31411 41.4785 8.33203 39.9023 8.33203H36.1763C35.6587 8.33203 35.2388 8.65353 35.2388 9.0498V14.9337C35.2388 15.3299 35.6587 15.6515 36.1763 15.6515ZM37.1138 9.76758H39.9023C40.4448 9.76758 40.8862 10.1055 40.8862 10.5209C40.8862 10.9362 40.4448 11.2738 39.9023 11.2738H37.1138V9.76758Z" />
+									<path d="M32.9766 14.9337V9.0498C32.9766 8.65353 32.5566 8.33203 32.0391 8.33203C31.5215 8.33203 31.1016 8.65353 31.1016 9.0498V14.9337C31.1016 15.3299 31.5215 15.6515 32.0391 15.6515C32.5566 15.6515 32.9766 15.3299 32.9766 14.9337Z" />
+									<path d="M30.0546 18.4436L28.7548 21.5064C28.7265 21.573 28.6455 21.6182 28.5541 21.6182H24.3476C22.3208 21.6182 21.4912 23.6011 23.1215 24.5076L26.5244 26.4008C26.5986 26.4422 26.6293 26.5148 26.601 26.5817L25.3012 29.6446C24.6777 31.1149 26.8759 32.3407 28.5122 31.4304L31.915 29.5376C31.9892 29.4962 32.0893 29.4962 32.1635 29.5376L35.5664 31.4304C37.1992 32.3388 39.4013 31.1156 38.7768 29.6446L37.4775 26.5817C37.4492 26.5148 37.4799 26.4422 37.5541 26.4008L40.957 24.5076C42.5908 23.5992 41.7534 21.6182 39.7304 21.6182H35.5244C35.4326 21.6182 35.352 21.573 35.3237 21.5064L34.0239 18.4436C33.3989 16.9732 30.6796 16.9706 30.0546 18.4436ZM32.039 18.7755C32.1923 18.7755 32.2285 18.8596 32.2402 18.8873L33.5395 21.9498C33.8198 22.61 34.6171 23.0538 35.5239 23.0538H39.7299C39.768 23.0538 39.8837 23.0538 39.9311 23.1655C39.9785 23.2773 39.8852 23.3293 39.8544 23.3465L36.4516 25.2392C35.7177 25.6475 35.413 26.3649 35.6938 27.0254L36.9931 30.0883C37.0048 30.116 37.0405 30.2001 36.9165 30.2689C36.7924 30.338 36.6987 30.2861 36.6679 30.2689L33.2651 28.3761C32.5317 27.9679 31.5458 27.9679 30.8125 28.3761L27.4096 30.2689C27.3789 30.2861 27.2851 30.338 27.1611 30.2689C27.0371 30.1997 27.0727 30.1156 27.0844 30.0879L28.3842 27.0251C28.6645 26.3649 28.3598 25.6471 27.6264 25.2392L24.2231 23.3465C24.1923 23.3293 24.0991 23.2773 24.1464 23.1655C24.1938 23.0538 24.3095 23.0538 24.3476 23.0538H28.5537C29.4604 23.0538 30.2578 22.61 30.538 21.9498L31.8378 18.8873C31.8496 18.8596 31.8852 18.7755 32.039 18.7755Z" />
+									<path d="M4.5 22.5119V48.2822C4.5 48.6789 4.91943 49 5.4375 49H18.2168C18.7349 49 19.1543 48.6789 19.1543 48.2822C19.1543 47.8856 18.7349 47.5645 18.2168 47.5645H8.42334L31.9849 34.9986L55.5459 47.5645H22.5918C22.0742 47.5645 21.6543 47.8856 21.6543 48.2822C21.6543 48.6789 22.0742 49 22.5918 49H58.5322C59.0498 49 59.4697 48.6789 59.4697 48.2822V22.5119C59.4697 22.2771 59.3193 22.0573 59.0679 21.9231L52.5474 18.4453V13.9487C52.5474 13.5525 52.1274 13.231 51.6099 13.231C51.0918 13.231 50.6724 13.5525 50.6724 13.9487V25.829L48.7974 26.829V6.90782C48.7974 6.51118 48.3774 6.19005 47.8599 6.19005C45.9863 6.19005 44.4624 5.02329 44.4624 3.58887C44.4624 3.19222 44.043 2.87109 43.5249 2.87109H20.4448C19.9268 2.87109 19.5073 3.19222 19.5073 3.58887C19.5073 5.02292 17.9829 6.19005 16.1099 6.19005C15.5918 6.19005 15.1724 6.51118 15.1724 6.90782V14.1641C15.1724 14.5607 15.5918 14.8818 16.1099 14.8818C16.6274 14.8818 17.0474 14.5607 17.0474 14.1641V7.56167C19.2046 7.26372 20.9097 5.95827 21.2988 4.30664H42.6709C43.0596 5.95827 44.7651 7.26372 46.9224 7.56167V27.829L34.3726 34.5223L32.5205 33.5346C32.1987 33.363 31.771 33.363 31.4492 33.5346L29.5972 34.5223L17.0474 27.829V17.5137C17.0474 17.117 16.6274 16.7959 16.1099 16.7959C15.5918 16.7959 15.1724 17.117 15.1724 17.5137V26.829L13.2974 25.829V2.36192C13.2974 1.85126 13.8398 1.43555 14.5073 1.43555H49.4624C50.1294 1.43555 50.6724 1.85126 50.6724 2.36192V10.5034C50.6724 10.9001 51.0918 11.2212 51.6099 11.2212C52.1279 11.2212 52.5474 10.9001 52.5474 10.5034V2.36192C52.5474 1.05946 51.1636 0 49.4624 0H14.5073C12.8062 0 11.4224 1.05946 11.4224 2.36192V18.4453L4.90186 21.9231C4.6499 22.0573 4.5 22.2771 4.5 22.5119ZM11.4224 20.1949V24.829C10.5034 24.3392 7.99512 23.0013 7.07764 22.5119L11.4224 20.1949ZM27.9565 35.3971L6.375 46.9076V23.8869L27.9565 35.3971ZM57.5947 46.9076L36.0127 35.3971L57.5947 23.8869V46.9076ZM52.5474 20.1949L56.8916 22.5119C55.9746 23.0013 53.4658 24.3392 52.5474 24.829V20.1949Z" />
+								</svg>
+								<div class="cooperation-item__title">Улучшенный</div>
+								<div class="cooperation-item__text">
+									<ul>
+										<li>Lorem ipsum dolor sit amet consectetur. Auctor sed proin est nam at. </li>
+										<li>Tellus lorem odio a facilisi platea est risus. Aliquam sollicitudin ornare porttitor orci. </li>
+										<li>Ut sit elementum natoque quis odio ut urna elementum. Facilisis nisi pellentesque neque convallis cursus.</li>
+									</ul>
+								</div>
+								<div class="btn btn_blue2">Узнать условия по телефону</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__block border-radius">
+				<div class="footer__top">
+					<div class="footer__top-left">
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Телефон горячей линии</div>
+							<div class="footer__top-item-value">+7 (8672) 40-42-03</div>
+						</div>
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Для пациентов</div>
+							<div class="footer__top-item-value">medical@clinic.ru</div>
+						</div>
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Для партнеров</div>
+							<div class="footer__top-item-value">medical2@clinic.ru</div>
+						</div>
+					</div>
+					<div class="footer__top-right">
+						<div class="social">
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#tg"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#yt"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#vk"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#wa"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__btn footer__btn_mob">
+							<a href="#" class="btn btn_white btn_w100">Скачать прайс лист</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__left">
+						<div class="footer__title">Услуги</div>
+						<div class="footer__service">
+							<a href="#" class="footer__link">Консультации для взрослых</a>
+							<a href="#" class="footer__link">Консультации для детей</a>
+							<a href="#" class="footer__link">Лабораторные анализы</a>
+							<a href="#" class="footer__link">Чекапы (комплексная диагностика)</a>
+							<a href="#" class="footer__link">Ультразвуковая диагностика</a>
+							<a href="#" class="footer__link">Лучевая диагностика</a>
+							<a href="#" class="footer__link">Эндоскопия</a>
+							<a href="#" class="footer__link">Хирургия</a>
+							<a href="#" class="footer__link">Стационар (Дневной, круглосуточный)</a>
+							<a href="#" class="footer__link">Функциональная диагностика</a>
+							<a href="#" class="footer__link">Медицинская косметология и реабилитация</a>
+							<a href="#" class="footer__link">Выездная помощь</a>
+						</div>
+					</div>
+					<div class="footer__center">
+						<div class="footer__title">О нас</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Лицензии</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Контакты</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Новости</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item footer__item_blue">Врачи</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item footer__item_blue">Акции</a>
+						</div>
+					</div>
+					<div class="footer__right">
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Услуги для юридических лиц</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Вакансии</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Отзывы</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Часто задаваемые вопросы</a>
+						</div>
+						<div class="footer__btn">
+							<a href="#" class="btn btn_white btn_w203">Скачать прайс лист</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="callback">
+				<div class="callback__row">
+					<div class="callback__left">
+						<a href="#" class="logo">
+							<img src="images/logo_white.svg" alt="logo" class="logo__img">
+						</a>
+						<div class="footer__copy-block">
+							<div class="footer__copy">ООО “Семейная медицина” 2025.</div>
+							<a href="#" class="footer__policy">Политика конфидециальности</a>
+						</div>
+					</div>
+					<div class="callback__right">
+						<div class="callback__title">Оставьте заявку на обратный звонок</div>
+						<div class="callback__text">Вы не знаете какая услуга нужна? Наш менеджер поможет и запишет Вас на удобную дату и время</div>
+						<form class="callback-form">
+							<div class="callback-form__input-block">
+								<input type="text" class="callback-form__input" placeholder="Как Вас зовут?*">
+							</div>
+							<div class="callback-form__input-block">
+								<input type="text" class="callback-form__input" placeholder="+7 (999) 999-99-99">
+							</div>
+							<button class="btn btn_callback btn_w203">Отправить</button>
+						</form>
+						<div class="footer__copy-block footer__copy-block_mob">
+							<div class="footer__copy">ООО “Семейная медицина” 2025.</div>
+							<a href="#" class="footer__policy">Политика конфидециальности</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

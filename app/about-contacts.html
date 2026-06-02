@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__left">
+						<a href="#" class="logo">
+							<img src="images/logo.svg" alt="logo" class="logo__img">
+						</a>
+					</div>
+					<div class="header__right">
+						<div class="header__right-addreses">
+							<div class="header__city">
+								<a href="#" class="balloon">
+									<div class="balloon__icon-block">
+										<svg class="balloon__icon">
+											<use xlink:href="images/sprite.svg#location"></use>
+										</svg>
+									</div>
+									<div class="balloon__block">
+										<div class="balloon__label">Город</div>
+										<div class="balloon__title">Владикавказ</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="header__phone">
+								<a href="#" class="balloon balloon_phone">
+									<div class="balloon__icon-block">
+										<svg class="balloon__icon">
+											<use xlink:href="images/sprite.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="balloon__block">
+										<div class="balloon__label">Заказать звонок</div>
+										<div class="balloon__title">+7 (8672) 40-42-03</div>
+									</div>
+								</a>
+							</div>
+							<div class="header__btn">
+								<a href="#" class="btn btn_w203 btn_upper">онлайн запись</a>
+							</div>
+						</div>
+
+						<div class="header__lk">
+							<a href="#" class="balloon balloon_lk">
+								<div class="balloon__icon-block">
+									<svg class="balloon__icon">
+										<use xlink:href="images/sprite.svg#lk"></use>
+									</svg>
+								</div>
+								<div class="balloon__block">
+									<div class="balloon__label">Личный кабинет</div>
+									<div class="balloon__title">Войти/Зарегестрироваться</div>
+								</div>
+							</a>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="container">
+				<div class="header__bottom-row">
+					<div class="header__bottom-left">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Врачи</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">анализы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">хирургия</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">чекапы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+								<li class="menu__item"><a href="#" class="menu__link menu__link_more">еще</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__bottom-right">
+						<div class="search">
+							<svg class="search__svg">
+								<use xlink:href="images/sprite.svg#search"></use>
+							</svg>
+							<div class="search__text">поиск</div>
+						</div>
+						<div class="header__call-home">
+							<div class="call-home">
+								<svg class="call-home__svg">
+									<use xlink:href="images/sprite.svg#car"></use>
+								</svg>
+								<div class="call-home__text">вызов на дом</div>
+							</div>
+						</div>
+						<div class="header__result-tests">
+							<div class="result-tests">
+								<svg class="result-tests__svg">
+									<use xlink:href="images/sprite.svg#result"></use>
+								</svg>
+								<div class="result-tests__text">результаты анализов</div>
+							</div>
+						</div>
+						<span class="header__toggle-menu" id="toggle-menu">
+							<span class="header__toggle-line"></span>
+							меню
+						</span>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="menu-modal-overlay"></div>
+	<div class="menu-modal">
+		<nav class="menu menu_modal">
+			<div class="menu-modal__top">
+				<a href="#" class="logo">
+					<img src="images/logo.svg" alt="logo" class="logo__img logo__img_menu">
+				</a>
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-menu">
+					<path d="M9.17 14.8299L14.83 9.16992" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M14.83 14.8299L9.17 9.16992" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<ul class="menu__list">
+				<li class="menu__item menu__item_sub">
+					<a href="#" class="menu__link">Услуги</a>
+
+					<span class="menu__item-svg-block">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="menu__item-svg">
+							<path d="M15 2L9 2C4 2 2 4 2 9L2 15C2 20 4 22 9 22L15 22C20 22 22 20 22 15L22 9C22 4 20 2 15 2Z" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15.53 10.5401L12 14.0601L8.47 10.5401" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+					</span>
+					<ul class="menu__sub menu__sub_modal">
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Акушерство и гинекология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Аллергология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Выездная помощь</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дневной стационар </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дерматология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Детская неврология </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Кардиология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Маммология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Массаж</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Мануальная терапия</a></li>
+					</ul>
+
+				</li>
+				<li class="menu__item menu__item_sub">
+					<a href="#" class="menu__link">Врачи</a>
+					<span class="menu__item-svg-block">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="menu__item-svg">
+							<path d="M15 2L9 2C4 2 2 4 2 9L2 15C2 20 4 22 9 22L15 22C20 22 22 20 22 15L22 9C22 4 20 2 15 2Z" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15.53 10.5401L12 14.0601L8.47 10.5401" stroke="#3C5673" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+					</span>
+					<ul class="menu__sub menu__sub_modal">
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Акушерство и гинекология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Аллергология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Выездная помощь</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дневной стационар </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Дерматология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Детская неврология </a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Кардиология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Маммология</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Массаж</a></li>
+						<li class="menu__sub-item"><a href="#" class="menu__sub-link">Мануальная терапия</a></li>
+					</ul>
+				</li>
+				<li class="menu__item"><a href="#" class="menu__link">анализы</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">хирургия</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">чекапы</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+				<li class="menu__item"><a href="#" class="menu__link menu__link_more">еще</a></li>
+			</ul>
+			<div class="menu-modal__bottom">
+				<a href="#" class="btn btn_w100 btn_upper">онлайн запись</a>
+				<div class="menu-modal__ballons">
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#lk"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Личный кабинет</div>
+							<div class="balloon__title">Войти/Зарегестрироваться</div>
+						</div>
+					</a>
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Город</div>
+							<div class="balloon__title">Владикавказ</div>
+						</div>
+					</a>
+					<a href="#" class="balloon">
+						<div class="balloon__icon-block">
+							<svg class="balloon__icon">
+								<use xlink:href="images/sprite.svg#phone"></use>
+							</svg>
+						</div>
+						<div class="balloon__block">
+							<div class="balloon__label">Заказать звонок</div>
+							<div class="balloon__title">+7 (8672) 40-42-03</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<div class="menu-modal__results">
+				<div class="result-tests result-tests_menu">
+					<svg class="result-tests__svg">
+						<use xlink:href="images/sprite.svg#result"></use>
+					</svg>
+					<div class="result-tests__text">результаты анализов</div>
+				</div>
+				<div class="call-home">
+					<svg class="call-home__svg">
+						<use xlink:href="images/sprite.svg#car"></use>
+					</svg>
+					<div class="call-home__text">вызов на дом</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<main class="main">
+		<div class="container">
+			<div class="inner">
+				<ul class="breadcrumb">
+					<li class="breadcrumb__item">
+						<a href="#" class="breadcrumb__link">Все услуги</a>
+					</li>
+					<li class="breadcrumb__item breadcrumb__item_active">Лучевая диагностика</li>
+				</ul>
+				<h1 class="title title_white title_mb0">Новости</h1>
+			</div>
+		</div>
+
+
+		<div class="section section_pt0">
+			<div class="container">
+
+				<div class="contacts-map">
+					<div class="contacts-map__block">
+						<div class="contacts-map__title">Общие контакты</div>
+						<div class="contacts-map__item">
+							<div class="contacts-map__item-title">Связаться с нами:</div>
+							<div class="contacts-map__item-value">
+								<div>+7 8672 40- 42-03</div>
+								<div>info@sm15.ru</div>
+							</div>
+						</div>
+						<div class="contacts-map__item">
+							<div class="contacts-map__item-title">Служба качества:</div>
+							<div class="contacts-map__item-value">+7 8672 40- 42-03</div>
+						</div>
+						<div class="contacts-map__item">
+							<div class="contacts-map__item-title">Социальные сети:</div>
+							<div class="contacts-map__item-value">
+								<div class="social">
+									<a href="#" class="social__item">
+										<svg class="social__item-svg">
+											<use xlink:href="images/sprite.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg class="social__item-svg">
+											<use xlink:href="images/sprite.svg#yt"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg class="social__item-svg">
+											<use xlink:href="images/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg class="social__item-svg">
+											<use xlink:href="images/sprite.svg#wa"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A372058a9c9f4ac7c5f44ffc98f8ece59f528c8f51573a6bb6b306e89056d7e47&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="section section_pt0">
+			<div class="container">
+				<div class="title-arrow">
+					<div class="title">Адреса клиник</div>
+					<svg class="title-arrow__icon">
+						<use xlink:href="images/sprite.svg#title-arrow"></use>
+					</svg>
+				</div>
+				<div class="tab-block">
+					<div class="tab-btn-block">
+						<div class="tab-btn active" data-tab="1">Владикавказ</div>
+						<div class="tab-btn" data-tab="2">Алагир</div>
+						<div class="tab-btn" data-tab="3">Дигора</div>
+						<div class="tab-btn" data-tab="4">Эльхотово</div>
+					</div>
+					<div class="tab-content active" data-tab-content="1">
+						<div class="clinic">
+							<div class="clinic__row">
+								<div class="clinic__col">
+									<div class="clinic__item">
+										<div class="clinic__item-top">
+											<div class="address-item">
+												<div class="address-item__address">пр. Доватора, 16</div>
+												<div class="address-item__title">Многопрофильный медицинский центр</div>
+												<div class="address-item__time">пн-пт: 08:00 - 20:00<br>сб: 08:00 - 19:00<br>вс: 09:00 - 16:00</div>
+												<a href="#" class="address-item__phone">
+													<svg class="address-item__phone-svg">
+														<use xlink:href="images/sprite.svg#phone"></use>
+													</svg>
+													+7 (8672) 40-42-03</a>
+											</div>
+										</div>
+										<img src="images/dest/doctor.jpg" alt="" class="clinic__img">
+									</div>
+								</div>
+								<div class="clinic__col">
+									<div class="clinic__item">
+										<div class="clinic__item-top">
+											<div class="address-item">
+												<div class="address-item__address">пр. Доватора, 16</div>
+												<div class="address-item__title">Многопрофильный медицинский центр</div>
+												<div class="address-item__time">пн-пт: 08:00 - 20:00<br>сб: 08:00 - 19:00<br>вс: 09:00 - 16:00</div>
+												<a href="#" class="address-item__phone">
+													<svg class="address-item__phone-svg">
+														<use xlink:href="images/sprite.svg#phone"></use>
+													</svg>
+													+7 (8672) 40-42-03</a>
+											</div>
+										</div>
+										<img src="images/dest/doctor.jpg" alt="" class="clinic__img">
+									</div>
+								</div>
+								<div class="clinic__col">
+									<div class="clinic__item">
+										<div class="clinic__item-top">
+											<div class="address-item">
+												<div class="address-item__address">пр. Доватора, 16</div>
+												<div class="address-item__title">Многопрофильный медицинский центр</div>
+												<div class="address-item__time">пн-пт: 08:00 - 20:00<br>сб: 08:00 - 19:00<br>вс: 09:00 - 16:00</div>
+												<a href="#" class="address-item__phone">
+													<svg class="address-item__phone-svg">
+														<use xlink:href="images/sprite.svg#phone"></use>
+													</svg>
+													+7 (8672) 40-42-03</a>
+											</div>
+										</div>
+										<img src="images/dest/doctor.jpg" alt="" class="clinic__img">
+									</div>
+								</div>
+								<div class="clinic__col">
+									<div class="clinic__item">
+										<div class="clinic__item-top">
+											<div class="address-item">
+												<div class="address-item__address">пр. Доватора, 16</div>
+												<div class="address-item__title">Многопрофильный медицинский центр</div>
+												<div class="address-item__time">пн-пт: 08:00 - 20:00<br>сб: 08:00 - 19:00<br>вс: 09:00 - 16:00</div>
+												<a href="#" class="address-item__phone">
+													<svg class="address-item__phone-svg">
+														<use xlink:href="images/sprite.svg#phone"></use>
+													</svg>
+													+7 (8672) 40-42-03</a>
+											</div>
+										</div>
+										<img src="images/dest/doctor.jpg" alt="" class="clinic__img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content" data-tab-content="2">2</div>
+					<div class="tab-content" data-tab-content="3">3</div>
+					<div class="tab-content" data-tab-content="4">4</div>
+				</div>
+			</div>
+		</div>
+
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__block border-radius">
+				<div class="footer__top">
+					<div class="footer__top-left">
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Телефон горячей линии</div>
+							<div class="footer__top-item-value">+7 (8672) 40-42-03</div>
+						</div>
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Для пациентов</div>
+							<div class="footer__top-item-value">medical@clinic.ru</div>
+						</div>
+						<div class="footer__top-item">
+							<div class="footer__top-item-key">Для партнеров</div>
+							<div class="footer__top-item-value">medical2@clinic.ru</div>
+						</div>
+					</div>
+					<div class="footer__top-right">
+						<div class="social">
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#tg"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#yt"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#vk"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__item">
+								<svg class="social__item-svg">
+									<use xlink:href="images/sprite.svg#wa"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__btn footer__btn_mob">
+							<a href="#" class="btn btn_white btn_w100">Скачать прайс лист</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__left">
+						<div class="footer__title">Услуги</div>
+						<div class="footer__service">
+							<a href="#" class="footer__link">Консультации для взрослых</a>
+							<a href="#" class="footer__link">Консультации для детей</a>
+							<a href="#" class="footer__link">Лабораторные анализы</a>
+							<a href="#" class="footer__link">Чекапы (комплексная диагностика)</a>
+							<a href="#" class="footer__link">Ультразвуковая диагностика</a>
+							<a href="#" class="footer__link">Лучевая диагностика</a>
+							<a href="#" class="footer__link">Эндоскопия</a>
+							<a href="#" class="footer__link">Хирургия</a>
+							<a href="#" class="footer__link">Стационар (Дневной, круглосуточный)</a>
+							<a href="#" class="footer__link">Функциональная диагностика</a>
+							<a href="#" class="footer__link">Медицинская косметология и реабилитация</a>
+							<a href="#" class="footer__link">Выездная помощь</a>
+						</div>
+					</div>
+					<div class="footer__center">
+						<div class="footer__title">О нас</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Лицензии</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Контакты</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__link">Новости</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item footer__item_blue">Врачи</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item footer__item_blue">Акции</a>
+						</div>
+					</div>
+					<div class="footer__right">
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Услуги для юридических лиц</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Вакансии</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Отзывы</a>
+						</div>
+						<div class="footer__link-item">
+							<a href="#" class="footer__item">Часто задаваемые вопросы</a>
+						</div>
+						<div class="footer__btn">
+							<a href="#" class="btn btn_white btn_w203">Скачать прайс лист</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="callback">
+				<div class="callback__row">
+					<div class="callback__left">
+						<a href="#" class="logo">
+							<img src="images/logo_white.svg" alt="logo" class="logo__img">
+						</a>
+						<div class="footer__copy-block">
+							<div class="footer__copy">ООО “Семейная медицина” 2025.</div>
+							<a href="#" class="footer__policy">Политика конфидециальности</a>
+						</div>
+					</div>
+					<div class="callback__right">
+						<div class="callback__title">Оставьте заявку на обратный звонок</div>
+						<div class="callback__text">Вы не знаете какая услуга нужна? Наш менеджер поможет и запишет Вас на удобную дату и время</div>
+						<form class="callback-form">
+							<div class="callback-form__input-block">
+								<input type="text" class="callback-form__input" placeholder="Как Вас зовут?*">
+							</div>
+							<div class="callback-form__input-block">
+								<input type="text" class="callback-form__input" placeholder="+7 (999) 999-99-99">
+							</div>
+							<button class="btn btn_callback btn_w203">Отправить</button>
+						</form>
+						<div class="footer__copy-block footer__copy-block_mob">
+							<div class="footer__copy">ООО “Семейная медицина” 2025.</div>
+							<a href="#" class="footer__policy">Политика конфидециальности</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

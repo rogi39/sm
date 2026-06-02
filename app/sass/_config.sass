@@ -1,0 +1,87 @@
+// USER VARIABLES SECTION
+
+$accent: #FF7009
+$light_accent: #FFF5EE
+$blue: #5C9FDE
+$light_blue: #F2F5F9
+$blue2: #a9b6c5
+$text: #262626
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, wxp: 1440px, wxpp: 1600px, fhd: 1920px, qhd: 2560px)
+
+// +media-breakpoint-up(sm)
+// +media-breakpoint-up(md)
+// +media-breakpoint-up(lg)
+// +media-breakpoint-up(xl)
+// +media-breakpoint-up(wxp)
+// +media-breakpoint-up(wxpp)
+// +media-breakpoint-up(fhd)
+// +media-breakpoint-up(qshd)
+
+// FONTS LOAD SECTION
+
+// 100 - Extra Light or Ultra Light
+// 200 - Light or Thin
+// 300 - Book or Demi
+// 400 - Regular or Normal
+// 500 - Medium
+// 600 - Semibold or Demibold
+// 700 - Bold
+// 800 - Black or Extra Bold or Heavy
+// 900 - Extra Black or Fat or Ultra Blac
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import "../libs/pick/lightpick.css"
+@import "../libs/swiper/swiper-bundle.min.css"
+@import "../libs/drop/dropzone.min.css"
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap // Uncomment to initially display system fonts
+		src: url('#{$furl}.eot')
+		src: url('#{$furl}.eot?#iefix') format('embedded-opentype'), url('#{$furl}.woff2') format('woff2'), url('#{$furl}.woff') format('woff'), url('#{$furl}.ttf') format('truetype')
+
+@include font('NunitoSans', normal, 400, '../fonts/NunitoSans-Regular')
+@include font('NunitoSans', normal, 600, '../fonts/NunitoSans-SemiBold')
+@include font('NunitoSans', normal, 700, '../fonts/NunitoSans-Bold')
+@include font('Mont', normal, 400, '../fonts/Mont-Regular')
+@include font('Mont', normal, 600, '../fonts/Mont-SemiBold')
+@include font('Mont', normal, 700, '../fonts/Mont-Bold')
+@include font('Quartal', normal, 400, '../fonts/Quartal')
+// GENERAL DOCUMENT STYLES
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	scroll-behavior: smooth
+
+body
+	font-family: NunitoSans, sans-serif
+	font-size: 16px
+	min-width: 360px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $text

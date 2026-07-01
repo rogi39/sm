@@ -1364,6 +1364,7 @@ img
 	font-size: 24px
 	color: $text
 	line-height: 130%
+	transition: color 0.3s ease-out
 	+media-breakpoint-up(sm)
 		font-size: 32px
 	+media-breakpoint-up(md)
@@ -1393,15 +1394,19 @@ img
 	align-items: center
 	gap: 18px
 	margin-bottom: 18px
+	text-decoration: none
 	+media-breakpoint-up(sm)
 		gap: 36px
 		margin-bottom: 30px
+	&:hover
+		text-decoration: none
 	/* .title-arrow__icon */
 	&__icon
 		width: 20px
 		height: 21px
 		flex: 0 0 20px
 		fill: $text
+		transition: fill 0.3s ease-out
 
 .title-row
 	display: flex
@@ -1896,10 +1901,15 @@ img
 		&:hover
 			text-decoration: none
 			background-color: #ffe6d5
+			.trust-us__item-img
+				fill: $accent
 	/* .trust-us__item-img */
 	&__item-img
 		margin-bottom: 8px
-
+		fill: #EFBE9B
+		transition: all .35s ease-out
+		max-width: 210px
+		max-height: 40px
 	/* .trust-us__item-rating */
 	&__item-rating
 		display: flex
@@ -1950,12 +1960,17 @@ img
 	/* .footer__top-left */
 	&__top-left
 		display: flex
+		flex-direction: column
 		flex-wrap: wrap
 		gap: 12px
 		+media-breakpoint-up(sm)
 			gap: 20px
+			flex-direction: row
+			align-items: center
 		+media-breakpoint-up(xl)
-			gap: 60px
+			gap: 40px
+		+media-breakpoint-up(wxp)
+			gap: 135px
 
 	/* .footer__top-item */
 	&__top-item
@@ -1988,7 +2003,8 @@ img
 			display: flex
 			flex-wrap: wrap
 		+media-breakpoint-up(xl)
-			gap: 100px
+			gap: 20px
+			justify-content: space-between
 
 	/* .footer__left */
 	&__left
@@ -2057,7 +2073,27 @@ img
 		color: #fff
 		&:hover
 			color: #fff
-
+	&__end
+		+media-breakpoint-up(md)
+			flex: 0 0 188px
+	&__end-mob
+		+media-breakpoint-up(sm)
+			display: none
+	&__end-title
+		font-weight: 600
+		line-height: 150%
+		color: #3C5673
+		font-size: 14px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+	&__end-app
+		display: inline-block
+		margin-top: 15px
+		width: 130px
+		margin-right: 20px
+		+media-breakpoint-up(sm)
+			width: max-content
+			display: block
 .social
 	display: flex
 	gap: 16px
@@ -2284,8 +2320,13 @@ img
 		border-radius: 16px
 		background-color: $light_accent
 		padding: 30px 20px
+		display: block
+		color: $text
 		+media-breakpoint-up(sm)
 			padding: 36px
+		&:hover
+			text-decoration: none
+			color: $text
 
 	/* .consult__item-title */
 	&__item-title
@@ -3248,12 +3289,12 @@ img
 			order: 2
 
 .sidebar-calc
-	background-color: $light_accent
-	border-radius: 16px
-	padding: 16px
-	+media-breakpoint-up(sm)
-		border-radius: 32px
-		padding: 24px
+	// background-color: $light_accent
+	// border-radius: 16px
+	// padding: 16px
+	// +media-breakpoint-up(sm)
+	// 	border-radius: 32px
+	// 	padding: 24px
 	/* .sidebar-calc__title */
 	&__title
 		font-weight: 600
@@ -3272,17 +3313,71 @@ img
 
 	/* .sidebar-calc__price */
 	&__price
-		font-weight: 700
-		font-size: 28px
-		color: $accent
-		margin-bottom: 8px
-		+media-breakpoint-up(sm)
-			font-size: 40px
+		// font-weight: 700
+		// font-size: 28px
+		// color: $accent
+		// margin-bottom: 8px
+		// +media-breakpoint-up(sm)
+		// 	font-size: 40px
 
 	/* .sidebar-calc__see */
 	&__see
 		color: $accent
-
+.calc
+	&__row
+		display: flex
+		align-items: flex-end
+		gap: 15px
+		margin-bottom: 32px
+		flex-wrap: wrap
+		+media-breakpoint-up(sm)
+			gap: 28px
+	&__col1
+		max-width: 600px
+		width: 100%
+		background-color: #FFF5EE
+		border-radius: 24px
+		padding: 7px 28px
+	&__col2
+	&__col2_top
+		display: flex
+		align-items: flex-end
+		gap: 7px
+		margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			margin-bottom: 3px
+			gap: 14px
+	&__col2-check-svg
+		width: 20px
+		height: 20px
+		fill: #5C9FDE
+	&__col2_bottom
+		display: flex
+		align-items: center
+		gap: 8px
+		flex-wrap: wrap
+		+media-breakpoint-up(sm)
+			gap: 16px
+	&__text
+		font-size: 16px
+		font-weight: 700
+		line-height: 100%
+		margin-bottom: 0
+		+media-breakpoint-up(sm)
+			font-size: 20px
+	&__price
+		border: 1px solid #5C9FDE
+		color: #5C9FDE
+		font-size: 16px
+		font-weight: 700
+		line-height: 80%
+		padding: 5px 8px
+		border-radius: 20px
+		width: max-content
+		text-align: center
+		+media-breakpoint-up(sm)
+			font-size: 20px
+			padding: 7px 18px
 .programm
 	/* .programm__item */
 	&__item
@@ -3769,7 +3864,7 @@ img
 
 	/* .about-info__col */
 	&__col
-		flex: 0 0 calc(33.333% - 12px)
+		flex: 0 0 calc(25% - 12px)
 
 	/* .about-info__item */
 	&__item
@@ -5826,6 +5921,248 @@ img
 	&__remove:hover
 		color: #d00
 
+.about-text
+	font-weight: 600
+	line-height: 120%
+	font-size: 20px
+	background-color: $light_accent
+	padding: 20px
+	border-radius: 16px
+	+media-breakpoint-up(sm)
+		font-size: 32px
+		padding: 50px 40px
+.about-quality
+	background-color: $light_blue
+	border-radius: 16px
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: 20px
+	padding: 20px
+	+media-breakpoint-up(sm)
+		padding: 50px 40px
+		gap: 40px
+	+media-breakpoint-up(lg)
+		flex-direction: row
+		justify-content: space-between
+	&__content
+		flex: 0 0 100%
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc(62% - 20px)
+		+media-breakpoint-up(xl)
+			flex: 0 0 calc(72% - 20px)
+	&__title
+		margin-bottom: 20px
+		line-height: 120%
+		+media-breakpoint-up(sm)
+			margin-bottom: 40px
+	&__text
+		line-height: 140%
+	&__img
+		max-width: 300px
+		min-width: 300px
+		height: 300px
+		border-radius: 16px
+		object-fit: cover
+		+media-breakpoint-up(sm)
+			height: 400px
+		
+.title-row
+	&__subtitle
+		line-height: 120%
+		font-weight: 600
+		margin-top: 6px
+		font-size: 14px
+		+media-breakpoint-up(sm)
+			font-size: 16px
+.about-preim
+	&__item
+		display: flex
+		gap: 10px	
+		background-color: $light_accent
+		padding: 20px 12px
+		border-radius: 16px
+		width: 100%
+		+media-breakpoint-up(sm)	
+			padding: 24px
+		&:not(:last-child)
+			margin-bottom: 12px
+			+media-breakpoint-up(sm)	
+				margin-bottom: 24px
+	&__item-icon
+		width: 24px
+		height: 24px
+		fill: $accent
+		flex: none
+	&__item-text
+		line-height: 140%
+
+
+.about-sliders
+	.swiper-wrapper
+		transition-timing-function: linear !important
+.about-slider
+	&__pagination
+		text-align: center
+		+media-breakpoint-up(sm)
+			margin-top: 12px
+		.swiper-pagination-bullet-active
+			background: $accent !important
+	&__slide-doctor-img
+		position: absolute
+		bottom: -20px
+		right: -30px
+		width: 200px
+		max-width: 120px
+		+media-breakpoint-up(sm)
+			bottom: -30px
+			right: -42px
+			max-width: unset
+	
+	&__slide
+		height: 180px
+		border-radius: 16px
+		overflow: hidden
+		width: 200px !important
+		+media-breakpoint-up(md)
+			height: 300px
+			width: 300px !important
+		+media-breakpoint-up(lg)
+			width: 300px !important
+		+media-breakpoint-up(xl)
+			width: calc( 22vw - 24px ) !important
+	&__slide-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__slide-doctor-title
+		color: #000
+		font-weight: 600
+		font-size: 16px
+		line-height: 120%
+		margin-bottom: 0px
+		+media-breakpoint-up(sm)
+			margin-bottom: 5px
+			font-size: 20px
+	&__slide-doctor-arrow
+		width: 40px
+		opacity: 30%
+		height: 35px
+		+media-breakpoint-up(sm)
+			width: 50px
+	&__slide-doctor
+		padding: 15px
+		overflow: hidden
+		position: relative
+		background-color: $light_accent
+		width: 130px !important
+		+media-breakpoint-up(sm)
+			padding: 20px
+			width: 200px !important
+		+media-breakpoint-up(xl)
+			width: 11vw !important
+		&:hover
+			background-color: $light_blue
+			text-decoration: none
+
+.podxod
+	display: flex
+	flex-direction: column
+	gap: 30px
+	position: relative
+	+media-breakpoint-up(md)
+		flex-direction: row
+		gap: 60px
+	&__left
+		max-width: 320px
+		width: 100%
+		position: sticky
+		top: 80px
+		height: max-content
+	&__left-text
+		line-height: 100%
+		margin-top: 30px
+		+media-breakpoint-up(md)
+			margin-top: 42px
+	&__right
+		width: 100%
+	&__right-item
+		padding: 12px
+		position: relative
+		overflow: hidden
+		border-radius: 16px
+		background-color: $light_blue
+		+media-breakpoint-up(sm)
+			padding: 24px 40px
+		&:not(:last-child)
+			margin-bottom: 12px
+			+media-breakpoint-up(sm)	
+				margin-bottom: 24px
+	&__right-item-title
+		color: #3C5673
+		font-weight: 600
+		font-size: 20px
+		line-height: 100%
+		margin-bottom: 10px
+		position: relative
+		+media-breakpoint-up(sm)
+			font-size: 24px
+	&__right-item-text
+		line-height: 138%
+		position: relative
+	&__right-item-img
+		position: absolute
+		bottom: 0
+		right: 0
+		z-index: 0
+		+media-breakpoint-up(sm)
+			max-width: 218px
+
+.main-doctors
+	&__slide
+		height: stretch
+		&:hover
+			text-decoration: none
+	.doctor-item
+		height: 100%
+		padding: 16px
+		+media-breakpoint-up(sm)
+			padding: 20px
+		.doctor-item__name
+			font-size: 18px
+			+media-breakpoint-up(sm)
+				font-size: 20px
+			
+	&__title
+		width: max-content
+		transition: all 0.3s ease-out
+		&:hover
+			.title
+				color: #81b2e1
+			svg
+				fill: #81b2e1
+	&__arrows
+		display: flex
+		width: 100%
+		align-items: center
+		justify-content: flex-end
+		gap: 25px
+		margin-top: 20px
+		+media-breakpoint-up(sm)
+			margin-top: 40px
+			gap: 44px
+	&__svg
+		width: 20px
+		fill: #262626
+		height: 18px
+		transition: all 0.3s ease-out
+		+media-breakpoint-up(sm)
+			width: 20px
+			height: 23px
+		&:hover
+			fill: #81b2e1
+	
+	
 .border-radius
 	border-radius: 0 16px 16px 16px
 

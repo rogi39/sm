@@ -1129,6 +1129,56 @@
 		</div>
 	</main>
 
+	<div class="zapis-mob btn-modal" data-id-modal="modal-callback">Записаться на приём</div>
+
+	<div class="messengers">
+		<a href="" class="messengers__item messengers__item_max">
+			<p class="messengers__item-text">Написать в MAX</p>
+			<svg class="messengers__item-svg">
+				<use xlink:href="images/sprite.svg#max"></use>
+			</svg>
+		</a>
+		<a href="" class="messengers__item messengers__item_tg">
+			<p class="messengers__item-text">Написать в Telegram</p>
+			<svg class="messengers__item-svg">
+				<use xlink:href="images/sprite.svg#tg"></use>
+			</svg>
+		</a>
+		<div class="messengers__item messengers__item_form  btn-modal" data-id-modal="modal-callback">
+			<p class="messengers__item-text">Позвоните мне</p>
+			<svg class="messengers__item-svg">
+				<use xlink:href="images/sprite.svg#tel1"></use>
+			</svg>
+		</div>
+		<a href="" class="messengers__item messengers__item_tel">
+			<p class="messengers__item-text">Позвонить</p>
+			<svg class="messengers__item-svg">
+				<use xlink:href="images/sprite.svg#tel2"></use>
+			</svg>
+		</a>
+		<div class="messengers__close">
+			<svg class="messengers__close-svg messengers__close-svg-close">
+				<use xlink:href="images/sprite.svg#close"></use>
+			</svg>
+
+
+			<svg class="messengers__item-svg messengers__close-svg">
+				<use xlink:href="images/sprite.svg#tel1"></use>
+			</svg>
+			<svg class="messengers__item-svg messengers__close-svg">
+				<use xlink:href="images/sprite.svg#tg"></use>
+			</svg>
+			<svg class="messengers__item-svg messengers__close-svg">
+				<use xlink:href="images/sprite.svg#tel2"></use>
+			</svg>
+			<svg class="messengers__item-svg messengers__close-svg">
+				<use xlink:href="images/sprite.svg#max"></use>
+			</svg>
+
+		</div>
+	</div>
+
+
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__block border-radius">
@@ -1303,6 +1353,57 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal" id="modal-callback">
+		<div class="modal__block modal__block_callback modal__block_w540">
+
+			<div class="modal__close">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+					class="modal__close-svg">
+					<path d="M9.16992 14.8299L14.8299 9.16992" stroke="#A9B6C5" stroke-width="1.5"
+						stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M14.8299 14.8299L9.16992 9.16992" stroke="#A9B6C5" stroke-width="1.5"
+						stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+						stroke="#A9B6C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<div class="subtitle">Семейная медицина</div>
+			<div class="modal__title">Заказать звонок</div>
+			<div class="modal__text">Оставьте свои контактные данные и мы перезвоним Вам для подтверждения записи</div>
+			<div class="modal__title-form">Контактные данные</div>
+			<form class="modal-form send-form" action="modal-callback">
+				<div class="modal-form__input-block">
+					<input type="text" class="modal-form__input" placeholder="ФИО" name="modal-callback-name">
+
+				</div>
+				<div class="modal-form__input-block">
+					<input type="text" class="modal-form__input tel" placeholder="+7 (___) — ___ — ____"
+						name="modal-callback-phone">
+
+				</div>
+
+				<div class="form__checkbox">
+					<input type="checkbox" class="form__checkbox-input" id="modal-callback-privacy"
+						name="modal-callback-privacy" checked>
+					<label for="modal-callback-privacy" class="form__checkbox-box"></label>
+					<div class="form__policy ">Нажимая кнопку отправить, вы соглашаетесь с нашей <a
+							href="/politika-konfidetsialnosti/" target="_blank">политикой конфиденциальности</a></div>
+				</div>
+
+				<div class="smart-captcha-block">
+					<div style="height: 100px" id="captcha-container" class="smart-captcha"
+						data-sitekey="ysc1_xhvxcWSC3hUusNY8vf0kEcOcRmB1Zz7AFrajivOh075bbfdc"></div>
+				</div>
+
+				<input type="hidden" value="<?php echo $current_url ?>" name="modal-callback-page">
+
+				<div class="modal-form__btn-row">
+					<button class="modal-form__btn btn  btn_gradient">Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+	</div>
 
 	<div class="modal modal_center" id="modal-address">
 		<div class="modal__block modal__block_w368">
@@ -1598,7 +1699,20 @@
 			</form>
 		</div>
 	</div>
+	<script>
+		let messengers = document.querySelector(".messengers");
+		document.querySelector(".messengers__close").addEventListener("click", function () {
+			event.stopPropagation();
+			messengers.classList.toggle("open");
+		})
 
+		document.addEventListener("click", function (event) {
+			// Если клик был НЕ по блоку messengers и НЕ по его внутренним элементам
+			if (!messengers.contains(event.target)) {
+				messengers.classList.remove("open");
+			}
+		});
+	</script>
 	<script src="js/app.min.js"></script>
 
 </body>

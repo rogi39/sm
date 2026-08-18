@@ -225,7 +225,7 @@ img
 				width: 8px
 				flex: 0 0 8px
 				border-radius: 50%
-				background-color: $accent
+				background-color: #000
 				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25)
 				display: inline-block
 				margin-right: 15px
@@ -254,6 +254,9 @@ img
 		padding: 100px 0
 	&_pt0
 		padding-top: 0
+	&_pb0
+		padding-bottom: 0
+
 	&_gray
 		background-color: #fafafa
 
@@ -320,7 +323,7 @@ img
 	&__link
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 
 	/* .menu-scrolled__right */
 	&__right
@@ -354,7 +357,7 @@ img
 	&__link
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 
 .main
 	padding-top: 144px
@@ -921,7 +924,7 @@ img
 	&__sub-link
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 		&:hover
 			text-decoration: none
 	/* .menu__sub */
@@ -1198,6 +1201,45 @@ img
 	text-align: center
 	margin-bottom: 24px
 
+.first-nav
+	// position: absolute
+	// z-index: 1
+	// width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	// bottom: 24px
+	// top: calc(50% - 10px)
+	// +media-breakpoint-up(wxp)
+	// 	width: calc(100% + 60px)
+	// 	left: -30px
+	/* .first-nav__item */
+	&__item
+		position: absolute
+		z-index: 1
+		bottom: 24px
+		&.first-next
+			right: 0
+
+	/* .first-nav__item-svg */
+	&__item-svg
+		width: 20px
+		fill: $text
+		height: 18px
+		transition: all 0.3s ease-out
+		+media-breakpoint-up(sm)
+			width: 20px
+			height: 23px
+		&:hover
+			fill: #81b2e1
+
+.first-prev
+
+.first-next
+
+.first-block
+	position: relative
+
 .first
 	/* .first__block-bottom */
 	&__block-bottom
@@ -1312,6 +1354,8 @@ img
 	/* .advantages__col */
 	&__col
 		flex: 0 0 calc(33.3333% - 11px)
+	&__col_50
+		flex: 0 0 calc(50% - 8px)
 
 	/* .advantages__item */
 	&__item
@@ -1332,6 +1376,10 @@ img
 			padding: 30px
 	&__item_border
 		border-top-left-radius: 0
+	&__item_aic
+		align-items: center
+		.advantages__title
+			margin-bottom: 0
 	/* .advantages__icon-block */
 	&__icon-block
 
@@ -1471,7 +1519,7 @@ img
 			grid-row: 3 / 4
 
 .checkup
-	background: url('../images/checkup.png'), linear-gradient(180deg, #ffab6e 0%, #ff7009 100%)
+	background: url('../images/checkup.jpg'), linear-gradient(180deg, #ffab6e 0%, #ff7009 100%)
 	background-position: center bottom
 	background-repeat: no-repeat
 	padding: 30px 20px
@@ -1934,10 +1982,10 @@ img
 	/* .footer__block */
 	&__block
 		background-color: $light_blue
-		background-image: url('../images/footer.svg')
-		background-repeat: no-repeat
-		background-position: right bottom
-		background-size: 200px
+		// background-image: url('../images/footer.svg')
+		// background-repeat: no-repeat
+		// background-position: right bottom
+		// background-size: 200px
 		margin-bottom: 8px
 		padding: 30px 20px
 		border-radius: 0 16px 16px 16px
@@ -2207,6 +2255,9 @@ img
 	margin-bottom: 32px
 	+media-breakpoint-up(sm)
 		padding: 36px
+	&_blue
+		// background: radial-gradient(circle, #ffb681, #ffa666, #ff954b, #ff8330, #ff7009)
+		background: radial-gradient(65.2% 296.71% at 65.2% 30.75%, #73a4d2 0%, #80b8ec 100%) /* Радиальный градиент в Figma повернут на -0.73deg обычный CSS radial-gradient() не поддерживает поворот */
 	&_doc
 		background: url('../images/doc-single.svg'), radial-gradient(296.71% 65.2% at 65.2% 30.75%, #ffb681 0%, #ff7009 100%)
 		background-repeat: no-repeat
@@ -2420,7 +2471,10 @@ img
 			color: $blue
 
 .inner-block
-	/* .inner-block__row */
+	/* .inner-block__img */
+	&__img
+		border-radius: 28px
+		/* .inner-block__row */
 	&__row
 		display: flex
 		flex-wrap: wrap
@@ -2428,9 +2482,16 @@ img
 		flex-direction: column
 		+media-breakpoint-up(lg)
 			flex-direction: row
+	&__row_mb
+		margin-bottom: 16px
+		+media-breakpoint-up(lg)
+			margin-bottom: 32px
+
 	/* .inner-block__col */
 	&__col
 		flex: 0 0 calc(50% - 8px)
+		+media-breakpoint-up(lg)
+			flex: 1 0 calc(50% - 8px)
 
 	/* .inner-block__title */
 	&__title
@@ -2460,6 +2521,12 @@ img
 		flex: 0 0 100%
 		+media-breakpoint-up(sm)
 			flex: 0 0 calc( 50% - 8px )
+	&__col_w100
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 8px )
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc( 25% - 12px )
 
 	/* .advantages-inner__item */
 	&__item
@@ -2741,7 +2808,7 @@ img
 	&__name-small
 		font-weight: 700
 		font-size: 18px
-		color: #262626
+		color: $text
 		margin-bottom: 16px
 
 	/* .checkup-item__text-small */
@@ -2829,6 +2896,8 @@ img
 			flex: 0 0 calc( 50% - 8px )
 		+media-breakpoint-up(lg)
 			flex: 0 0 calc( 33.333% - 11px )
+	&__col_hidden
+		display: none
 
 .doc-slider-pagination
 	text-align: center
@@ -2879,6 +2948,13 @@ img
 		font-size: 14px
 		color: #3c5673
 		margin-bottom: 14px
+		// display: flex
+		// align-items: center
+		// gap: 5px
+	/* .doctor-item__pos-staj */
+	&__pos-staj
+		color: #5c9fde
+		display: inline-block
 
 	/* .doctor-item__row */
 	&__row
@@ -2895,6 +2971,7 @@ img
 		border-radius: 38px
 		padding: 10px 23px
 		background-color: #fff
+		cursor: pointer
 	/* .doctor-item__btn */
 	&__btn
 		border-radius: 38px
@@ -3187,7 +3264,7 @@ img
 	&__title
 		font-weight: 600
 		font-size: 24px
-		color: #262626
+		color: $text
 		margin-bottom: 12px
 
 .analys
@@ -3308,7 +3385,7 @@ img
 	&__text
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 		margin-bottom: 24px
 
 	/* .sidebar-calc__price */
@@ -3514,7 +3591,7 @@ img
 			font-size: 38px
 		+media-breakpoint-up(md)
 			font-size: 48px
-			margin-bottom: 70px
+			margin-bottom: 42px
 
 	/* .checkup-block__subtitle */
 	&__subtitle
@@ -3883,7 +3960,7 @@ img
 	&__title
 		font-weight: 600
 		font-size: 24px
-		color: #262626
+		color: $text
 		+media-breakpoint-up(sm)
 			font-size: 32px
 
@@ -3967,7 +4044,7 @@ img
 	&__item-title
 		font-weight: 600
 		font-size: 14px
-		color: #262626
+		color: $text
 
 .about-license
 	/* .about-license__row */
@@ -4001,7 +4078,7 @@ img
 	&__item-title
 		font-weight: 600
 		font-size: 14px
-		color: #262626
+		color: $text
 
 .news
 	/* .news__row */
@@ -4184,7 +4261,7 @@ img
 	&__title
 		font-weight: 600
 		font-size: 24px
-		color: #262626
+		color: $text
 		margin-bottom: 8px
 
 	/* .anketa__row */
@@ -4198,7 +4275,7 @@ img
 	&__text
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 		max-width: 336px
 
 	/* .anketa__btn */
@@ -4443,7 +4520,7 @@ img
 		font-weight: 600
 		font-size: 20px
 		line-height: 122%
-		color: #262626
+		color: $text
 		margin-bottom: 28px
 		span
 			color: $accent
@@ -4481,14 +4558,14 @@ img
 	&__item-title
 		font-weight: 700
 		font-size: 14px
-		color: #262626
+		color: $text
 		margin-bottom: 20px
 
 	/* .nalog-how__item-text */
 	&__item-text
 		font-weight: 400
 		font-size: 14px
-		color: #262626
+		color: $text
 
 	/* .nalog-how__item-text-row */
 	&__item-text-row
@@ -4512,7 +4589,7 @@ img
 	font-weight: 600
 	font-size: 16px
 	line-height: 120%
-	color: #262626
+	color: $text
 	margin-bottom: 24px
 	+media-breakpoint-up(sm)
 		font-size: 24px
@@ -4934,14 +5011,14 @@ img
 		font-weight: 600
 		font-size: 36px
 		line-height: 136%
-		color: #262626
+		color: $text
 
 	/* .modal__text */
 	&__text
 		font-weight: 400
 		font-size: 14px
 		line-height: 129%
-		color: #262626
+		color: $text
 		margin-bottom: 30px
 
 	/* .modal__title-form */
@@ -4949,7 +5026,7 @@ img
 		font-weight: 600
 		font-size: 24px
 		line-height: 204%
-		color: #262626
+		color: $text
 
 .radio label, .checkbox label
 	padding-left: 0
@@ -5032,7 +5109,7 @@ img
 	&__button-address
 		font-weight: 600
 		font-size: 16px
-		color: #262626
+		color: $text
 	&__button-text
 		font-weight: 500
 		font-size: 14px
@@ -5087,7 +5164,7 @@ img
 	&__list-item-address
 		font-weight: 600
 		font-size: 16px
-		color: #262626
+		color: $text
 
 	&__list-item-text
 		font-weight: 500
@@ -5177,7 +5254,7 @@ img
 		font-weight: 700
 		font-size: 18px
 		line-height: 129%
-		color: #262626
+		color: $text
 		margin-bottom: 12px
 
 	/* .select-address__item */
@@ -5201,7 +5278,7 @@ img
 	&__item-address
 		font-weight: 600
 		font-size: 14px
-		color: #262626
+		color: $text
 	/* .select-address__btn-block */
 	&__btn-block
 		display: flex
@@ -5263,6 +5340,17 @@ img
 	&__wrap
 		position: relative
 		z-index: 1
+	/* .checkup-single-hero__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		line-height: 120%
+		color: #fff
+		// margin-bottom: 23px
+		max-width: 635px
+		+media-breakpoint-up(lg)
+			padding-left: 60px
+
 	/* .checkup-single-hero__title */
 	&__title
 		font-weight: 600
@@ -5270,7 +5358,8 @@ img
 		line-height: 120%
 		color: #fff
 		// margin-bottom: 23px
-		max-width: 635px
+		max-width: 705px
+		margin-bottom: 26px
 		+media-breakpoint-up(sm)
 			font-size: 42px
 			line-height: 97%
@@ -5489,7 +5578,7 @@ img
 		font-weight: 700
 		font-size: 16px
 		line-height: 120%
-		color: #262626
+		color: $text
 		margin-top: 4px
 		+media-breakpoint-up(sm)
 			font-size: 18px
@@ -5547,7 +5636,7 @@ img
 		font-weight: 700
 		font-size: 16px
 		line-height: 150%
-		color: #262626
+		color: $text
 	/* .checkup-single-sostav__price-block */
 	&__price-block
 		border-radius: 16px
@@ -5628,7 +5717,7 @@ img
 	&__text
 		font-weight: 300
 		font-size: 16px
-		color: #262626
+		color: $text
 		span
 			color: $accent
 	/* .checkup-single-sostav__sum */
@@ -5661,7 +5750,7 @@ img
 		font-weight: 600
 		font-size: 24px
 		line-height: 120%
-		color: #262626
+		color: $text
 		margin-bottom: 16px
 		+media-breakpoint-up(sm)
 			margin-bottom: 36px
@@ -5824,7 +5913,7 @@ img
 	&__item-title
 		font-weight: 600
 		font-size: 32px
-		color: #262626
+		color: $text
 		margin-bottom: 4px
 		+media-breakpoint-up(sm)
 			margin-bottom: 16px
@@ -5966,7 +6055,7 @@ img
 		object-fit: cover
 		+media-breakpoint-up(sm)
 			height: 400px
-		
+
 .title-row
 	&__subtitle
 		line-height: 120%
@@ -5978,16 +6067,16 @@ img
 .about-preim
 	&__item
 		display: flex
-		gap: 10px	
+		gap: 10px
 		background-color: $light_accent
 		padding: 20px 12px
 		border-radius: 16px
 		width: 100%
-		+media-breakpoint-up(sm)	
+		+media-breakpoint-up(sm)
 			padding: 24px
 		&:not(:last-child)
 			margin-bottom: 12px
-			+media-breakpoint-up(sm)	
+			+media-breakpoint-up(sm)
 				margin-bottom: 24px
 	&__item-icon
 		width: 24px
@@ -5996,7 +6085,6 @@ img
 		flex: none
 	&__item-text
 		line-height: 140%
-
 
 .about-sliders
 	.swiper-wrapper
@@ -6018,7 +6106,7 @@ img
 			bottom: -30px
 			right: -42px
 			max-width: unset
-	
+
 	&__slide
 		height: 180px
 		border-radius: 16px
@@ -6096,7 +6184,7 @@ img
 			padding: 24px 40px
 		&:not(:last-child)
 			margin-bottom: 12px
-			+media-breakpoint-up(sm)	
+			+media-breakpoint-up(sm)
 				margin-bottom: 24px
 	&__right-item-title
 		color: #3C5673
@@ -6120,9 +6208,14 @@ img
 
 .main-doctors
 	&__slide
-		height: stretch
+		// height: stretch
+		min-height: 365px
+		height: auto
 		&:hover
 			text-decoration: none
+		+media-breakpoint-up(sm)
+			min-height: initial
+			height: 100%
 	.doctor-item
 		height: 100%
 		padding: 16px
@@ -6132,7 +6225,7 @@ img
 			font-size: 18px
 			+media-breakpoint-up(sm)
 				font-size: 20px
-			
+
 	&__title
 		width: max-content
 		transition: all 0.3s ease-out
@@ -6153,7 +6246,7 @@ img
 			gap: 44px
 	&__svg
 		width: 20px
-		fill: #262626
+		fill: $text
 		height: 18px
 		transition: all 0.3s ease-out
 		+media-breakpoint-up(sm)
@@ -6161,8 +6254,7 @@ img
 			height: 23px
 		&:hover
 			fill: #81b2e1
-	
-	
+
 .zapis-mob
 	background-color: $blue
 	color: #fff
@@ -6213,7 +6305,7 @@ img
 			background-color: #fff
 		.messengers__close-svg
 			opacity: 0 !important
-			animation-play-state: paused	
+			animation-play-state: paused
 		.messengers__close-svg-close
 			opacity: 1 !important
 			fill: $blue
@@ -6300,14 +6392,345 @@ img
 			animation-delay: 6s
 		&:nth-child(5)
 			animation-delay: 9s
-		
+
 		+media-breakpoint-up(sm)
 			width: 28px
 			height: 28px
-			
 
+.alergologia-signal
+	/* .alergologia-signal__subtitle */
+	&__subtitle
+		font-size: 14px
+		max-width: 340px
+		margin-bottom: 24px
+		color: #3c5673
 
+	/* .alergologia-signal__items */
+	&__items
+		display: flex
+		flex-wrap: wrap
+		gap: 16px
 
+	/* .alergologia-signal__item */
+	&__item
+		font-weight: 500
+		font-size: 16px
+		color: #3c5673
+		flex: 0 0 100%
+		background: #f2f5f9
+		padding: 20px 24px
+		border-radius: 16px
+		+media-breakpoint-up(sm)
+			padding: 27px 30px
+			font-size: 20px
+		+media-breakpoint-up(lg)
+			flex: 0 0 calc(50% - 8px)
+
+.alergologia-work
+	padding-top: 80px
+	+media-breakpoint-up(sm)
+		padding-top: 120px
+
+	/* .alergologia-work__img */
+	&__img
+		display: none
+		+media-breakpoint-up(sm)
+			display: block
+			position: absolute
+			z-index: -1
+			right: 0
+			bottom: 0
+			max-width: 200px
+		+media-breakpoint-up(md)
+			max-width: 260px
+		+media-breakpoint-up(lg)
+			max-width: 100%
+
+	/* .alergologia-work__top-text */
+	&__top-text
+		+media-breakpoint-up(sm)
+			max-width: 70%
+	/* .alergologia-work__top */
+	&__top
+		background: linear-gradient(90deg, #5c9fde 0%, #8abff0 100%)
+		border-radius: 32px
+		color: #fff
+		padding: 20px
+		font-weight: 500
+		font-size: 16px
+		line-height: 140%
+		position: relative
+		z-index: 1
+		ul
+			padding: 0
+			padding-left: 20px
+		+media-breakpoint-up(sm)
+			padding: 60px 30px
+		+media-breakpoint-up(md)
+			font-size: 20px
+
+	/* .alergologia-work__bottom */
+	&__bottom
+		background: #f2f5f9
+		padding: 60px 20px 20px 20px
+		margin-top: -30px
+		border-bottom-left-radius: 32px
+		border-bottom-right-radius: 32px
+		+media-breakpoint-up(sm)
+			padding: 60px 30px 30px 30px
+
+	/* .alergologia-work__subtitle */
+	&__subtitle
+		font-weight: 600
+		font-size: 13px
+		color: #6caae4
+		margin-bottom: 12px
+
+	/* .alergologia-work__title */
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 120%
+		color: $text
+		+media-breakpoint-up(sm)
+			font-size: 24px
+		+media-breakpoint-up(lg)
+			font-size: 32px
+
+.alergologia-item
+	border-radius: 16px
+	background-color: $light_accent
+	padding: 16px
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&:not(:last-child)
+		margin-bottom: 16px
+	&:hover
+		text-decoration: none
+		.alergologia-item__title
+			color: $blue
+	+media-breakpoint-up(sm)
+		padding: 20px 18px
+	/* .alergologia-item__title */
+	&__title
+		font-weight: 600
+		font-size: 16px
+		line-height: 120%
+		color: #3c5673
+		transition: color .35s ease-out
+		+media-breakpoint-up(sm)
+			font-size: 20px
+
+	/* .alergologia-item__price */
+	&__price
+		font-weight: 700
+		font-size: 16px
+		color: $accent
+		flex: 0 0 80px
+		text-align: right
+		+media-breakpoint-up(sm)
+			font-size: 20px
+			flex: 0 0 110px
+		+media-breakpoint-up(md)
+			flex: 0 0 120px
+			font-size: 24px
+
+.alergologia-why
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url('../images/dest/alergologia-why.jpg')
+		background-size: cover
+		background-position: center
+		filter: blur(10px)
+		z-index: -1
+
+	/* .alergologia-why__block */
+	&__block
+		backdrop-filter: blur(4px)
+		background: rgba(255, 255, 255, 0.6)
+		padding: 30px 20px
+		border-radius: 30px
+		+media-breakpoint-up(sm)
+			padding: 30px
+
+	/* .alergologia-why__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+		row-gap: 20px
+
+	/* .alergologia-why__col */
+	&__col
+		padding: 0 10px
+		flex: 0 0 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			flex: 0 0 33.3333%
+	&__col_50
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+
+	/* .alergologia-why__item */
+	&__item
+		border-radius: 18px
+		background-color: #fff
+		padding: 30px
+
+	/* .alergologia-why__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 20px
+		line-height: 120%
+		color: $text
+		min-height: 48px
+		margin-bottom: 48px
+
+	/* .alergologia-why__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 16px
+		line-height: 140%
+		color: rgba(38, 38, 38, 0.72)
+		min-height: 44px
+
+.alergologia-how
+	/* .alergologia-how__item */
+	&__item
+		padding: 24px 0
+		&:not(:last-child)
+			border-bottom: 1px solid #f2f5f9
+
+	/* .alergologia-how__item-row */
+	&__item-row
+		display: flex
+		flex-direction: column
+		+media-breakpoint-up(lg)
+			gap: 24px
+			align-items: center
+			flex-direction: row
+
+	/* .alergologia-how__item-left */
+	&__item-left
+		display: flex
+		align-items: center
+		gap: 10px
+		+media-breakpoint-up(sm)
+			gap: 20px
+		+media-breakpoint-up(lg)
+			flex: 0 0 455px
+
+	/* .alergologia-how__item-number */
+	&__item-number
+		font-weight: 700
+		font-size: 30px
+		color: rgba(60, 86, 115, 0.17)
+		+media-breakpoint-up(sm)
+			font-size: 40px
+
+	/* .alergologia-how__item-title */
+	&__item-title
+		font-weight: 700
+		font-size: 18px
+		color: #3c5673
+		+media-breakpoint-up(sm)
+			font-size: 24px
+
+	/* .alergologia-how__item-right */
+	&__item-right
+		flex: 1
+
+	/* .alergologia-how__item-text */
+	&__item-text
+		font-weight: 400
+		font-size: 16px
+		color: #3c5673
+
+.review-alergologia
+	background-color: $light_accent
+	padding: 20px
+	border-radius: 0 16px 16px 16px
+	+media-breakpoint-up(sm)
+		padding: 30px
+	/* .review-alergologia__row */
+	&__row
+		+media-breakpoint-up(sm)
+			display: flex
+
+	/* .review-alergologia__left */
+	&__left
+		text-align: center
+		margin-bottom: 12px
+		+media-breakpoint-up(sm)
+			text-align: left
+			margin-bottom: 0
+			flex: 0 0 154px
+			padding-right: 30px
+			margin-right: 30px
+			border-right: 1px solid #fff
+
+	/* .review-alergologia__img */
+	&__img
+		height: 123px
+		width: 123px
+		border-radius: 50%
+
+	/* .review-alergologia__right */
+	&__right
+
+	/* .review-alergologia__title-block */
+	&__title-block
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 12px
+
+	/* .review-alergologia__title */
+	&__title
+		font-weight: 600
+		color: $text
+
+	/* .review-alergologia__date */
+	&__date
+		font-weight: 600
+		font-size: 14px
+		color: #ff7009
+
+	/* .review-alergologia__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		color: $text
+
+.alergologia-review-slider-pagination
+	text-align: center
+	margin-top: 12px
+	.swiper-pagination-bullet-active
+		background: $accent
+
+.inner-service__col--hidden
+	display: none
+
+.show-all-btn
+	margin-top: 20px
+	padding: 10px 20px
+	background-color: $accent
+	color: white
+	border: none
+	border-radius: 4px
+	cursor: pointer
+	font-size: 16px
+	&:hover
+		background-color: #e05d00
 
 @keyframes iconFadeLoopSmooth
 	0%
@@ -6322,10 +6745,6 @@ img
 		opacity: 0
 	100%
 		opacity: 0
-
-
-
-
 
 .border-radius
 	border-radius: 0 16px 16px 16px

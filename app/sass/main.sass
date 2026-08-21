@@ -5009,9 +5009,11 @@ img
 	/* .modal__title */
 	&__title
 		font-weight: 600
-		font-size: 36px
+		font-size: 28px
 		line-height: 136%
 		color: $text
+		+media-breakpoint-up(sm)
+			font-size: 36px
 
 	/* .modal__text */
 	&__text
@@ -5309,6 +5311,33 @@ img
 	&__btn-prev
 		background: #f0f0f0
 		color: #333
+
+.modal-review
+	/* .modal-review__title-block */
+	&__title-block
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 12px
+
+	/* .modal-review__title */
+	&__title
+		font-weight: 600
+		color: $text
+
+	/* .modal-review__date */
+	&__date
+		font-weight: 600
+		font-size: 14px
+		color: $accent
+
+	/* .modal-review__text */
+	&__text
+		font-weight: 400
+		font-size: 16px
+		line-height: 129%
+		color: $text
+		white-space: pre-line
 
 .checkup-single-hero
 	position: relative
@@ -6657,12 +6686,12 @@ img
 
 .review-alergologia
 	background-color: $light_accent
-	padding: 20px
+	padding: 24px
 	border-radius: 0 16px 16px 16px
 	+media-breakpoint-up(sm)
-		padding: 30px
 	/* .review-alergologia__row */
 	&__row
+		margin-bottom: 8px
 		+media-breakpoint-up(sm)
 			display: flex
 
@@ -6670,13 +6699,15 @@ img
 	&__left
 		text-align: center
 		margin-bottom: 12px
+		font-size: 54px
+		line-height: 54px
+		font-weight: 600
 		+media-breakpoint-up(sm)
 			text-align: left
 			margin-bottom: 0
-			flex: 0 0 154px
-			padding-right: 30px
-			margin-right: 30px
-			border-right: 1px solid #fff
+			padding-right: 12px
+			margin-right: 12px
+			border-right: 1px solid #000
 
 	/* .review-alergologia__img */
 	&__img
@@ -6699,6 +6730,9 @@ img
 		font-weight: 600
 		color: $text
 
+	/* .review-alergologia__doctor */
+	&__doctor
+		display: none
 	/* .review-alergologia__date */
 	&__date
 		font-weight: 600
@@ -6710,6 +6744,25 @@ img
 		font-weight: 400
 		font-size: 16px
 		color: $text
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		overflow: hidden
+
+	/* .review-alergologia__btn */
+	&__btn
+		display: inline-flex
+		align-items: center
+		padding: 0
+		border: none
+		background: none
+		cursor: pointer
+		font-weight: 600
+		font-size: 14px
+		line-height: 129%
+		color: $accent
+		&:hover
+			color: darken($accent, 10%)
 
 .alergologia-review-slider-pagination
 	text-align: center

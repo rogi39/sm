@@ -1234,3 +1234,50 @@ const alergologiaReviewSlider = () => {
 	});
 };
 alergologiaReviewSlider();
+
+document.addEventListener("DOMContentLoaded", function () {
+	const reviewTexts = document.querySelectorAll(".review-alergologia__text");
+	const reviewModal = document.getElementById("modal-review");
+	if (!reviewModal || !reviewTexts.length) return;
+
+	const reviewModalTitle = reviewModal.querySelector(".modal-review__title");
+	const reviewModalDoctor = reviewModal.querySelector(".modal-review__doctor");
+	const reviewModalDate = reviewModal.querySelector(".modal-review__date");
+	const reviewModalText = reviewModal.querySelector(".modal-review__text");
+
+	function toggleReviewBtns() {
+		reviewTexts.forEach((text) => {
+			const btn = text.nextElementSibling;
+			if (!btn || !btn.classList.contains("review-alergologia__btn")) return;
+			if (text.scrollHeight <= text.clientHeight) {
+				btn.style.display = "none";
+			} else {
+				btn.style.display = "inline-flex";
+			}
+		});
+	}
+
+	toggleReviewBtns();
+	window.addEventListener("resize", toggleReviewBtns);
+
+	document.querySelectorAll(".review-alergologia__btn").forEach((btn) => {
+		btn.addEventListener("click", function (e) {
+			e.preventDefault();
+			const card = this.closest(".review-alergologia");
+			// const title = card.querySelector(".review-alergologia__title").textContent.trim();
+			const doctor = card.querySelector(".review-alergologia__doctor").textContent.trim();
+			const date = card.querySelector(".review-alergologia__date").textContent.trim();
+			const text = card.querySelector(".review-alergologia__text").textContent.trim();
+			// reviewModalTitle.textContent = title;
+			reviewModalDoctor.textContent = doctor;
+			reviewModalDate.textContent = date;
+			reviewModalText.textContent = text;
+			let wsb = widthScrollBar();
+			fadeIn(reviewModal, 300, "flex");
+			document.body.classList.add("noscroll");
+			document.querySelector(".header").style.paddingRight = wsb + "px";
+			document.querySelector(".footer").style.paddingRight = wsb + "px";
+			document.querySelector(".main").style.paddingRight = wsb + "px";
+		});
+	});
+});

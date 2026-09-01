@@ -1406,6 +1406,12 @@ img
 		font-weight: 400
 		font-size: 14px
 		color: $text
+	&_alergologia
+		.advantages__item
+			&:hover
+				background-color: $light_accent
+				.advantages__icon
+					fill: $accent
 
 .title
 	font-weight: 600
@@ -6366,6 +6372,7 @@ img
 			opacity: 1
 			visibility: visible
 			transition: all 0.3s ease-out
+			display: flex
 		.messengers__close
 			background-color: #fff
 		.messengers__close-svg
@@ -6375,7 +6382,8 @@ img
 			opacity: 1 !important
 			fill: $blue
 	&__item
-		display: flex
+		display: none
+		animation: fade .35s ease
 		align-items: center
 		gap: 16px
 		background-color: #fff
@@ -6466,7 +6474,7 @@ img
 	/* .alergologia-signal__subtitle */
 	&__subtitle
 		font-size: 14px
-		max-width: 340px
+		max-width: 392px
 		margin-bottom: 24px
 		color: #3c5673
 
@@ -6515,6 +6523,12 @@ img
 	&__top-text
 		+media-breakpoint-up(sm)
 			max-width: 70%
+		h4
+			font-size: 20px
+			font-weight: 700
+			margin-bottom: 16px
+			+media-breakpoint-up(sm)
+				font-size: 36px
 	/* .alergologia-work__top */
 	&__top
 		background: linear-gradient(90deg, #5c9fde 0%, #8abff0 100%)
@@ -6658,7 +6672,7 @@ img
 		line-height: 120%
 		color: $text
 		min-height: 48px
-		margin-bottom: 48px
+		margin-bottom: 10px
 
 	/* .alergologia-why__item-text */
 	&__item-text
@@ -6743,7 +6757,6 @@ img
 			margin-bottom: 0
 			padding-right: 12px
 			margin-right: 12px
-			border-right: 1px solid $text
 
 	/* .review-alergologia__img */
 	&__img

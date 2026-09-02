@@ -1210,10 +1210,10 @@ const alergologiaReviewSlider = () => {
       type: "bullets",
       clickable: true,
     },
-    // navigation: {
-    // 	nextEl: '.video-review-next',
-    // 	prevEl: '.video-review-prev',
-    // },
+    navigation: {
+      nextEl: ".alergologia-review__next",
+      prevEl: ".alergologia-review__prev",
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,

@@ -1,0 +1,12 @@
+root = true
+
+[*]
+# Настройки отступов ("editor.tabSize": 2, "editor.insertSpaces": false)
+indent_style = tab
+indent_size = 2
+tab_width = 2
+
+# Настройки переноса строк ("editor.wordWrapColumn": 9999, "editor.wordWrap": "on")
+# В EditorConfig нет прямого аналога включения "wordWrap: on" (это свойство отображения в IDE), 
+# но максимальная длина строки отключается или задается так:
+max_line_length = off

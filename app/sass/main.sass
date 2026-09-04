@@ -5003,6 +5003,8 @@ img
 		padding: 40px 20px
 		+media-breakpoint-up(sm)
 			padding: 40px 60px
+	&__block_review
+		padding: 40px 20px
 	&__block_w540
 		width: 90%
 		+media-breakpoint-up(sm)
@@ -5344,6 +5346,12 @@ img
 		font-weight: 600
 		color: $text
 
+	/* .modal-review__doctor */
+	&__doctor
+		font-weight: 600
+		font-size: 14px
+		color: $accent
+
 	/* .modal-review__date */
 	&__date
 		font-weight: 600
@@ -5357,6 +5365,27 @@ img
 		line-height: 129%
 		color: $text
 		white-space: pre-line
+		margin-bottom: 12px
+	/* .modal-review__text-row */
+	&__text-row
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			display: flex
+	/* .modal-review__text-left */
+	&__text-left
+		text-align: center
+		margin-bottom: 12px
+		font-size: 54px
+		line-height: 54px
+		font-weight: 600
+		+media-breakpoint-up(sm)
+			text-align: left
+			margin-bottom: 0
+			padding-right: 12px
+			margin-right: 12px
+
+	/* .modal-review__text-right */
+	&__text-right
 
 .checkup-single-hero
 	position: relative
@@ -6787,6 +6816,7 @@ img
 		font-weight: 600
 		font-size: 14px
 		color: $accent
+		display: none
 
 	/* .review-alergologia__text */
 	&__text
@@ -6812,7 +6842,7 @@ img
 		color: $accent
 		&:hover
 			color: darken($accent, 10%)
-	
+
 .alergologia-review-slider-pagination
 	text-align: center
 	margin-top: 12px
@@ -6846,7 +6876,6 @@ img
 			height: 23px
 		&:hover
 			fill: $accent
-	
 
 .inner-service__col--hidden
 	display: none

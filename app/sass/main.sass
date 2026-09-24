@@ -1916,6 +1916,7 @@ img
 		max-height: 0
 		overflow: hidden
 		transition: max-height .5s ease
+		transition: all .5s ease
 		a
 			color: $accent
 		p
@@ -7421,6 +7422,45 @@ img
 			flex: 0 0 calc( 50% - 14px )
 // .review-hirurgiya__text
 // 	-webkit-line-clamp: 5
+
+
+
+.plastic-hirurgiya-services
+	display: flex
+	flex-wrap: wrap
+	row-gap: 8px
+	column-gap: 13px
+	&__item
+		background-color: $light_accent
+		flex: 0 0 100%
+		margin: unset
+		height: max-content
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 14px )
+		&.open
+			.qa-item__text-block
+				padding-bottom: 16px
+	.qa-item__title
+		font-weight: 700 !important
+	.qa-item__title-block
+		background-color: $light_accent
+	&__count
+		font-size: 12px
+		font-weight: 600
+		color: $blue2
+		line-height: 100%
+		margin-right: 10px
+		+media-breakpoint-up(sm)
+			margin-right: 27px
+	&__item-link
+		color: #3C5673 !important
+		display: block
+		padding-bottom: 16px !important
+
+
+
+
+	
 @keyframes iconFadeLoopSmooth
 	0%
 		opacity: 0

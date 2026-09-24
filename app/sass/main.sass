@@ -5004,7 +5004,7 @@ img
 		+media-breakpoint-up(sm)
 			padding: 40px 60px
 	&__block_review
-		padding: 40px 20px
+		padding: 20px 67px 20px 20px
 	&__block_w540
 		width: 90%
 		+media-breakpoint-up(sm)
@@ -7228,6 +7228,199 @@ img
 		margin-top: 60px
 		font-size: 24px
 
+
+.hirurgiya-single-hero
+	position: relative
+	overflow: hidden
+	border-radius: 0 32px 32px 32px
+	background: linear-gradient(180.93deg, #5C9FDE 0.72%, #91C3F2 25.36%, #A0CDF8 37.2%, #B2DAFF 50.04%, #98C8F5 68.6%, #5C9FDE 95.36%)
+	&__title
+		font-size: 28px
+		color: #fff
+		line-height: 120%
+		margin-bottom: 17px
+		max-width: 400px
+		+media-breakpoint-up(sm)
+			font-size: 52px
+	&__img
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		max-width: 600px
+		object-fit: cover
+		border-radius: 32px
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+			max-width: 500px
+		+media-breakpoint-up(xl)
+			max-width: 600px
+	&_bottom
+		padding: 30px 20px
+		+media-breakpoint-up(lg)
+			padding: 97px 20px 50px 83px
+		+media-breakpoint-up(xl)
+			padding: 97px 20px 150px 83px
+	&_bottom__wrap
+		max-width: 580px
+	&_bottom__title
+		margin-bottom: 30px
+		line-height: 130%
+		+media-breakpoint-up(lg)
+			margin-bottom: 64px
+	&__wrap
+		max-width: 100%
+		padding: 30px 20px
+		+media-breakpoint-up(lg)
+			max-width: 500px
+			padding: 109px 20px 45px
+		+media-breakpoint-up(xl)
+			max-width: 615px
+			padding: 109px 20px 109px 85px
+	&__tel
+		font-size: 24px
+		font-weight: 600
+	&__text
+		color: #fff
+		font-weight: 600
+		font-size: 18px
+		line-height: 130%
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			margin-bottom: 48px
+	&__btn-block
+		display: flex
+		align-items: center
+		gap: 10px
+		flex-wrap: wrap
+		+media-breakpoint-up(sm)
+			gap: 32px
+.reason
+	&__item
+		&:not(:last-child)
+			margin-bottom: 16px
+			+media-breakpoint-up(sm)
+				margin-bottom: 28px
+	&__item-top
+		display: flex
+		gap: 12px
+		align-items: center
+		margin-bottom: 12px
+		+media-breakpoint-up(sm)
+			margin-bottom: 24px
+			gap: 24px
+	&__item-top-title
+		color: $blue
+		font-weight: 700
+		font-size: 20px
+		line-height: 100%
+		margin-bottom: 0
+		+media-breakpoint-up(sm)
+			font-size: 32px
+	&__item-text
+		font-size: 16px
+		line-height: 120%
+		color: #000
+		+media-breakpoint-up(sm)
+			font-size: 24px
+	&__item-icon
+		fill: $blue
+		width: 28px
+		height: 28px
+		+media-breakpoint-up(sm)
+			width: 44px
+			height: 44px
+.hirurgiya-text
+	background-color: $light_blue
+	border-top-right-radius: 20px
+	border-bottom-right-radius: 20px
+	border-bottom-left-radius: 20px
+	font-size: 18px
+	line-height: 130%
+	padding: 10px 12px
+	margin-top: 30px
+	+media-breakpoint-up(sm)
+		font-size: 24px
+		padding: 18px 26px
+		margin-top: 48px
+.hirurgiya-how
+	&__img
+		border-top-right-radius: 24px
+		border-bottom-right-radius: 24px
+		border-bottom-left-radius: 24px
+		width: 100%
+		max-height: 600px
+		object-fit: cover
+		margin: 10px 0 30px
+		min-height: 200px
+		+media-breakpoint-up(sm)
+			margin: 18px 0 48px
+			border-top-right-radius: 40px
+			border-bottom-right-radius: 40px
+			border-bottom-left-radius: 40px
+	&__item
+		display: flex
+		gap: 10px
+		padding: 12px
+		background-color: $light_accent
+		border-radius: 20px
+		&:not(:last-child)
+			margin-bottom: 20px
+		+media-breakpoint-up(sm)
+			padding: 24px
+			gap: 16px
+	&__item-num
+		font-weight: 700
+		font-size: 42px
+		color: $accent
+		line-height: 85%
+		+media-breakpoint-up(sm)
+			font-size: 132px
+	&__item-content
+
+	&__item-title
+		font-size: 20px
+		font-weight: 700
+		line-height: 100%
+		margin-bottom: 8px
+		+media-breakpoint-up(sm)
+			font-size: 32px
+	&__item-text
+		font-size: 16px
+		color: #59595B
+		line-height: 130%
+		margin-bottom: 0
+		+media-breakpoint-up(sm)
+			font-size: 20px
+			line-height: 150%
+	
+
+.hirurgiya-inner-service
+	.inner-service__item
+		background-color: $light_accent
+	.inner-service__item-btn
+		color: $accent
+		&:hover
+			background-color: $accent
+			color: #fff
+
+
+.hirurgiya-qa
+	display: flex
+	flex-wrap: wrap
+	row-gap: 8px
+	column-gap: 13px
+	&__item
+		flex: 0 0 100%
+		margin: unset
+		height: max-content
+		border-radius: 16px
+		+media-breakpoint-up(sm)
+			flex: 0 0 calc( 50% - 14px )
+// .review-hirurgiya__text
+// 	-webkit-line-clamp: 5
 @keyframes iconFadeLoopSmooth
 	0%
 		opacity: 0

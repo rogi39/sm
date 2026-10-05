@@ -6356,6 +6356,28 @@ img
 		&:hover
 			fill: #81b2e1
 
+
+.arrows-container
+
+	display: flex
+	width: 100%
+	align-items: center
+	justify-content: flex-end
+	gap: 25px
+	margin-top: 20px
+	+media-breakpoint-up(sm)
+		margin-top: 40px
+		gap: 44px
+	&__svg
+		width: 20px
+		fill: $text
+		height: 18px
+		transition: all 0.3s ease-out
+		+media-breakpoint-up(sm)
+			width: 20px
+			height: 23px
+		&:hover
+			fill: #81b2e1
 .zapis-mob
 	background-color: $blue
 	color: #fff
@@ -7458,7 +7480,100 @@ img
 		padding-bottom: 16px !important
 
 
+.before-after__slide-images
+	position: relative
+	width: 100%
+	max-width: 600px
+	aspect-ratio: 1
+	overflow: hidden
+	user-select: none
+	border-radius: 12px
+	container-type: inline-size
 
+	.before-after__slide-img
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		object-fit: cover
+		pointer-events: none
+
+.img-after
+	width: 100%
+
+.img-before-wrapper
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 50%
+	overflow: hidden
+	z-index: 1
+
+.img-before
+	width: 100cqw
+	max-width: none
+	height: 110% !important
+
+.slider-input
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: transparent
+	opacity: 0
+	cursor: ew-resize
+	z-index: 3
+	margin: 0
+	touch-action: none
+
+.slider-line
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 50%
+	width: 2px
+	background-color: #3C5673
+	z-index: 2
+	pointer-events: none
+	transform: translateX(-50%)
+
+.slider-button
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 115px
+	height: 28px
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.badge
+	position: absolute
+	bottom: 16px
+	padding: 4px 8px
+	background: rgba(0, 0, 0, 0.6)
+	color: #fff
+	font-family: sans-serif
+	font-size: 12px
+	border-radius: 4px
+	z-index: 2
+	pointer-events: none
+
+.before-after__slide-text
+	color: #3C5673
+	font-size: 28px
+	margin-top: 8px
+	display: inline-block
+
+.after-text
+	position: absolute
+	left: 51%
+
+
+	
 
 	
 @keyframes iconFadeLoopSmooth

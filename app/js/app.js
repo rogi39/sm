@@ -44,27 +44,27 @@ function closeMenu() {
 
 const menuScrolled = document.querySelector(".menu-scrolled");
 const menuScrolledBtn = document.querySelector(".header__scrolled-menu");
+if (menuScrolledBtn) {
+	menuScrolledBtn.addEventListener("click", () => {
+		menuScrolled.classList.toggle("active");
+		document.body.classList.toggle("noscroll");
+		overlay.classList.toggle("active");
+		menuScrolledBtn.classList.toggle("active");
 
-menuScrolledBtn.addEventListener("click", () => {
-	menuScrolled.classList.toggle("active");
-	document.body.classList.toggle("noscroll");
-	overlay.classList.toggle("active");
-	menuScrolledBtn.classList.toggle("active");
-
-	let wsb = widthScrollBar();
-	if (menuScrolled.classList.contains("active")) {
-		fadeIn(menuScrolled, 300, "block");
-		header.style.paddingRight = widthScrollBar() + "px";
-		document.querySelector(".main").style.paddingRight = wsb + "px";
-		document.querySelector(".footer").style.paddingRight = wsb + "px";
-	} else {
-		fadeOut(menuScrolled, 300);
-		header.style.paddingRight = "0px";
-		document.querySelector(".main").style.paddingRight = "0px";
-		document.querySelector(".footer").style.paddingRight = "0px";
-	}
-});
-
+		let wsb = widthScrollBar();
+		if (menuScrolled.classList.contains("active")) {
+			fadeIn(menuScrolled, 300, "block");
+			header.style.paddingRight = widthScrollBar() + "px";
+			document.querySelector(".main").style.paddingRight = wsb + "px";
+			document.querySelector(".footer").style.paddingRight = wsb + "px";
+		} else {
+			fadeOut(menuScrolled, 300);
+			header.style.paddingRight = "0px";
+			document.querySelector(".main").style.paddingRight = "0px";
+			document.querySelector(".footer").style.paddingRight = "0px";
+		}
+	});
+}
 window.addEventListener("scroll", () => {
 	var scrolled = window.pageYOffset;
 	if (scrolled >= 500) {
@@ -78,6 +78,45 @@ window.addEventListener("scroll", () => {
 		header.classList.remove("on");
 	}
 });
+const BeforeSlider = () => {
+	const sliderDocOptions = {
+		slidesPerView: 1.2,
+		loop: false,
+		spaceBetween: 12,
+		speed: 1000,
+
+		allowTouchMove: true,
+
+		// Элементы с этим классом не запускают свайп Swiper
+		noSwiping: true,
+		noSwipingClass: "slider-input",
+
+		navigation: {
+			nextEl: ".before-after__next",
+			prevEl: ".before-after__prev",
+		},
+
+		breakpoints: {
+			576: {
+				spaceBetween: 18,
+				slidesPerView: 1.5,
+			},
+			768: {
+				slidesPerView: 1.5,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+		},
+	};
+
+	new Swiper(".before-after", sliderDocOptions);
+};
+
+BeforeSlider();
 
 document.addEventListener("DOMContentLoaded", function () {
 	// Custom JS
@@ -351,19 +390,19 @@ function openAkcii(e) {
 		document.querySelector(`.select-address__item[data-id-address="${getCookie("id_address")}"]`).classList.add("active");
 		// console.log(getCookie('id_address'));
 	}
-
-	modal.addEventListener("click", (e) => {
-		if (e.target.closest(".modal__close") || e.target.classList.contains("modal")) {
-			fadeOut(modal, 300);
-			setTimeout(() => {
-				document.body.classList.remove("noscroll");
-				document.querySelector(".header").style.paddingRight = "0px";
-				document.querySelector(".footer").style.paddingRight = "0px";
-				document.querySelector(".main").style.paddingRight = "0px";
-			}, 300);
-		}
-	});
-
+	if (modal) {
+		modal.addEventListener("click", (e) => {
+			if (e.target.closest(".modal__close") || e.target.classList.contains("modal")) {
+				fadeOut(modal, 300);
+				setTimeout(() => {
+					document.body.classList.remove("noscroll");
+					document.querySelector(".header").style.paddingRight = "0px";
+					document.querySelector(".footer").style.paddingRight = "0px";
+					document.querySelector(".main").style.paddingRight = "0px";
+				}, 300);
+			}
+		});
+	}
 	if (!getCookie("id_address")) {
 		// modal.classList.add("open");
 		// document.body.classList.add("noscroll");
@@ -1267,8 +1306,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			const date = card.querySelector(".review-alergologia__date").textContent.trim();
 			const text = card.querySelector(".review-alergologia__text").textContent.trim();
 			// reviewModalTitle.textContent = title;
-			reviewModalDoctor.textContent = 'Врач: ' + doctor;
-			reviewModalDate.textContent = 'Источник: ' + date;
+			reviewModalDoctor.textContent = "Врач: " + doctor;
+			reviewModalDate.textContent = "Источник: " + date;
 			reviewModalText.textContent = text;
 			let wsb = widthScrollBar();
 			fadeIn(reviewModal, 300, "flex");
